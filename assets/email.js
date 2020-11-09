@@ -1,20 +1,17 @@
-//var API = configVariables.API;
+window.onload = function() {
 
-// Node.js SDK: https://github.com/sendinblue/APIv3-nodejs-library
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
-
-// Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = configVariables.API;
-
-var apiInstance = new SibApiV3Sdk.ContactsApi();
-
-var createContact = new SibApiV3Sdk.CreateContact(); // CreateContact | Values to create a contact
-createContact = { 'email' : "ryanzelazny@gmail.com" };
-
-apiInstance.createContact(createContact).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
+  emailjs.init("user_dojrTO2MWFwZrszDi1QQa");
+  
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // generate a five digit number for the contact_number variable
+      this.contact_number.value = Math.random() * 100000 | 0;
+      // these IDs from the previous steps
+      emailjs.sendForm("default_service", "template_jhilbex", "#contact-form")
+          .then(function() {
+              console.log('SUCCESS!');
+          }, function(error) {
+              console.log('FAILED...', error);
+          });
+  });
+}
