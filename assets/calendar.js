@@ -102,6 +102,19 @@ var weekButton = document.querySelector("#week-button");
 var dailyButton = document.querySelector("#daily-button");
 
 
+function showMonthView() {
+    if (monthContainer.style.display === "none" && weekContainer.style.display === "block" && dailyContainer.style.display === "none") {
+        monthContainer.style.display = "block";
+        weekContainer.style.display = "none";
+        dailyContainer.style.display = "none";
+    }
+    else if (monthContainer.style.display === "none" && weekContainer.style.display === "none" && dailyContainer.style.display === "block") {
+        monthContainer.style.display = "block";
+        weekContainer.style.display = "none";
+        dailyContainer.style.display = "none";
+    }
+}
+
 function showWeekView() {
     if (monthContainer.style.display === "block" && weekContainer.style.display === "none" && dailyContainer.style.display === "none") {
         monthContainer.style.display = "none";
@@ -115,4 +128,19 @@ function showWeekView() {
     }
 }
 
+function showDailyView() {
+    if (monthContainer.style.display === "block" && weekContainer.style.display === "none" && dailyContainer.style.display === "none") {
+        monthContainer.style.display = "none";
+        weekContainer.style.display = "none";
+        dailyContainer.style.display = "block";
+    }
+    else if (monthContainer.style.display === "none" && weekContainer.style.display === "block" && dailyContainer.style.display === "none") {
+        monthContainer.style.display = "none";
+        weekContainer.style.display = "none";
+        dailyContainer.style.display = "block";
+    }
+}
+
+monthButton.addEventListener("click", showMonthView);
 weekButton.addEventListener("click", showWeekView);
+dailyButton.addEventListener("click", showDailyView);
