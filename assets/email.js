@@ -1,6 +1,6 @@
 window.onload = function() {
 
-  emailjs.init("user_dojrTO2MWFwZrszDi1QQa");
+  emailjs.init(configVariables.emailIDKey);
   
   document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
