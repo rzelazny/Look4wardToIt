@@ -6,11 +6,13 @@ $.ajax({
     for (let i = 0; i < listMovies.results.length; i++) {
         console.log(listMovies.results[i].original_title);
         console.log(listMovies.dates);
-    }
-    if (listMovies.results.release_date !== listMovies.dates.minumum) {
-        //dont show title
-    }
-    else {
-        //show title
+        if (Date.parse(listMovies.results.release_date) < Date.parse(listMovies.dates.minumum)) {
+            console.log("it worked");
+        }
+        else {
+            console.log("it didn't work");
+        }
     }
 })
+
+
