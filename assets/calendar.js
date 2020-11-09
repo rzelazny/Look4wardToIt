@@ -1,14 +1,13 @@
-today = new Date();
-currentMonth = today.getMonth();
-currentYear = today.getFullYear();
-selectYear = document.getElementById("year");
-selectMonth = document.getElementById("month");
+var today = new Date();
+var currentMonth = today.getMonth();
+var currentYear = today.getFullYear();
+var selectYear = document.getElementById("year");
+var selectMonth = document.getElementById("month");
 
-
-months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 // monthYearClass = document.getElementsByClassName("monthYear")
-monthAndYear = document.getElementById("monthAndYear");
+var monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
 
 
@@ -31,7 +30,7 @@ function jump() {
 }
 
 function showCalendar(month, year) {
-
+    
     let firstDay = (new Date(year, month)).getDay();
 
      // body of the calendar
@@ -78,20 +77,20 @@ function showCalendar(month, year) {
                 cell.appendChild(input);
                 date++;
             }
-
-
         }
-
-        table.appendChild(row); // appending each row into calendar body.
+        // append each row into calendar body //
+        table.appendChild(row);
     }
 
 }
 
-
-// check how many days in a month code from https://dzone.com/articles/determining-number-days-month
 function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
+
+///////////////////////////////////////////////////////////////////////
+// Getting the containers to display when button for section clicked //
+///////////////////////////////////////////////////////////////////////
 
 
 var monthContainer = document.querySelector("#month-view-container");

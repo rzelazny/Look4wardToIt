@@ -4,11 +4,11 @@
 
 /* from old layout i have commented in index */
 #test {
-  width: 14%;
-  height: 200px;
+    width: 14%;
+    height: 200px;
 }
 
 textarea {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
