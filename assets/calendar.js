@@ -14,6 +14,8 @@ showCalendar(currentMonth, currentYear);
 function next() {
     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
     currentMonth = (currentMonth + 1) % 12;
+    // currentMonth = (currentMonth + 1); shows the exact same in console
+    // console.log(currentMonth);
     showCalendar(currentMonth, currentYear);
 }
 
@@ -70,8 +72,8 @@ function showCalendar(month, year) {
                 cellText = document.createTextNode(date);
                 input = document.createElement("textarea");
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-info");
-                } // color today's date
+                    cell.classList.add("bg-warning")
+                }
                 cell.appendChild(cellText);
                 row.appendChild(cell);
                 cell.appendChild(input);
