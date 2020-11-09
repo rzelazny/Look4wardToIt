@@ -4,8 +4,10 @@ currentYear = today.getFullYear();
 selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
 
+
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+// monthYearClass = document.getElementsByClassName("monthYear")
 monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
 
@@ -40,6 +42,7 @@ function showCalendar(month, year) {
 
     // filing data about month and in the page via DOM.
     monthAndYear.innerHTML = months[month] + " " + year;
+    // monthYearClass.innerHTML = months[month] + " " + year;
     selectYear.value = year;
     selectMonth.value = month;
 
@@ -91,5 +94,25 @@ function daysInMonth(iMonth, iYear) {
 }
 
 
+var monthContainer = document.querySelector("#month-view-container");
+var weekContainer = document.querySelector("#week-view-container");
+var dailyContainer = document.querySelector("#daily-view-container");
+var monthButton = document.querySelector("#month-button");
+var weekButton = document.querySelector("#week-button");
+var dailyButton = document.querySelector("#daily-button");
 
 
+function showWeekView() {
+    if (monthContainer.style.display === "block" && weekContainer.style.display === "none" && dailyContainer.style.display === "none") {
+        monthContainer.style.display = "none";
+        weekContainer.style.display = "block";
+        dailyContainer.style.display = "none";
+    }
+    else if (monthContainer.style.display === "none" && weekContainer.style.display === "none" && dailyContainer.style.display === "block") {
+        monthContainer.style.display = "none";
+        weekContainer.style.display = "block";
+        dailyContainer.style.display = "none";
+    }
+}
+
+weekButton.addEventListener("click", showWeekView);
