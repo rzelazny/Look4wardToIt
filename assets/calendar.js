@@ -36,7 +36,7 @@ function showCalendar(month, year) {
     let firstDay = (new Date(year, month)).getDay();
 
      // body of the calendar
-    table = document.getElementById("calendar-body");
+    var table = document.getElementById("calendar-body");
 
     // clearing all previous cells
     table.innerHTML = "";
@@ -57,11 +57,9 @@ function showCalendar(month, year) {
         for (let j = 0; j < 7; j++) {
             if (i === 0 && j < firstDay) {
                 cell = document.createElement("td");
-                cellText = document.createText("");
-                input = document.createElement("textarea");
+                cellText = document.createTextNode("");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
-                cell.appendChild(input);
             }
             else if (date > daysInMonth(month, year)) {
                 break;
@@ -72,7 +70,7 @@ function showCalendar(month, year) {
                 cellText = document.createTextNode(date);
                 input = document.createElement("textarea");
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-warning")
+                    cell.classList.add("bg-")
                 }
                 cell.appendChild(cellText);
                 row.appendChild(cell);
