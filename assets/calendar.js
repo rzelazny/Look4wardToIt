@@ -1,5 +1,26 @@
 // $(document).ready(function () {
 
+    //////////////////////////////////////////////////////////////////////////////////
+    // Variables ////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+
+    var monthContainer = document.querySelector("#month-view-container");
+    var weekContainer = document.querySelector("#week-view-container");
+    var dailyContainer = document.querySelector("#daily-view-container");
+
+    var monthButton = document.querySelector("#month-button");
+    var weekButton = document.querySelector("#week-button");
+    var dailyButton = document.querySelector("#daily-button");
+
+    var previousMonthButton = document.querySelector("#previousMonth");
+    var nextMonthButton = document.querySelector("#nextMonth");
+
+    var previousWeekButton = document.querySelector("#previousWeek");
+    var nextWeekButton = document.querySelector("#nextWeek");
+
+    var previousDateButton = document.querySelector("#previousDate");
+    var nextDateButton = document.querySelector("#nextDate");
+
     var today = new Date();
 
     var currentDay = today.getDay();
@@ -14,7 +35,7 @@
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-     /////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////
     // Daily View Functions /////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
 
@@ -44,18 +65,13 @@
         // console.log(months[month] + " " + currentDateLong);
 
 
-
-
-
-
-
     }
 
     // id for quote area on the daily page
     $("#dailyQuote").text("this is where we will be putting the daily quote :)")
 
 
-    // function nextDay() {
+    // function nextDate() {
     //     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
     //     currentMonth = (currentMonth + 1) % 12;
     //     // currentMonth = (currentMonth + 1); shows the exact same in console
@@ -63,10 +79,10 @@
     //     showDailyCalendar(currentDate);
     // }
 
-    // function previousDay() {
+    // function previousDate() {
     //     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
     //     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    //     showDailyCalendar(currentDate;
+    //     showDailyCalendar(currentDate);
     // }
 
     showDailyCalendar(currentDate);
@@ -161,24 +177,9 @@
 
     showMonthCalendar(currentMonth, currentYear);
 
-    //WIP to target specific day on month view//
-    // document.querySelectorAll("#month-body .input").forEach(cell => {
-    //     cell.addEventListener("click",event => {
-    //         console.log(event.currentTarget);
-    //     });
-    // });
-
     ///////////////////////////////////////////////////////////////////////
     // Getting the containers to display when button for section clicked //
     ///////////////////////////////////////////////////////////////////////
-
-
-    var monthContainer = document.querySelector("#month-view-container");
-    var weekContainer = document.querySelector("#week-view-container");
-    var dailyContainer = document.querySelector("#daily-view-container");
-    var monthButton = document.querySelector("#month-button");
-    var weekButton = document.querySelector("#week-button");
-    var dailyButton = document.querySelector("#daily-button");
 
 
     function showMonthView() {
@@ -219,6 +220,19 @@
             dailyContainer.style.display = "block";
         }
     }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Event Listeners //////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
+
+    previousMonthButton.addEventListener("click", previousMonth);
+    nextMonthButton.addEventListener("click", nextMonth);
+
+    previousWeekButton.addEventListener("click", previousWeek); //fnc doesnt exist yet
+    nextWeekButton.addEventListener("click", nextWeek); //fnc doesnt exist yet
+
+    previousDateButton.addEventListener("click", previousDate); //fnc wip
+    nextDateButton.addEventListener("click", nextDate); //fnc wip
 
     monthButton.addEventListener("click", showMonthView);
     weekButton.addEventListener("click", showWeekView);
