@@ -14,25 +14,46 @@
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    if (currentDate === 1 || currentDate === 21 || currentDate === 31) {
-        currentDateLong = currentDate + "st";
-    }
-    else if (currentDate === 2 || currentDate === 22) {
-        currentDateLong = currentDate + "nd";
-    }
-    else if (currentDate === 3 || currentDate === 23) {
-        currentDateLong = currentDate + "rd";
-    } else {
-        currentDateLong = currentDate + "th";
-    }
-    console.log(currentDateLong);
+     /////////////////////////////////////////////////////////////////////////////////
+    // Daily View Functions /////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
 
-    showMonthCalendar(currentMonth, currentYear);
+    function showDailyCalendar(date) {
 
-    // showDay(currentDate);
+        // selectYear.value = year;
+        // selectMonth.value = month;
+
+        dailyBody = document.getElementById("daily-body");
+
+        // $(".monthYearClass").text(months[month] + " " + year);
+        $("#currentDate").text(moment().format("ddd, MMM Do"));
+
+        if (currentDate === 1 || currentDate === 21 || currentDate === 31) {
+            currentDateLong = currentDate + "st";
+        }
+        else if (currentDate === 2 || currentDate === 22) {
+            currentDateLong = currentDate + "nd";
+        }
+        else if (currentDate === 3 || currentDate === 23) {
+            currentDateLong = currentDate + "rd";
+        } else {
+            currentDateLong = currentDate + "th";
+        };
+
+        console.log(currentDateLong);
+        // console.log(months[month] + " " + currentDateLong);
+
+
+
+
+
+
+
+    }
 
     // id for quote area on the daily page
     $("#dailyQuote").text("this is where we will be putting the daily quote :)")
+
 
     // function nextDay() {
     //     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
@@ -47,6 +68,12 @@
     //     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
     //     showDailyCalendar(currentDate;
     // }
+
+    showDailyCalendar(currentDate);
+
+    /////////////////////////////////////////////////////////////////////////////////
+    // Month View Functions /////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
 
     function nextMonth() {
         currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
@@ -76,7 +103,6 @@
         monthBody = document.getElementById("month-body");
 
         $(".monthYearClass").text(months[month] + " " + year);
-        $("#currentDate").text(moment().format("ddd, MMM Do"));
 
         let firstDay = (new Date(year, month)).getDay();
 
@@ -132,6 +158,8 @@
     function daysInMonth(iMonth, iYear) {
         return 32 - new Date(iYear, iMonth, 32).getDate();
     }
+
+    showMonthCalendar(currentMonth, currentYear);
 
     //WIP to target specific day on month view//
     // document.querySelectorAll("#month-body .input").forEach(cell => {
