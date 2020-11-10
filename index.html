@@ -23,6 +23,7 @@
         <!-- navbar dropdown menu -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
+                <!-- view button group -->
                 <!-- <li>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button id="month-button" type="button" class="btn btn-secondary">Month View</button>
@@ -30,6 +31,7 @@
                         <button id="daily-button" type="button" class="btn btn-secondary">Day View</button>
                     </div>
                 </li> -->
+                <!-- view dropdown menu -->
                 <li class="btn-group dropleft">
                     <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -41,32 +43,35 @@
                         <div class="dropdown-item" id="daily-button">Daily View</div>
                     </div>
                 </li>
-                <li class="nav-item dropdown" style="display: none;">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                <!-- setting button with dropdown options -->
+                <li class="nav-item dropleft" style="display: inline;">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Settings
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="settings-dropdown">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Option</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Options</label>
+                        </div>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Option</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Options</label>
+                        </div>
                     </div>
                 </li>
+            </ul>
         </div>
     </nav>
-
-    <!-- customized options for calendar -->
-    <section id="custom-options" style="text-align: center;">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Option</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">Options</label>
-        </div>
-    </section>
 
     <!-- Month View Container -->
     <section id="month-view-container" class="container" style="display:block;">

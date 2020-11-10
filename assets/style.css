@@ -54,3 +54,7 @@ td {
     width: 100px;
     /* width: 100%; */
 }   
+
+#settings-dropdown {
+    padding: 10px;
+}
