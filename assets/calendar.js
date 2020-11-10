@@ -4,8 +4,8 @@
     $("#dailyQuote").text("this is where we will be putting the daily quote :)")
 
     // displays current day on daily view //
-    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
-    $(".monthYearClass").text(moment().format("MMMM YYYY"));
+    $("#currentDay").text(moment().format("ddd, MMM Do"));
+    // $(".monthYearClass").text(moment().format("MMMM YYYY"));
 
     var today = new Date();
     var currentMonth = today.getMonth();
@@ -44,6 +44,8 @@
         selectMonth.value = month;
 
         monthBody = document.getElementById("month-body");
+
+        $(".monthYearClass").text(months[month] + " " + year);
 
         let firstDay = (new Date(year, month)).getDay();
 
