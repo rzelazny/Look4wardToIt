@@ -1,16 +1,13 @@
 // $(document).ready(function () {
 
-    // id for quote area on the daily page
-    $("#dailyQuote").text("this is where we will be putting the daily quote :)")
-
-    // displays current day on daily view //
-
-    $("#currentDay").text(moment().format("ddd, MMM Do"));
-    // $(".monthYearClass").text(moment().format("MMMM YYYY")//
-
     var today = new Date();
+
+    var currentDay = today.getDay();
+    var currentDate = today.getDate();
+
     var currentMonth = today.getMonth();
     var currentYear = today.getFullYear();
+
     var selectYear = document.getElementById("year");
     var selectMonth = document.getElementById("month");
 
@@ -18,6 +15,24 @@
 
     showCalendar(currentMonth, currentYear);
 
+    // showDay(currentDate);
+
+    // id for quote area on the daily page
+    $("#dailyQuote").text("this is where we will be putting the daily quote :)")
+
+    // function nextDay() {
+    //     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
+    //     currentMonth = (currentMonth + 1) % 12;
+    //     // currentMonth = (currentMonth + 1); shows the exact same in console
+    //     // console.log(currentMonth);
+    //     showCalendar(currentMonth, currentYear);
+    // }
+
+    // function previousDay() {
+    //     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+    //     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+    //     showCalendar(currentMonth, currentYear);
+    // }
 
     function nextMonth() {
         currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
@@ -47,6 +62,7 @@
         monthBody = document.getElementById("month-body");
 
         $(".monthYearClass").text(months[month] + " " + year);
+        $("#currentDate").text(moment().format("ddd, MMM Do"));
 
         let firstDay = (new Date(year, month)).getDay();
 
@@ -90,11 +106,12 @@
             // append each row into calendar body //
             monthBody.appendChild(row);
 
-            document.querySelectorAll("#month-body .cell").forEach(cell => {
-                cell.addEventListener("click", event => {
-                    console.log(event.currentTarget);
-                });
-            });
+            //WIP to target specific day on month view//
+            // document.querySelectorAll("#month-body .cell").forEach(cell => {
+            //     cell.addEventListener("click", event => {
+            //         console.log(event.currentTarget);
+            //     });
+            // });
         }
     }
 
@@ -102,11 +119,13 @@
         return 32 - new Date(iYear, iMonth, 32).getDate();
     }
 
+    //WIP to target specific day on month view//
     // document.querySelectorAll("#month-body .input").forEach(cell => {
     //     cell.addEventListener("click",event => {
     //         console.log(event.currentTarget);
     //     });
     // });
+
     ///////////////////////////////////////////////////////////////////////
     // Getting the containers to display when button for section clicked //
     ///////////////////////////////////////////////////////////////////////
