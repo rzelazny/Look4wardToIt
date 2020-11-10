@@ -4,8 +4,9 @@
     $("#dailyQuote").text("this is where we will be putting the daily quote :)")
 
     // displays current day on daily view //
+
     $("#currentDay").text(moment().format("ddd, MMM Do"));
-    // $(".monthYearClass").text(moment().format("MMMM YYYY"));
+    // $(".monthYearClass").text(moment().format("MMMM YYYY")//
 
     var today = new Date();
     var currentMonth = today.getMonth();
@@ -73,7 +74,7 @@
                 else {
                     cell = document.createElement("td");
                     cellText = document.createTextNode(date);
-                    input = document.createElement("input");
+                    input = document.createElement("textarea")
                     input.classList.value = "input-event";
                     input.setAttribute("date", date + "-" + (month+1) + "-" + year) //not sure why this month returns 1 less than expected
                     cell.appendChild(cellText);
