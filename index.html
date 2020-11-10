@@ -60,6 +60,7 @@
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
             <table class="table table-bordered table-responsive-sm" id="calendar">
+                <div id="images">
                 <thead>
                     <tr>
                         <th>Sun</th>
@@ -71,6 +72,7 @@
                         <th>Sat</th>
                     </tr>
                 </thead>
+                </div>  
                 <tbody id="month-body">
                 </tbody>
             </table>
@@ -198,13 +200,13 @@
                     <th id="dailyQuote" style="text-align: center;"></th>
                 </tr>
             </thead>
+            <img id="pic" src="" alt="" width=100px>
             <tbody id="weekly-body">
                 <td>
                     <textarea></textarea>
                 </td>
             </tbody>
         </table>
-
         <div class="form-inline">
             <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">&#8249</button>
             <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">&#8250;</button>
