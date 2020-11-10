@@ -7,8 +7,6 @@ window.onload = function() {
   var curTime = (moment().format('H'));
   var sendEmail = $("#send_alert").val();
 
-
-
   //send email based on criteria (currently if it's ~8pm for testing)
   if(curTime > 20 && curTime < 21){
     $("#send_mail").value("true");
