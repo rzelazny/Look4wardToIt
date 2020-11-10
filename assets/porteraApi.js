@@ -1,4 +1,5 @@
 var today = new Date();
+var releaseDate = new Date();
 
 $.ajax({
     type: "GET",
@@ -6,7 +7,16 @@ $.ajax({
     dataType: "JSON",
 }).then(function (data) {
     for (let i = 0; i < data.results.length; i++) {
-        // console.log(data.results[i].original_title);
+        console.log(data.results[i].original_title);
+        // console.log(releaseDate.getTime());
+        // console.log(data.results[i].release_date);
+        // console.log(today.getTime());
+        if(Date.parse(data.results[i].release_date) <= Date.parse(today)) {
+            // console.log("dont show title")
+        }
+        else {
+            // console.log("show title")
+        }
     }
 })
 
