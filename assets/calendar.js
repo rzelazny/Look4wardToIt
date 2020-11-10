@@ -6,8 +6,6 @@ var selectMonth = document.getElementById("month");
 
 var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-// monthYearClass = document.getElementsByClassName("monthYear")
-var monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
 
 
@@ -36,14 +34,13 @@ function showCalendar(month, year) {
     let firstDay = (new Date(year, month)).getDay();
 
      // body of the calendar
-    var table = document.getElementById("calendar-body");
+    var table = document.getElementById("monthly-body");
 
     // clearing all previous cells
     table.innerHTML = "";
 
-    // filing data about month and in the page via DOM.
-    monthAndYear.innerHTML = months[month] + " " + year;
-    // monthYearClass.innerHTML = months[month] + " " + year;
+    $("#dailyDay").text(today.getDate() + "th");
+    $(".monthYearClass").text(months[month] + " " + year);
     selectYear.value = year;
     selectMonth.value = month;
 
@@ -70,7 +67,7 @@ function showCalendar(month, year) {
                 cellText = document.createTextNode(date);
                 input = document.createElement("textarea");
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-")
+                    cell.classList.add("bg-warning")
                 }
                 cell.appendChild(cellText);
                 row.appendChild(cell);

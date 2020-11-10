@@ -1,4 +1,6 @@
-#month-view {
+#month-view,
+#week-view,
+#daily-view {
     margin: 20px;
 }
 
