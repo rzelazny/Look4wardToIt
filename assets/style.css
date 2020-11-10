@@ -1,4 +1,6 @@
-#month-view {
+#month-view,
+#week-view,
+#daily-view {
     margin: 20px;
 }
 
@@ -8,7 +10,20 @@
     height: 200px;
 }
 
+input,
 textarea {
     width: 100%;
     height: 100%;
+    background-color: transparent;
+    border: transparent;
+}
+
+textarea {
+    height: 350px;
+}
+
+th, 
+tr, 
+td {
+    text-align: center;
 }
