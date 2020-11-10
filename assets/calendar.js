@@ -76,7 +76,6 @@
                     input = document.createElement("input");
                     input.classList.value = "input-event";
                     input.setAttribute("date", date + "-" + (month+1) + "-" + year) //not sure why this month returns 1 less than expected
-                    console.log(month);
                     cell.appendChild(cellText);
                     row.appendChild(cell);
                     cell.appendChild(input);
