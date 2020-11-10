@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -31,7 +31,8 @@
                     </div>
                 </li> -->
                 <li class="btn-group dropleft">
-                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         View
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,73 +55,49 @@
                 </li>
         </div>
     </nav>
-<!-- Month View Container -->
-    <div id="month-view-container" class="container" style="display:block;">
+
+    <form>
+        <input type="checkbox">
+        <label> I have a bike</label>
+      </form>
+
+    <!-- customized options for calendar -->
+    <section id="custom-options" style="text-align: center;">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Option</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Options</label>
+        </div>
+    </section>
+
+    <!-- Month View Container -->
+    <section id="month-view-container" class="container" style="display:block;">
         <div id="month-view" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
             <table class="table table-bordered table-responsive-sm" id="calendar">
                 <div id="images">
-                <thead>
-                    <tr>
-                        <th>Sun</th>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                    </tr>
-                </thead>
-                </div>  
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                </div>
                 <tbody id="month-body">
                 </tbody>
             </table>
-            <div class="form-inline">
+            <form class="form-inline">
                 <button class="btn btn-outline-primary col-sm-3" id="previous" onclick="previous()">&#8249</button>
-                <!-- <form class="form-inline"> -->
-                    <select class="form-control col-sm-3" name="month" id="month" onchange="jump()">
-                        <option value=0>Jan</option>
-                        <option value=1>Feb</option>
-                        <option value=2>Mar</option>
-                        <option value=3>Apr</option>
-                        <option value=4>May</option>
-                        <option value=5>Jun</option>
-                        <option value=6>Jul</option>
-                        <option value=7>Aug</option>
-                        <option value=8>Sep</option>
-                        <option value=9>Oct</option>
-                        <option value=10>Nov</option>
-                        <option value=11>Dec</option>
-                    </select>
-                    <select class="form-control col-sm-3" name="year" id="year" onchange="jump()">
-                        <option value=2010>2010</option>
-                        <option value=2011>2011</option>
-                        <option value=2012>2012</option>
-                        <option value=2013>2013</option>
-                        <option value=2014>2014</option>
-                        <option value=2015>2015</option>
-                        <option value=2016>2016</option>
-                        <option value=2017>2017</option>
-                        <option value=2018>2018</option>
-                        <option value=2019>2019</option>
-                        <option value=2020>2020</option>
-                        <option value=2021>2021</option>
-                        <option value=2022>2022</option>
-                        <option value=2023>2023</option>
-                        <option value=2024>2024</option>
-                        <option value=2025>2025</option>
-                        <option value=2026>2026</option>
-                        <option value=2027>2027</option>
-                        <option value=2028>2028</option>
-                        <option value=2029>2029</option>
-                        <option value=2030>2030</option>
-                    </select>
-                <button class="btn btn-outline-primary col-sm-3" id="next" onclick="next()">&#8250;</button>
-            </div>
-            <!-- <br/> -->
-            <!-- <form class="form-inline">
-                <select class="form-control col-sm-5" name="month" id="month" onchange="jump()">
+                <select class="form-control col-sm-3" name="month" id="month" onchange="jump()">
                     <option value=0>Jan</option>
                     <option value=1>Feb</option>
                     <option value=2>Mar</option>
@@ -134,7 +111,7 @@
                     <option value=10>Nov</option>
                     <option value=11>Dec</option>
                 </select>
-                <select class="form-control col-sm-5" name="year" id="year" onchange="jump()">
+                <select class="form-control col-sm-3" name="year" id="year" onchange="jump()">
                     <option value=2010>2010</option>
                     <option value=2011>2011</option>
                     <option value=2012>2012</option>
@@ -157,11 +134,12 @@
                     <option value=2029>2029</option>
                     <option value=2030>2030</option>
                 </select>
-            </form> -->
+                <button class="btn btn-outline-primary col-sm-3" id="next" onclick="next()">&#8250;</button>
+            </form>
         </div>
-    </div>
+    </section>
 
-<!-- Week View Container -->
+    <!-- Week View Container -->
     <div id="week-view-container" class="container" style="display:none;">
         <div id="week-view" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
@@ -178,7 +156,7 @@
                         <th>Sat</th>
                     </tr>
                 </thead>
-                <tbody id= "week-body">
+                <tbody id="week-body">
                 </tbody>
             </table>
 
@@ -186,37 +164,37 @@
                 <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">&#8249</button>
                 <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">&#8250;</button>
             </div>
-            <br/>
+            <br />
         </div>
     </div>
 
-<!-- Daily View Container -->
-<div id="daily-view-container" class="container" style="display: none;">
-    <div id="daily-view" class="card">
-        <h1 class="card-header" id="currentDay" style="text-align: center;"></h1>
-        <table class="table table-bordered table-responsive-sm" id="calendar">
-            <thead>
-                <tr>
-                    <th id="dailyQuote" style="text-align: center;"></th>
-                </tr>
-            </thead>
-            <img id="pic" src="" alt="" width=100px>
-            <tbody id="weekly-body">
-                <td>
-                    <textarea></textarea>
-                </td>
-            </tbody>
-        </table>
-        <div class="form-inline">
-            <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">&#8249</button>
-            <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">&#8250;</button>
+    <!-- Daily View Container -->
+    <div id="daily-view-container" class="container" style="display: none;">
+        <div id="daily-view" class="card">
+            <h1 class="card-header" id="currentDay" style="text-align: center;"></h1>
+            <table class="table table-bordered table-responsive-sm" id="calendar">
+                <thead>
+                    <tr>
+                        <th id="dailyQuote" style="text-align: center;"></th>
+                    </tr>
+                </thead>
+                <img id="pic" src="" alt="" width=100px>
+                <tbody id="weekly-body">
+                    <td>
+                        <textarea></textarea>
+                    </td>
+                </tbody>
+            </table>
+            <div class="form-inline">
+                <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">&#8249</button>
+                <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">&#8250;</button>
+            </div>
+            <br />
         </div>
-        <br/>
     </div>
-</div>
 
 
-<!-- old way i had calendar with cards -->
+    <!-- old way i had calendar with cards -->
     <!-- <div class="container">
         <div class="row">
             <div class="card">
@@ -267,7 +245,7 @@
             <a href="#" class="next round">&#8250;</a>
         </div>
     </div> -->
-    
+
     <!-- hidden form for email input -->
     <form id="email-form">
         <textarea name="user_name">Bob</textarea>
@@ -277,21 +255,21 @@
         <textarea name="send_mail" id="send_alert">False</textarea>
     </form>
 
-<footer> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script src="assets/config.js"></script>
-    <script src="assets/email.js"></script>
-    <script src="assets/script.js"></script>
-    <script src="./assets/calendar.js"></script>
-    <script src="assets/NasaAPI.js"></script>
+    <footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script src="assets/config.js"></script>
+        <script src="assets/email.js"></script>
+        <script src="assets/script.js"></script>
+        <script src="./assets/calendar.js"></script>
+        <script src="assets/NasaAPI.js"></script>
 
-    <script src="./assets/porteraApi.js"></script>
+        <script src="./assets/porteraApi.js"></script>
 
-</footer>
+    </footer>
 
 </body>
 
