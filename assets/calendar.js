@@ -19,7 +19,7 @@
     showCalendar(currentMonth, currentYear);
 
 
-    function next() {
+    function nextMonth() {
         currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
         currentMonth = (currentMonth + 1) % 12;
         // currentMonth = (currentMonth + 1); shows the exact same in console
@@ -27,7 +27,7 @@
         showCalendar(currentMonth, currentYear);
     }
 
-    function previous() {
+    function previousMonth() {
         currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
         currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
         showCalendar(currentMonth, currentYear);
