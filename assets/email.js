@@ -14,7 +14,7 @@ window.onload = function() {
 
   if(sendEmail){
     // send email using EmailJS 
-    emailjs.sendForm("default_service", "template_jhilbex", "#email-form")
+    // emailjs.sendForm("default_service", "template_jhilbex", "#email-form")
     .then(function() {
       console.log('Email sent!');
     }, function(error) {
