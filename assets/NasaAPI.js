@@ -1,5 +1,5 @@
 var req = new XMLHttpRequest();
-var APIKey = "GdEg4FRAzH4iSejZ4CKf8uxEy5RpGsDRREKWJeBT"
+var APIKey = configVariables.NASAKey;
 var nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=" + APIKey; 
 
 console.log(nasaUrl);
