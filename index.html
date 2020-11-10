@@ -75,7 +75,7 @@
 
     <!-- Month View Container -->
     <section id="month-view-container" class="container" style="display:block;">
-        <div id="month-view" class="card">
+        <div id="month-view-card" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
             <table class="table table-bordered table-responsive-sm" id="calendar">
@@ -95,7 +95,7 @@
                 <tbody id="month-body">
                 </tbody>
             </table>
-            <form class="form-inline">
+            <div class="form-inline">
                 <button class="btn btn-outline-primary col-sm-3" id="previous" onclick="previous()">&#8249</button>
                 <select class="form-control col-sm-3" name="month" id="month" onchange="jump()">
                     <option value=0>Jan</option>
@@ -135,7 +135,7 @@
                     <option value=2030>2030</option>
                 </select>
                 <button class="btn btn-outline-primary col-sm-3" id="next" onclick="next()">&#8250;</button>
-            </form>
+            </div>
         </div>
     </section>
 
