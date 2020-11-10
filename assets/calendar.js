@@ -30,28 +30,28 @@ function jump() {
 }
 
 function showCalendar(month, year) {
-    
-    let firstDay = (new Date(year, month)).getDay();
 
-     // body of the calendar
-    var table = document.getElementById("monthly-body");
-
-    // clearing all previous cells
-    table.innerHTML = "";
-
-    $("#dailyDay").text(today.getDate() + "th");
-    $(".monthYearClass").text(months[month] + " " + year);
     selectYear.value = year;
     selectMonth.value = month;
 
-    // creating all cells
-    let date = 1;
-    for (let i = 0; i < 6; i++) {
-        // creates a table row
-        let row = document.createElement("tr");
+    monthBody = document.getElementById("month-body");
 
-        //creating individual cells, filing them up with data.
-        for (let j = 0; j < 7; j++) {
+    $("#dailyDay").text(today.getDate() + "th");
+    $(".monthYearClass").text(months[month] + " " + year);
+
+    let firstDay = (new Date(year, month)).getDay();
+
+    //clears monthly cal //
+    monthBody.innerHTML = "";
+
+    // creating monthly cal //
+    var date = 1;
+    for (var i = 0; i < 6; i++) {
+        // creates a cal rows //
+        var row = document.createElement("tr");
+
+        //creating individual cells // fill w/ data //
+        for (var j = 0; j < 7; j++) {
             if (i === 0 && j < firstDay) {
                 cell = document.createElement("td");
                 cellText = document.createTextNode("");
@@ -66,19 +66,19 @@ function showCalendar(month, year) {
                 cell = document.createElement("td");
                 cellText = document.createTextNode(date);
                 input = document.createElement("textarea");
-                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-warning")
-                }
                 cell.appendChild(cellText);
                 row.appendChild(cell);
                 cell.appendChild(input);
+                
+                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+                    cell.classList.add("bg-warning")
+                }
                 date++;
             }
         }
         // append each row into calendar body //
-        table.appendChild(row);
+        monthBody.appendChild(row);
     }
-
 }
 
 function daysInMonth(iMonth, iYear) {
