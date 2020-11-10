@@ -191,11 +191,11 @@
 <!-- Daily View Container -->
 <div id="daily-view-container" class="container" style="display: none;">
     <div id="daily-view" class="card">
-        <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
+        <h1 class="card-header" id="currentDay" style="text-align: center;"></h1>
         <table class="table table-bordered table-responsive-sm" id="calendar">
             <thead>
                 <tr>
-                    <th id="dailyDay" style="text-align: center;"></th>
+                    <th id="dailyQuote" style="text-align: center;"></th>
                 </tr>
             </thead>
             <tbody id="weekly-body">
@@ -282,7 +282,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="assets/config.js"></script>
     <script src="assets/email.js"></script>
