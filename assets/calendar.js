@@ -78,6 +78,12 @@ function showCalendar(month, year) {
         }
         // append each row into calendar body //
         monthBody.appendChild(row);
+
+        document.querySelectorAll("#month-body .cell").forEach(cell => {
+            cell.addEventListener("click",event => {
+                console.log(event.currentTarget);
+            });
+        });
     }
 }
 
@@ -85,6 +91,11 @@ function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
+// document.querySelectorAll("#month-body .input").forEach(cell => {
+//     cell.addEventListener("click",event => {
+//         console.log(event.currentTarget);
+//     });
+// });
 ///////////////////////////////////////////////////////////////////////
 // Getting the containers to display when button for section clicked //
 ///////////////////////////////////////////////////////////////////////
