@@ -27,3 +27,8 @@ tr,
 td {
     text-align: center;
 }
+
+/* Form is never displayed but needs to exist for email submission */
+#email-form{
+    display: none;  
+}
