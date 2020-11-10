@@ -21,3 +21,9 @@ textarea {
 textarea {
     height: 350px;
 }
+
+th, 
+tr, 
+td {
+    text-align: center;
+}
