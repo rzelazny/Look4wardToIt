@@ -12,3 +12,8 @@ textarea {
     width: 100%;
     height: 100%;
 }
+
+/* Form is never displayed but needs to exist for email submission */
+#email-form{
+    display: none;  
+}

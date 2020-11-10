@@ -1,17 +1,25 @@
 window.onload = function() {
 
+  // Initialize email client with API key
   emailjs.init(configVariables.emailIDKey);
   
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      // generate a five digit number for the contact_number variable
-      this.contact_number.value = Math.random() * 100000 | 0;
-      // these IDs from the previous steps
-      emailjs.sendForm("default_service", "template_jhilbex", "#contact-form")
-          .then(function() {
-              console.log('SUCCESS!');
-          }, function(error) {
-              console.log('FAILED...', error);
-          });
+  // Get time to see if we need to send emails yet
+  var curTime = (moment().format('H'));
+  var sendEmail = $("#send_alert").val();
+
+  //send email based on criteria (currently if it's ~8pm for testing)
+  if(curTime > 20 && curTime < 21){
+    $("#send_mail").value("true");
+  }
+
+  if(sendEmail){
+    // send email using EmailJS 
+    emailjs.sendForm("default_service", "template_jhilbex", "#email-form")
+    .then(function() {
+      console.log('Email sent!');
+    }, function(error) {
+      console.log('Email failed...', error);
   });
+  }
+
 }
