@@ -10,8 +10,14 @@
     height: 200px;
 }
 
+input,
 textarea {
     width: 100%;
     height: 100%;
     background-color: transparent;
+    border: transparent;
+}
+
+textarea {
+    height: 350px;
 }

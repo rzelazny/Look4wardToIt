@@ -65,7 +65,7 @@ function showCalendar(month, year) {
             else {
                 cell = document.createElement("td");
                 cellText = document.createTextNode(date);
-                input = document.createElement("textarea");
+                input = document.createElement("input");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
                 cell.appendChild(input);
