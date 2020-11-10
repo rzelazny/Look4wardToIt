@@ -74,6 +74,7 @@
                     cell = document.createElement("td");
                     cellText = document.createTextNode(date);
                     input = document.createElement("input");
+                    input.classList.value = "input-" + date + "-" + month + "-" + year;
                     cell.appendChild(cellText);
                     row.appendChild(cell);
                     cell.appendChild(input);
