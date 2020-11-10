@@ -1,63 +1,69 @@
 $(document).ready(function(){
 
+    //sample code to pull upcoming events for a given sports team
+    // var userTeam = "Buffalo Bills";
+    // var teamID = ""
 
-    var userTeam = "Buffalo Bills";
-    var teamID = ""
 
-
-    $.ajax({
-        type:"GET",
-        url: "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + userTeam,    
-    }).then(function(data){
-        teamID= data.teams[0].idTeam
-        console.log(data.teams[0].idTeam);
-        $.ajax({
-            type:"GET",
-            url: "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamID,
-        }).then(function(teamData){
-            console.log(teamData);
-        })
-    })
+    // $.ajax({
+    //     type:"GET",
+    //     url: "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + userTeam,    
+    // }).then(function(data){
+    //     teamID= data.teams[0].idTeam
+    //     console.log(data.teams[0].idTeam);
+    //     $.ajax({
+    //         type:"GET",
+    //         url: "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamID,
+    //     }).then(function(teamData){
+    //         console.log(teamData);
+    //     })
+    // })
 
     //variable for local storage/retrieval of events
     var events = [];
 
-    var inputEvents =  $(".input-event")
+    var inputElement =  $(".input-event")
 
     //load saved events from local storage if there are any
     function init() {
         // Parsing the JSON string to an object
         var storedEvents = JSON.parse(localStorage.getItem("events"));
-        var dateWithEvent = ""
-
-    //This gives a date: inputEvents[0].attributes.date.value
 
         // If events were retrieved from localStorage, update the event array to it
         if (storedEvents !== null) {
             events = storedEvents;
 
             //display the stored events
-            for (i=0; i < events.length; i++){
-                for (j=0; j <inputEvents.length; j++){
-                    if(inputEvents[j].attributes.date.value === events[i].eventDay){
-                        dateWithEvent = j;
-                    }
-                }
-                //dateWithEvent = inputEvents[0];
-                console.log(dateWithEvent);
-                inputEvents[dateWithEvent].value = storedEvents[i].event;
-            }
+            displayStoredEvents();
         }
     }
 
-    inputEvents.on('input', function(){
+    //function displays stored events
+    function displayStoredEvents(){
+        var dateWithEvent = "";
+
+        //for every stored event...
+        for (i=0; i < events.length; i++){
+            //find the input element with the date equal to the stored event
+            for (j=0; j < inputElement.length; j++){
+                if(inputElement[j].attributes.date.value === events[i].eventDay){
+                    dateWithEvent = j;
+                }
+            }
+            //display the stored event
+            inputElement[dateWithEvent].value = events[i].event;
+        }
+    }
+
+    //function stores text inputs locally
+    inputElement.on('input', function(){
 
         var newEvent = {
             event: this.value,
             eventDay: this.attributes.date.value
         }
 
-        //see if timeblock already has an event saved
+        //see if day already has an event saved
         var eventExists = findAttribute(events, "eventDay", newEvent.eventDay)
 
         //if there is a stored event and the new event is blank, remove the existing event from storage
