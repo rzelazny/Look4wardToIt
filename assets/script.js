@@ -19,9 +19,10 @@ $(document).ready(function(){
         })
     })
 
-    //local storage
+    //variable for local storage/retrieval of events
     var events = [];
 
+    var inputEvents =  $(".input-event")
 
     //load saved events from local storage if there are any
     function init() {
@@ -29,21 +30,25 @@ $(document).ready(function(){
         var storedEvents = JSON.parse(localStorage.getItem("events"));
         var dateWithEvent = ""
 
+    //This gives a date: inputEvents[0].attributes.date.value
+
         // If events were retrieved from localStorage, update the event array to it
         if (storedEvents !== null) {
             events = storedEvents;
 
             //display the stored events
             for (i=0; i < events.length; i++){
-                //storedEvents[i].eventDay
-                dateWithEvent = i;
+                for (j=0; j <inputEvents.length; j++){
+                    if(inputEvents[j].attributes.date.value === events[i].eventDay){
+                        dateWithEvent = j;
+                    }
+                }
+                //dateWithEvent = inputEvents[0];
+                console.log(dateWithEvent);
                 inputEvents[dateWithEvent].value = storedEvents[i].event;
-                //timeBlocks[storedEvents[i].timeblock].innerHTML = storedEvents[i].event;
             }
         }
     }
-
-    var inputEvents =  $(".input-event")
 
     inputEvents.on('input', function(){
 
