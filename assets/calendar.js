@@ -74,7 +74,7 @@
                 else {
                     cell = document.createElement("td");
                     cellText = document.createTextNode(date);
-                    input = document.createElement("input");
+                    input = document.createElement("textarea")
                     cell.appendChild(cellText);
                     row.appendChild(cell);
                     cell.appendChild(input);
