@@ -1,16 +1,34 @@
-
-
-
-.container {
-    margin-top: 100px;
+#month-view,
+#week-view,
+#daily-view {
+    margin: 20px;
 }
 
-
-.card {
+/* from old layout i have commented in index */
+#test {
     width: 14%;
     height: 200px;
 }
+
+input,
 textarea {
     width: 100%;
     height: 100%;
+    background-color: transparent;
+    border: transparent;
+}
+
+textarea {
+    height: 350px;
+}
+
+th, 
+tr, 
+td {
+    text-align: center;
+}
+
+/* Form is never displayed but needs to exist for email submission */
+#email-form{
+    display: none;  
 }
