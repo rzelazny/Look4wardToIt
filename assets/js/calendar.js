@@ -228,8 +228,8 @@
     previousMonthButton.addEventListener("click", previousMonth);
     nextMonthButton.addEventListener("click", nextMonth);
 
-    previousWeekButton.addEventListener("click", previousWeek); //fnc doesnt exist yet
-    nextWeekButton.addEventListener("click", nextWeek); //fnc doesnt exist yet
+    // previousWeekButton.addEventListener("click", previousWeek); //fnc doesnt exist yet
+    // nextWeekButton.addEventListener("click", nextWeek); //fnc doesnt exist yet
 
     previousDateButton.addEventListener("click", previousDate); //fnc wip
     nextDateButton.addEventListener("click", nextDate); //fnc wip

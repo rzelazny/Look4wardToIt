@@ -160,8 +160,8 @@
                 </tbody>
             </table>
             <div class="form-inline">
-                <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previousWeek()">&#8249</button>
-                <button class="btn btn-outline-primary col-sm-6" id="next" onclick="nextWeek()">&#8250;</button>
+                <button class="btn btn-outline-primary col-sm-6" id="previous">&#8249</button>
+                <button class="btn btn-outline-primary col-sm-6" id="next">&#8250;</button>
             </div>
             <br />
         </div>
@@ -185,8 +185,8 @@
                 </tbody>
             </table>
             <div class="form-inline">
-                <button class="btn btn-outline-primary col-sm-6" id="previousDate" onclick="previousDay()">&#8249</button>
-                <button class="btn btn-outline-primary col-sm-6" id="nextDate" onclick="nextDay()">&#8250;</button>
+                <button class="btn btn-outline-primary col-sm-6" id="previousDate">&#8249</button>
+                <button class="btn btn-outline-primary col-sm-6" id="nextDate">&#8250;</button>
             </div>
             <br />
         </div>
@@ -244,6 +244,7 @@
             <a href="#" class="next round">&#8250;</a>
         </div>
     </div> -->
+
     <!-- hidden form for email input -->
     <form id="email-form">
         <textarea name="user_name">Bob</textarea>
@@ -254,19 +255,19 @@
     </form>
 
     <footer>
+        <!-- CDN attached js files -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-        <script src="assets/config.js"></script>
-        <script src="assets/email.js"></script>
-        <script src="assets/script.js"></script>
-        <script src="./assets/calendar.js"></script>
-        <script src="assets/NasaAPI.js"></script>
-
-        <script src="./assets/porteraApi.js"></script>
-
+        <!-- these are our attached js files -->
+        <script src="./assets/js/config.js"></script>
+        <script src="./assets/js/email.js"></script>
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/calendar.js"></script>
+        <script src="./assets/js/NasaAPI.js"></script>
+        <script src="./assets/js/porteraApi.js"></script>
     </footer>
 
 </body>
