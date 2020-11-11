@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -33,8 +33,7 @@
                 </li> -->
                 <!-- view dropdown menu -->
                 <li class="btn-group dropleft">
-                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         View
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -79,19 +78,17 @@
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
             <table class="table table-bordered table-responsive-sm" id="calendar">
-                <div id="images">
-                    <thead>
-                        <tr>
-                            <th>Sun</th>
-                            <th>Mon</th>
-                            <th>Tue</th>
-                            <th>Wed</th>
-                            <th>Thu</th>
-                            <th>Fri</th>
-                            <th>Sat</th>
-                        </tr>
-                    </thead>
-                </div>
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
                 <tbody id="month-body">
                 </tbody>
             </table>
@@ -137,9 +134,9 @@
                 <button class="btn btn-outline-primary col-sm-3" id="nextMonth">&#8250;</button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Week View Container -->
+<!-- Week View Container -->
     <div id="week-view-container" class="container" style="display:none;">
         <div id="week-view" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
@@ -156,14 +153,14 @@
                         <th>Sat</th>
                     </tr>
                 </thead>
-                <tbody id="week-body">
+                <tbody id= "week-body">
                 </tbody>
             </table>
             <div class="form-inline">
                 <button class="btn btn-outline-primary col-sm-6" id="previous">&#8249</button>
                 <button class="btn btn-outline-primary col-sm-6" id="next">&#8250;</button>
             </div>
-            <br />
+            <br/>
         </div>
     </div>
 
@@ -187,10 +184,12 @@
             </div>
             <br />
         </div>
+        <br/>
     </div>
+</div>
 
 
-    <!-- old way i had calendar with cards -->
+<!-- old way i had calendar with cards -->
     <!-- <div class="container">
         <div class="row">
             <div class="card">
@@ -241,7 +240,7 @@
             <a href="#" class="next round">&#8250;</a>
         </div>
     </div> -->
-
+    
     <!-- hidden form for email input -->
     <form id="email-form">
         <textarea name="user_name">Bob</textarea>
@@ -251,6 +250,23 @@
         <textarea name="send_mail" id="send_alert">False</textarea>
     </form>
 
+<<<<<<< HEAD
+<footer> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="assets/config.js"></script>
+    <script src="assets/email.js"></script>
+    <script src="assets/script.js"></script>
+    <script src="./assets/calendar.js"></script>
+    <script src="assets/NasaAPI.js"></script>
+
+    <script src="./assets/porteraApi.js"></script>
+
+</footer>
+=======
     <footer>
         <!-- CDN attached js files -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -266,6 +282,7 @@
         <script src="./assets/js/NasaAPI.js"></script>
         <script src="./assets/js/porteraApi.js"></script>
     </footer>
+>>>>>>> main
 
 </body>
 
