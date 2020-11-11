@@ -44,6 +44,8 @@
                         View
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-item" id="form-button">Settings Menu</div>
+                        <div class="dropdown-divider"></div>
                         <div class="dropdown-item" id="month-button">Month View</div>
                         <div class="dropdown-item" id="week-button" style="display:none;">Week View</div>
                         <div class="dropdown-item" id="daily-button">Daily View</div>
@@ -142,111 +144,111 @@
     </nav>
 
     <!-- //User Questions -->
-    <!-- //Do you like sports? -->
-    <div class="container" id="userQs">
-    <div class="container">
-        <form action="text" id="sportsYN">
-            <p>Do you like sports?
-                <br>
-                <input type="radio" name="y/n" value="yes" />Yes
-                <input type="radio" name="y/n" value="no" />No
-            </p>
-        </form>
-    </div>
+    <section class="container" id="settings-view-container" style="display:block;">
+        <!-- //Do you like sports? -->
+        <div class="card">
+            <form action="text" id="sportsYN">
+                <p>Do you like sports?
+                    <br>
+                    <input type="radio" name="y/n" value="yes" />Yes
+                    <input type="radio" name="y/n" value="no" />No
+                </p>
+            </form>
+        </div>
 
-    <br>
+        <br>
 
-    <!-- //Favorite sport -->
-    <div class="container">
-        <form action="text" id="faveSports">
-            <p>What are your favorite sports?
-                <br>
-                <input type="checkbox" name="sportType" value="Baseball" />Baseball
-                <input type="checkbox" name="sportType" value="American Football" /> American Football
-                <input type="checkbox" name="sportType" value="Basketball" />Basketball
-                <input type="checkbox" name="sportType" value="Ice Hockey" />Ice Hockey
-                <br>
-                <input type="checkbox" name="sportType" value="Soccer" />Soccer
-                <input type="checkbox" name="sportType" value="Golf" />Golf
-                <input type="checkbox" name="sportType" value="Fighting" />Fighting
-                <input type="checkbox" name="sportType" value="Snooker" />Snooker
-            </p>
+        <!-- //Favorite sport -->
+        <div class="card">
+            <form action="text" id="faveSports">
+                <p>What are your favorite sports?
+                    <br>
+                    <input type="checkbox" name="sportType" value="Baseball" />Baseball
+                    <input type="checkbox" name="sportType" value="American Football" /> American Football
+                    <input type="checkbox" name="sportType" value="Basketball" />Basketball
+                    <input type="checkbox" name="sportType" value="Ice Hockey" />Ice Hockey
+                    <br>
+                    <input type="checkbox" name="sportType" value="Soccer" />Soccer
+                    <input type="checkbox" name="sportType" value="Golf" />Golf
+                    <input type="checkbox" name="sportType" value="Fighting" />Fighting
+                    <input type="checkbox" name="sportType" value="Snooker" />Snooker
+                </p>
 
-        </form>
-    </div>
+            </form>
+        </div>
 
-    <br>
+        <br>
 
-    <!-- //Favorite Team? -->
-    <div class="container">
-        <form action="text" id="faveTeam">
-            <p>What is your favorite team?
-                <br>
-                <input type="text" name="Team name" placeholder="Enter Team Name">
-                <input type="submit" Value="Go">
-            </p>
-        </form>
-    </div>
+        <!-- //Favorite Team? -->
+        <div class="card">
+            <form action="text" id="faveTeam">
+                <p>What is your favorite team?
+                    <br>
+                    <input type="text" name="Team name" placeholder="Enter Team Name">
+                    <input type="submit" Value="Go">
+                </p>
+            </form>
+        </div>
 
-    <br>
+        <br>
 
-    <!--//do you like movies? -->
-    <div class="container">
-        <form action="text" id="movieYN">
-            <p>Do you like movies?
-                <br>
-                <input type="radio" name="y/n" value="yes" />Yes
-                <input type="radio" name="y/n" value="no" />No
-            </p>
-        </form>
-    </div>
+        <!--//do you like movies? -->
+        <div class="card">
+            <form action="text" id="movieYN">
+                <p>Do you like movies?
+                    <br>
+                    <input type="radio" name="y/n" value="yes" />Yes
+                    <input type="radio" name="y/n" value="no" />No
+                </p>
+            </form>
+        </div>
 
-    <br>
+        <br>
 
-    <!-- //favorite Genres -->
-    <div class="container">
-        <form action="text" id="faveGenres">
-            <p>What are your favorite genres?
-                <br>
-                <input type="checkbox" name="genreType" value="Action" />Action
-                <input type="checkbox" name="genreType" value="Adventure" />Adventure
-                <input type="checkbox" name="genreType" value="Animation" />Animation
-                <input type="checkbox" name="genreType" value="Comedy" />Comedy
-                <br>
-                <input type="checkbox" name="genreType" value="Crime" />Crime
-                <input type="checkbox" name="genreType" value="Documentary" />Documentary
-                <input type="checkbox" name="genreType" value="Drama" />Drama
-                <input type="checkbox" name="genreType" value="Family" />Family
-                <br>
-                <input type="checkbox" name="genreType" value="Fantasy" />Fantasy
-                <input type="checkbox" name="genreType" value="History" />History
-                <input type="checkbox" name="genreType" value="Horror" />Horror
-                <input type="checkbox" name="genreType" value="Music" />Music
-                <br>
-                <input type="checkbox" name="genreType" value="Mystery" />Mystery
-                <input type="checkbox" name="genreType" value="Romance" />Romance
-                <input type="checkbox" name="genreType" value="Science Fiction" />Science Fiction
-                <input type="checkbox" name="genreType" value="TV Movie" /> TV Moive
-                <br>
-                <input type="checkbox" name="genreType" value="Thriller" />Thriller
-                <input type="checkbox" name="genreType" value="War" />War
-                <input type="checkbox" name="genreType" value="Western" />Western
-            </p>
-        </form>
-    </div>
+        <!-- //favorite Genres -->
+        <div class="card">
+            <form action="text" id="faveGenres">
+                <p>What are your favorite genres?
+                    <br>
+                    <input type="checkbox" name="genreType" value="Action" />Action
+                    <input type="checkbox" name="genreType" value="Adventure" />Adventure
+                    <input type="checkbox" name="genreType" value="Animation" />Animation
+                    <input type="checkbox" name="genreType" value="Comedy" />Comedy
+                    <br>
+                    <input type="checkbox" name="genreType" value="Crime" />Crime
+                    <input type="checkbox" name="genreType" value="Documentary" />Documentary
+                    <input type="checkbox" name="genreType" value="Drama" />Drama
+                    <input type="checkbox" name="genreType" value="Family" />Family
+                    <br>
+                    <input type="checkbox" name="genreType" value="Fantasy" />Fantasy
+                    <input type="checkbox" name="genreType" value="History" />History
+                    <input type="checkbox" name="genreType" value="Horror" />Horror
+                    <input type="checkbox" name="genreType" value="Music" />Music
+                    <br>
+                    <input type="checkbox" name="genreType" value="Mystery" />Mystery
+                    <input type="checkbox" name="genreType" value="Romance" />Romance
+                    <input type="checkbox" name="genreType" value="Science Fiction" />Science Fiction
+                    <input type="checkbox" name="genreType" value="TV Movie" /> TV Moive
+                    <br>
+                    <input type="checkbox" name="genreType" value="Thriller" />Thriller
+                    <input type="checkbox" name="genreType" value="War" />War
+                    <input type="checkbox" name="genreType" value="Western" />Western
+                </p>
+            </form>
+        </div>
 
 
-    <!-- //Favorite Movie -->
-    <div class="container">
-        <form action="text" id="faveMovie">
-            <p>What is your favorite movie?
-                <br>
-                <input type="text" name="Movie name" placeholder="Enter Movie Title">
-                <input type="submit" Value="Go">
-            </p>
-        </form>
-    </div>
-</div>
+        <!-- //Favorite Movie -->
+        <div class="card">
+            <form action="text" id="faveMovie">
+                <p>What is your favorite movie?
+                    <br>
+                    <input type="text" name="Movie name" placeholder="Enter Movie Title">
+                    <input type="submit" Value="Go">
+                </p>
+            </form>
+        </div>
+    </section>
 
     <!-- Month View Container -->
     <section id="month-view-container" class="container" style="display:block;">
@@ -261,6 +263,63 @@
                     <p><a href="#" id="space-content"></a></p>
                 </div>
             </div>
+            <table class="table table-bordered table-responsive-sm" id="monthCalendar">
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody id="month-body">
+                </tbody>
+            </table>
+            <div class="form-inline">
+                <button class="btn btn-outline-primary col-sm-3" id="previousMonth">&#8249</button>
+                <select class="form-control col-sm-3" name="month" id="month">
+                    <option value=0>Jan</option>
+                    <option value=1>Feb</option>
+                    <option value=2>Mar</option>
+                    <option value=3>Apr</option>
+                    <option value=4>May</option>
+                    <option value=5>Jun</option>
+                    <option value=6>Jul</option>
+                    <option value=7>Aug</option>
+                    <option value=8>Sep</option>
+                    <option value=9>Oct</option>
+                    <option value=10>Nov</option>
+                    <option value=11>Dec</option>
+                </select>
+                <select class="form-control col-sm-3" name="year" id="year">
+                    <option value=2010>2010</option>
+                    <option value=2011>2011</option>
+                    <option value=2012>2012</option>
+                    <option value=2013>2013</option>
+                    <option value=2014>2014</option>
+                    <option value=2015>2015</option>
+                    <option value=2016>2016</option>
+                    <option value=2017>2017</option>
+                    <option value=2018>2018</option>
+                    <option value=2019>2019</option>
+                    <option value=2020>2020</option>
+                    <option value=2021>2021</option>
+                    <option value=2022>2022</option>
+                    <option value=2023>2023</option>
+                    <option value=2024>2024</option>
+                    <option value=2025>2025</option>
+                    <option value=2026>2026</option>
+                    <option value=2027>2027</option>
+                    <option value=2028>2028</option>
+                    <option value=2029>2029</option>
+                    <option value=2030>2030</option>
+                </select>
+                <button class="btn btn-outline-primary col-sm-3" id="nextMonth">&#8250;</button>
+            </div>
+        </div>
     </section>
 
     <!-- Week View Container -->

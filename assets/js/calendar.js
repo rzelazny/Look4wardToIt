@@ -2,6 +2,7 @@
     // Variables ////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
 
+    // var settingsContainer = document.queraSelector("#settings-view-container");
     var monthContainer = document.querySelector("#month-view-container");
     var weekContainer = document.querySelector("#week-view-container");
     var dailyContainer = document.querySelector("#daily-view-container");
@@ -210,6 +211,11 @@
             dailyContainer.style.display = "block";
         }
     }
+
+    // function showSettingsContainer() {
+        
+    // }
+    // settings-view-container
 
     ///////////////////////////////////////////////////////////////////////
     // Event Listeners //////////////////////////////////////////////////
