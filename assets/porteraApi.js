@@ -52,3 +52,12 @@ $.ajax({
         console.log(dataMovie);
     })
 })
+
+//looking up a genre list
+$.ajax({
+    type: "GET",
+    url: "https://api.themoviedb.org/3/genre/movie/list?api_key=c96c270b94cb65e3e28950111caf5bb7&language=en-US",
+    dataType: "JSON",
+}).then(function(data){
+    console.log(data)
+})
