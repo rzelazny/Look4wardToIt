@@ -12,17 +12,16 @@
         // If events were retrieved from localStorage, update the event array to it
         if (storedEvents !== null) {
             events = storedEvents;
-
             //display the stored events
             displayStoredEvents(inputElement);
-            addInputEvents(inputElement);
         }
+
+        addInputEvents(inputElement);
     }
 
     //function displays stored events
     function displayStoredEvents(inputElement){
         var dateWithEvent = "";
-        console.log(inputElement);
         //for every stored event...
         for (i=0; i < events.length; i++){
             //find the input element with the date equal to the stored event
@@ -34,6 +33,8 @@
             //display the stored event if a matching date was found
             if(dateWithEvent !== ""){
                 inputElement[dateWithEvent].value = events[i].event;
+                //clear out match for next loop
+                dateWithEvent = "";
             }
         }
     }
