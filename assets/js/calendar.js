@@ -42,7 +42,7 @@
     $("#dailyQuote").text("this is where we will be putting the daily quote :)")
 
     d = 0;
-
+    // this function will be used to generate and display daily cal view //
     function showDailyCalendar() {
 
         dailyBody = document.getElementById("daily-body");
