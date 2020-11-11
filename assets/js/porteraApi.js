@@ -83,8 +83,6 @@ $.ajax({
 
 
 
-
-
 //change THDB movieID to fandango movieID
 
 //fandago movieID
