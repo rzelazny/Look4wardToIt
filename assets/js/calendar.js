@@ -58,9 +58,10 @@
             var dailyRow = document.createElement("tr");
             var dailyCell = document.createElement("td");
             var dailyCellText = document.createTextNode("");
-            var dailyInput = document.createElement("textarea")
+            var dailyInput = document.createElement("textarea");
 
-            dailyInput.classList.add("dailyText")
+            dailyInput.classList.add("dailyText");
+            dailyInput.setAttribute("date", moment().add(d, 'days').format("DD-MM-YYYY"));
 
             dailyCell.appendChild(dailyInput);
             dailyRow.appendChild(dailyCell);
