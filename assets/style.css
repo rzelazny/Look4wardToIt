@@ -44,9 +44,13 @@ td {
     width: 960px;
 }
 
-#image{
+/* #image{ */
+
+/*     background-position: center;
+}; */
     /* background-position: center; */
-}
+/* } */
+
 /* The Modal (background) */
 .modal {
     display: none; 
