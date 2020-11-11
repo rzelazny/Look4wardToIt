@@ -22,6 +22,12 @@
         </nav>
         <!-- navbar dropdown menu -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <!-- google movie search -->
+            <form action="http://google.com/search" target="_blank">
+                <input name="q" placeholder="Find Showtimes">
+                <input type="submit" value="Go!">
+            </form>
+        
             <ul class="navbar-nav ml-auto">
                 <!-- view button group -->
                 <!-- <li>
@@ -132,13 +138,19 @@
         </div>
     </nav>
 
-
     <!-- Month View Container -->
     <section id="month-view-container" class="container" style="display:block;">
         <div id="month-view-card" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
-            <div id="image"></div>
+            <div id="image">
+                <button id="myBtn">Image Explanation</button>
+                <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="space-content"></p>
+                </div>
+            </div>
             <table class="table table-bordered table-responsive-sm" id="monthCalendar">
                 <thead>
                     <tr>
