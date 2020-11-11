@@ -60,7 +60,7 @@
             var dailyCellText = document.createTextNode("");
             var dailyInput = document.createElement("textarea");
 
-            dailyInput.classList.add("dailyText");
+            dailyInput.classList.add("dailyText", "input-event");
             dailyInput.setAttribute("date", moment().add(d, 'days').format("DD-MM-YYYY"));
 
             dailyCell.appendChild(dailyInput);
