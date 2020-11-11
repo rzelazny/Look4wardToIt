@@ -19,6 +19,7 @@ $.ajax({
   $("#image").prepend(spaceImg); 
   $("#space-content").prepend(spaceText);
 })
+
 // Get the modal
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
