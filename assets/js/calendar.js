@@ -2,7 +2,9 @@
     // Variables ////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
 
-    // var settingsContainer = document.queraSelector("#settings-view-container");
+    var settingsButton = document.getElementById("settings-button");
+    var settingsContainer = document.getElementById("settings-view-container");
+
     var monthContainer = document.querySelector("#month-view-container");
     var weekContainer = document.querySelector("#week-view-container");
     var dailyContainer = document.querySelector("#daily-view-container");
@@ -172,6 +174,10 @@
     // Getting the containers to display when button for section clicked //
     ///////////////////////////////////////////////////////////////////////
 
+    function displaySettings() {
+        settingsContainer.style.display = "block";
+    }
+
 
     function showMonthView() {
         if (monthContainer.style.display === "none" && weekContainer.style.display === "block" && dailyContainer.style.display === "none") {
@@ -212,10 +218,6 @@
         }
     }
 
-    // function showSettingsContainer() {
-        
-    // }
-    // settings-view-container
 
     ///////////////////////////////////////////////////////////////////////
     // Event Listeners //////////////////////////////////////////////////
@@ -236,3 +238,5 @@
 
     selectYear.addEventListener("change", jump);
     selectMonth.addEventListener("change", jump);
+
+    settingsButton.addEventListener("click", displaySettings);
