@@ -1,9 +1,6 @@
 //variable for local storage/retrieval of events
 var events = [];
 var inputElement = [];
-var userFavorites = [];
-
-//"faveTeam"
 
 //load saved events from local storage if there are any
 function loadExistingEvents() {
@@ -43,25 +40,24 @@ function displayStoredEvents(inputElement){
 }
 
 //function puts events into local storage
-function storeInput (myElement, source, sysEvent, sysDate) {
+function storeInput (source, myElement, sysEvent, sysDate) {
 
     //sysEvent and sysDate are optional parameters
     sysEvent = sysEvent || 0;
     sysDate = sysDate || 0;
 
-    if (source = "user"){
+    if (source === "user"){
         var newEvent = {
             event: myElement.value,
             eventDay: myElement.attributes.date.value
         }
     }
-    else if (source = "system"){
+    else if (source === "system"){
         var newEvent = {
             event: sysEvent,
             eventDay: sysDate
         }
     }
-
      //see if day already has an event saved
     var eventExists = findAttribute(events, "eventDay", newEvent.eventDay)
 
@@ -80,7 +76,7 @@ function storeInput (myElement, source, sysEvent, sysDate) {
         }
         else{
             //if there is already an event, user can overwrite the existing event
-            if (source = "user"){
+            if (source === "user"){
                 events.splice(eventExists, 1, newEvent);
             }
             //if there is already an event, system events get concat'd rather than overwriting 
@@ -101,7 +97,7 @@ function addInputEvents(inputElement) {
     
     //function stores text inputs locally
     inputElement.on('input', function(){
-        storeInput(this, "user");
+        storeInput("user", this);
     })
 }
 
