@@ -1,3 +1,22 @@
+//variables for team and their id
+var userTeam = "Buffalo Bills";
+var teamID = ""
+
+//ajax call to find the team id and to search for upcoming events
+$.ajax({
+    type:"GET",
+    url: "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + userTeam,    
+}).then(function(data){
+    teamID= data.teams[0].idTeam
+    console.log(data.teams[0].idTeam);
+    $.ajax({
+        type:"GET",
+        url: "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamID,
+    }).then(function(teamData){
+        console.log(teamData);
+    })
+})
+
 // variables for the time and release dates
 var today = new Date();
 var releaseDate = new Date();
@@ -51,4 +70,23 @@ $.ajax({
     }).then(function (dataMovie) {
         console.log(dataMovie);
     })
+})
+
+//looking up a genre list
+$.ajax({
+    type: "GET",
+    url: "https://api.themoviedb.org/3/genre/movie/list?api_key=c96c270b94cb65e3e28950111caf5bb7&language=en-US",
+    dataType: "JSON",
+}).then(function(data){
+    console.log(data)
+})
+
+
+//fandango API
+$.ajax({
+    type: "GET",
+    url: "http://api.fandango.com/v1/?op=performancesbymoviepostalcodesearch&movieid=151500&postalcode=08816&apikey=wtf2a3w28686grrnqx2myk7u&sig=0d637ad758f518ec99bf148e1ee9d9b01a21590a86526a18e8bdfaeacf2b13af",
+    dataType: "JSON",
+}).then(function(data) {
+    console.log(data);
 })
