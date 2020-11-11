@@ -6,5 +6,5 @@ $.ajax({
 }).then(function(data){
     console.log("i can see kanye")
     console.log(data.quote); // generates random quote
-    $("#dailyQuote").text(data.quote);
+    $("#dailyQuote").text('"' + data.quote + '" - Kanye West');
 })
