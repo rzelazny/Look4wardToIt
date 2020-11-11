@@ -4,11 +4,10 @@
     margin: 20px;
 }
 
-/* from old layout i have commented in index */
-#test {
+/* #test {
     width: 14%;
     height: 200px;
-}
+} */
 
 textarea {
     width: 100%;
@@ -18,7 +17,7 @@ textarea {
     border: transparent;
 }
 
-#dailyText {
+.dailyText {
     height: 350px;
 }
 

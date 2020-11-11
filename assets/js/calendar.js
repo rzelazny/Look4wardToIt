@@ -1,45 +1,109 @@
-// $(document).ready(function () {
+    //////////////////////////////////////////////////////////////////////////////////
+    // Variables ////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
 
-    // id for quote area on the daily page
-    $("#dailyQuote").text("this is where we will be putting the daily quote :)")
+    var monthContainer = document.querySelector("#month-view-container");
+    var weekContainer = document.querySelector("#week-view-container");
+    var dailyContainer = document.querySelector("#daily-view-container");
 
-    // displays current day on daily view //
+    var monthButton = document.querySelector("#month-button");
+    var weekButton = document.querySelector("#week-button");
+    var dailyButton = document.querySelector("#daily-button");
 
-    $("#currentDay").text(moment().format("ddd, MMM Do"));
-    // $(".monthYearClass").text(moment().format("MMMM YYYY")//
+    var previousMonthButton = document.querySelector("#previousMonth");
+    var nextMonthButton = document.querySelector("#nextMonth");
+
+    var previousWeekButton = document.querySelector("#previousWeek");
+    var nextWeekButton = document.querySelector("#nextWeek");
+
+    var previousDateButton = document.querySelector("#previousDate");
+    var nextDateButton = document.querySelector("#nextDate");
 
     var today = new Date();
+
+    var currentDay = today.getDay();
+    var currentDate = today.getDate();
+
     var currentMonth = today.getMonth();
     var currentYear = today.getFullYear();
+
     var selectYear = document.getElementById("year");
     var selectMonth = document.getElementById("month");
 
+
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    showCalendar(currentMonth, currentYear);
+    //////////////////////////////////////////////////////////////////////////////////
+    // Daily View Functions /////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
 
+    // id for quote area on the daily page //
+    $("#dailyQuote").text("this is where we will be putting the daily quote :)")
+
+    d = 0;
+    // this function will be used to generate and display daily cal view //
+    function showDailyCalendar() {
+
+        dailyBody = document.getElementById("daily-body");
+
+        // id for header on daily cal //
+        $("#currentDate").text(moment().add(d, 'days').format("ddd, MMM Do"));
+
+        //clears daily cal //
+        dailyBody.innerHTML = "";
+
+        for (var i = 0; i < 1; i++) {
+            // creating daily cal //
+            var dailyRow = document.createElement("tr");
+            var dailyCell = document.createElement("td");
+            var dailyCellText = document.createTextNode("");
+            var dailyInput = document.createElement("textarea")
+
+            dailyInput.classList.add("dailyText")
+
+            dailyCell.appendChild(dailyInput);
+            dailyRow.appendChild(dailyCell);
+            dailyCell.appendChild(dailyCellText);
+            dailyBody.appendChild(dailyRow);
+        }
+    }
+
+    function nextDate() {
+        d++;
+        showDailyCalendar();
+    }
+
+    function previousDate() {
+        d--;
+        showDailyCalendar();
+    }
+
+    showDailyCalendar();
+
+    /////////////////////////////////////////////////////////////////////////////////
+    // Month View Functions /////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
 
     function nextMonth() {
         currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
         currentMonth = (currentMonth + 1) % 12;
-        // currentMonth = (currentMonth + 1); shows the exact same in console
-        // console.log(currentMonth);
-        showCalendar(currentMonth, currentYear);
+        showMonthCalendar(currentMonth, currentYear);
     }
 
     function previousMonth() {
         currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
         currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-        showCalendar(currentMonth, currentYear);
+        showMonthCalendar(currentMonth, currentYear);
     }
 
     function jump() {
         currentYear = parseInt(selectYear.value);
         currentMonth = parseInt(selectMonth.value);
-        showCalendar(currentMonth, currentYear);
+        showMonthCalendar(currentMonth, currentYear);
     }
 
-    function showCalendar(month, year) {
+    function showMonthCalendar(month, year) {
 
         selectYear.value = year;
         selectMonth.value = month;
@@ -90,11 +154,12 @@
             // append each row into calendar body //
             monthBody.appendChild(row);
 
-            document.querySelectorAll("#month-body .cell").forEach(cell => {
-                cell.addEventListener("click", event => {
-                    console.log(event.currentTarget);
-                });
-            });
+            //WIP to target specific day on month view//
+            // document.querySelectorAll("#month-body .cell").forEach(cell => {
+            //     cell.addEventListener("click", event => {
+            //         console.log(event.currentTarget);
+            //     });
+            // });
         }
     }
 
@@ -102,22 +167,11 @@
         return 32 - new Date(iYear, iMonth, 32).getDate();
     }
 
-    // document.querySelectorAll("#month-body .input").forEach(cell => {
-    //     cell.addEventListener("click",event => {
-    //         console.log(event.currentTarget);
-    //     });
-    // });
+    showMonthCalendar(currentMonth, currentYear);
+
     ///////////////////////////////////////////////////////////////////////
     // Getting the containers to display when button for section clicked //
     ///////////////////////////////////////////////////////////////////////
-
-
-    var monthContainer = document.querySelector("#month-view-container");
-    var weekContainer = document.querySelector("#week-view-container");
-    var dailyContainer = document.querySelector("#daily-view-container");
-    var monthButton = document.querySelector("#month-button");
-    var weekButton = document.querySelector("#week-button");
-    var dailyButton = document.querySelector("#daily-button");
 
 
     function showMonthView() {
@@ -159,8 +213,22 @@
         }
     }
 
+    ///////////////////////////////////////////////////////////////////////
+    // Event Listeners //////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
+
+    previousMonthButton.addEventListener("click", previousMonth);
+    nextMonthButton.addEventListener("click", nextMonth);
+
+    // previousWeekButton.addEventListener("click", previousWeek); //fnc doesnt exist yet
+    // nextWeekButton.addEventListener("click", nextWeek); //fnc doesnt exist yet
+
+    previousDateButton.addEventListener("click", previousDate); //fnc wip
+    nextDateButton.addEventListener("click", nextDate); //fnc wip
+
     monthButton.addEventListener("click", showMonthView);
     weekButton.addEventListener("click", showWeekView);
     dailyButton.addEventListener("click", showDailyView);
 
-// });
+    selectYear.addEventListener("change", jump);
+    selectMonth.addEventListener("change", jump);
