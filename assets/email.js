@@ -21,5 +21,4 @@ window.onload = function() {
 //       console.log('Email failed...', error);
 //   });
 //   }
-
 }

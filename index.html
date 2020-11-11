@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css"/>
     <title>Customizable Calendar</title>
 </head>
 
@@ -23,6 +23,7 @@
         <!-- navbar dropdown menu -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
+                <!-- view button group -->
                 <!-- <li>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button id="month-button" type="button" class="btn btn-secondary">Month View</button>
@@ -30,6 +31,7 @@
                         <button id="daily-button" type="button" class="btn btn-secondary">Day View</button>
                     </div>
                 </li> -->
+                <!-- view dropdown menu -->
                 <li class="btn-group dropleft">
                     <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -41,18 +43,33 @@
                         <div class="dropdown-item" id="daily-button">Daily View</div>
                     </div>
                 </li>
-                <li class="nav-item dropdown" style="display: none;">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                <!-- setting button with dropdown options -->
+                <li class="nav-item dropleft" style="display: inline;">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Settings
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="settings-dropdown">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Option</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Options</label>
+                        </div>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Option</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Options</label>
+                        </div>
                     </div>
                 </li>
+            </ul>
         </div>
     </nav>
 
@@ -70,10 +87,10 @@
 
     <!-- Month View Container -->
     <section id="month-view-container" class="container" style="display:block;">
-        <div id="month-view" class="card">
-            <div id="images"></div>
+        <div id="month-view-card" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
+            <div id="image"></div>
             <table class="table table-bordered table-responsive-sm" id="calendar">
                     <thead>
                         <tr>
@@ -90,8 +107,8 @@
                 <tbody id="month-body">
                 </tbody>
             </table>
-            <form class="form-inline">
-                <button class="btn btn-outline-primary col-sm-3" id="previous" onclick="previous()">&#8249</button>
+            <div class="form-inline">
+                <button class="btn btn-outline-primary col-sm-3" id="previousMonth" onclick="previousMonth()">&#8249</button>
                 <select class="form-control col-sm-3" name="month" id="month" onchange="jump()">
                     <option value=0>Jan</option>
                     <option value=1>Feb</option>
@@ -129,8 +146,8 @@
                     <option value=2029>2029</option>
                     <option value=2030>2030</option>
                 </select>
-                <button class="btn btn-outline-primary col-sm-3" id="next" onclick="next()">&#8250;</button>
-            </form>
+                <button class="btn btn-outline-primary col-sm-3" id="nextMonth" onclick="nextMonth()">&#8250;</button>
+            </div>
         </div>
     </section>
 
@@ -240,7 +257,6 @@
             <a href="#" class="next round">&#8250;</a>
         </div>
     </div> -->
-
     <!-- hidden form for email input -->
     <form id="email-form">
         <textarea name="user_name">Bob</textarea>

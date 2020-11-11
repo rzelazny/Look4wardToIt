@@ -19,7 +19,7 @@
     showCalendar(currentMonth, currentYear);
 
 
-    function next() {
+    function nextMonth() {
         currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
         currentMonth = (currentMonth + 1) % 12;
         // currentMonth = (currentMonth + 1); shows the exact same in console
@@ -27,7 +27,7 @@
         showCalendar(currentMonth, currentYear);
     }
 
-    function previous() {
+    function previousMonth() {
         currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
         currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
         showCalendar(currentMonth, currentYear);
@@ -75,6 +75,8 @@
                     cell = document.createElement("td");
                     cellText = document.createTextNode(date);
                     input = document.createElement("textarea")
+                    input.classList.value = "input-event";
+                    input.setAttribute("date", date + "-" + (month+1) + "-" + year) //not sure why this month returns 1 less than expected
                     cell.appendChild(cellText);
                     row.appendChild(cell);
                     cell.appendChild(input);

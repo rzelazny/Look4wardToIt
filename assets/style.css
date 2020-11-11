@@ -13,6 +13,7 @@
 textarea {
     width: 100%;
     height: 100%;
+
     background-color: transparent;
     border: transparent;
 }
@@ -32,15 +33,16 @@ td {
     display: none;  
 }
 
-#month-view{
-    width: 700px;
-    height: 500px;
+#month-view-card{
+    width: 960px;
 }
 
-#images{
-   position: absolute; 
-   left: 0px;
-   top: 0px;
-   z-index: -10;
+#calendar{
+    width: 960px;
+
+}
+
+#image{
+    background-position: center;
 };
 
