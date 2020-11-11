@@ -11,6 +11,7 @@ $.ajax({
   spaceImg.attr("src", imageUrl);
   spaceImg.attr("alt", "space Image")
 
-  $("#images").prepend(spaceImg); 
+  // $("#images").prepend(spaceImg); 
+  $("#month-view").css("background-image", 'url(' + imageUrl + ')');
+  $("#images").css("background-size", "300px" )
 })
-

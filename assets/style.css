@@ -10,7 +10,6 @@
     height: 200px;
 }
 
-input,
 textarea {
     width: 100%;
     height: 100%;
@@ -18,7 +17,7 @@ textarea {
     border: transparent;
 }
 
-textarea {
+#dailyText {
     height: 350px;
 }
 
@@ -36,17 +35,12 @@ td {
 #month-view{
     width: 700px;
     height: 500px;
-    z-index: auto;
 }
 
 #images{
-    position: absolute;
-    width: 700px;
-    height: 500x;
-    overflow: visible;
-    /* z-index: -1; */
-}
-.cropped{
-    max-width: 700px;
-    overflow: hidden;
-}
+   position: absolute; 
+   left: 0px;
+   top: 0px;
+   z-index: -10;
+};
+

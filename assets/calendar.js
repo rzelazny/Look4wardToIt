@@ -4,8 +4,9 @@
     $("#dailyQuote").text("this is where we will be putting the daily quote :)")
 
     // displays current day on daily view //
-    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
-    $(".monthYearClass").text(moment().format("MMMM YYYY"));
+
+    $("#currentDay").text(moment().format("ddd, MMM Do"));
+    // $(".monthYearClass").text(moment().format("MMMM YYYY")//
 
     var today = new Date();
     var currentMonth = today.getMonth();
@@ -45,6 +46,8 @@
 
         monthBody = document.getElementById("month-body");
 
+        $(".monthYearClass").text(months[month] + " " + year);
+
         let firstDay = (new Date(year, month)).getDay();
 
         //clears monthly cal //
@@ -71,7 +74,7 @@
                 else {
                     cell = document.createElement("td");
                     cellText = document.createTextNode(date);
-                    input = document.createElement("input");
+                    input = document.createElement("textarea")
                     cell.appendChild(cellText);
                     row.appendChild(cell);
                     cell.appendChild(input);
