@@ -39,62 +39,45 @@
     //////////////////////////////////////////////////////////////////////////////////
     // Daily View Functions /////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
-
+    t = 0;
     function showDailyCalendar() {
 
         dailyBody = document.getElementById("daily-body");
 
-        // $(".monthYearClass").text(months[month] + " " + year);
-        $("#currentDate").text(moment().format("ddd, MMM Do"));
+        // id for header on daily cal //
+        $("#currentDate").text(moment().add(t, 'days').format("ddd, MMM Do"));
 
-        // id for quote area on the daily page
+        // id for quote area on the daily page //
         $("#dailyQuote").text("this is where we will be putting the daily quote :)")
-
-        // if (currentDate === 1 || currentDate === 21 || currentDate === 31) {
-        //     currentDateLong = currentDate + "st";
-        // }
-        // else if (currentDate === 2 || currentDate === 22) {
-        //     currentDateLong = currentDate + "nd";
-        // }
-        // else if (currentDate === 3 || currentDate === 23) {
-        //     currentDateLong = currentDate + "rd";
-        // } else {
-        //     currentDateLong = currentDate + "th";
-        // };
-        // console.log(currentDateLong);
-        // console.log(months[month] + " " + currentDateLong);
 
         //clears daily cal //
         dailyBody.innerHTML = "";
 
-        // creating daily cal //
-        var dailyRow = document.createElement("tr");
-        var dailyCell = document.createElement("td");
-        var dailyCellText = document.createTextNode("");
-        var dailyInput = document.createElement("textarea")
+        for (var i = 0; i < 1; i++) {
+            // creating daily cal //
+            var dailyRow = document.createElement("tr");
+            var dailyCell = document.createElement("td");
+            var dailyCellText = document.createTextNode("");
+            var dailyInput = document.createElement("textarea")
 
-        dailyInput.classList.add("dailyText")
+            dailyInput.classList.add("dailyText")
 
-        dailyCell.appendChild(dailyInput);
-        dailyRow.appendChild(dailyCell);
-        dailyCell.appendChild(dailyCellText);
-        dailyBody.appendChild(dailyRow);
+            dailyCell.appendChild(dailyInput);
+            dailyRow.appendChild(dailyCell);
+            dailyCell.appendChild(dailyCellText);
+            dailyBody.appendChild(dailyRow);
+        }
     }
 
+    function nextDate() {
+        t++;
+        showDailyCalendar();
+    }
 
-    // function nextDate() {
-    //     monthBody = document.getElementById("month-body");
-    //     monthBody.innerHTML = "";
-    //     tomorrows date - moment().add(1, 'days').calendar();
-    //  tomorrows dat e++
-    // showDailyCalendar();
-    // }
-
-    // function previousDate() {
-    //     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
-    //     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    //     showDailyCalendar(currentDate);
-    // }
+    function previousDate() {
+        t--;
+        showDailyCalendar();
+    }
 
     showDailyCalendar();
 
