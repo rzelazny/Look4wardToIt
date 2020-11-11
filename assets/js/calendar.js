@@ -39,7 +39,7 @@
     ////////////////////////////////////////////////////////////////////////////////
 
     // id for quote area on the daily page //
-    $("#dailyQuote").text("this is where we will be putting the daily quote :)")
+    // $("#dailyQuote").text("this is where we will be putting the daily quote :)")
 
     d = 0;
     // this function will be used to generate and display daily cal view //
@@ -58,9 +58,10 @@
             var dailyRow = document.createElement("tr");
             var dailyCell = document.createElement("td");
             var dailyCellText = document.createTextNode("");
-            var dailyInput = document.createElement("textarea")
+            var dailyInput = document.createElement("textarea");
 
-            dailyInput.classList.add("dailyText")
+            dailyInput.classList.add("dailyText", "input-event");
+            dailyInput.setAttribute("date", moment().add(d, 'days').format("DD-MM-YYYY"));
 
             dailyCell.appendChild(dailyInput);
             dailyRow.appendChild(dailyCell);
@@ -229,6 +230,17 @@
     monthButton.addEventListener("click", showMonthView);
     weekButton.addEventListener("click", showWeekView);
     dailyButton.addEventListener("click", showDailyView);
+
+    // function testing() {
+    //     console.log("test button");
+    //     dailyContainer.style.display = "block";
+    //     monthContainer.style.display = "none";
+
+    // };
+
+
+
+    dailyButton.addEventListener("click", testing);
 
     selectYear.addEventListener("change", jump);
     selectMonth.addEventListener("change", jump);

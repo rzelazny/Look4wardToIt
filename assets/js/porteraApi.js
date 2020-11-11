@@ -82,11 +82,18 @@ $.ajax({
 })
 
 
+
+
+
+//change THDB movieID to fandango movieID
+
+//fandago movieID
+
 //fandango API
-$.ajax({
-    type: "GET",
-    url: "http://api.fandango.com/v1/?op=performancesbymoviepostalcodesearch&movieid=151500&postalcode=08816&apikey=wtf2a3w28686grrnqx2myk7u&sig=0d637ad758f518ec99bf148e1ee9d9b01a21590a86526a18e8bdfaeacf2b13af",
-    dataType: "JSON",
-}).then(function(data) {
-    console.log(data);
-})
+// $.ajax({
+//     type: "GET",
+//     url: "http://api.fandango.com/v1/?op=performancesbymoviepostalcodesearch&movieid=151500&postalcode=08816&apikey=wtf2a3w28686grrnqx2myk7u&sig=0d637ad758f518ec99bf148e1ee9d9b01a21590a86526a18e8bdfaeacf2b13af",
+//     dataType: "JSON",
+// }).then(function(data) {
+//     console.log(data);
+// })
