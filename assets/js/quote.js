@@ -6,5 +6,6 @@ $.ajax({
 }).then(function(data){
     console.log("i can see kanye")
     console.log(data.quote); // generates random quote
-    $("dailyQuote").text("I can see this");
+    // $("#today").empty();
+    $("#dailyQuote").text(data.quote);
 })
