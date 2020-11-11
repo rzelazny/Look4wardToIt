@@ -42,7 +42,7 @@ function displayStoredEvents(inputElement){
     }
 }
 
-//function puts user input into local storage
+//function puts events into local storage
 function storeInput (myElement, source, sysEvent, sysDate) {
 
     //sysEvent and sysDate are optional parameters
@@ -85,7 +85,8 @@ function storeInput (myElement, source, sysEvent, sysDate) {
             }
             //if there is already an event, system events get concat'd rather than overwriting 
             else{
-                console.log (events.event.value);
+                newEvent.event = events[eventExists].event + "\r\n"+ newEvent.event;
+                events.splice(eventExists, 1, newEvent);
             }
             
         }
