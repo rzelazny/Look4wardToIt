@@ -175,7 +175,11 @@
     ///////////////////////////////////////////////////////////////////////
 
     function displaySettings() {
-        settingsContainer.style.display = "block";
+        if (settingsContainer.style.display === "none") {
+            settingsContainer.style.display = "block";
+        } else {
+            settingsContainer.style.display = "none";
+        }
     }
 
 
