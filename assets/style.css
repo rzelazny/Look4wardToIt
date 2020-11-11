@@ -32,28 +32,16 @@ td {
     display: none;  
 }
 
-
-#month-view{
-    height: 100%;
-    min-width: 320px;
-    max-width: 800px;
-    width: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+#month-view-card{
+    width: 960px;
 }
 
-#images{
-    background-position: -100px -100px;
-    height: 200px;
-    width: 100px;
-    /* width: 100%; */
-}   
+#monthCalendar{
+    width: 960px;
 
-#settings-dropdown {
-    padding: 10px;
 }
+
+#image{
+    background-position: center;
+};
+
