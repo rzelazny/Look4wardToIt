@@ -32,6 +32,7 @@
     var selectYear = document.getElementById("year");
     var selectMonth = document.getElementById("month");
 
+
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -237,5 +238,8 @@
     monthButton.addEventListener("click", showMonthView);
     weekButton.addEventListener("click", showWeekView);
     dailyButton.addEventListener("click", showDailyView);
+
+    selectYear.addEventListener("change", jump);
+    selectMonth.addEventListener("change", jump);
 
 // });
