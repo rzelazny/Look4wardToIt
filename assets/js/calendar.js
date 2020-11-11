@@ -1,5 +1,3 @@
-// $(document).ready(function () {
-
     //////////////////////////////////////////////////////////////////////////////////
     // Variables ////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
@@ -39,16 +37,18 @@
     //////////////////////////////////////////////////////////////////////////////////
     // Daily View Functions /////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
-    t = 0;
+
+    // id for quote area on the daily page //
+    $("#dailyQuote").text("this is where we will be putting the daily quote :)")
+
+    d = 0;
+
     function showDailyCalendar() {
 
         dailyBody = document.getElementById("daily-body");
 
         // id for header on daily cal //
-        $("#currentDate").text(moment().add(t, 'days').format("ddd, MMM Do"));
-
-        // id for quote area on the daily page //
-        $("#dailyQuote").text("this is where we will be putting the daily quote :)")
+        $("#currentDate").text(moment().add(d, 'days').format("ddd, MMM Do"));
 
         //clears daily cal //
         dailyBody.innerHTML = "";
@@ -70,12 +70,12 @@
     }
 
     function nextDate() {
-        t++;
+        d++;
         showDailyCalendar();
     }
 
     function previousDate() {
-        t--;
+        d--;
         showDailyCalendar();
     }
 
@@ -88,8 +88,6 @@
     function nextMonth() {
         currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
         currentMonth = (currentMonth + 1) % 12;
-        // currentMonth = (currentMonth + 1); shows the exact same in console
-        // console.log(currentMonth);
         showMonthCalendar(currentMonth, currentYear);
     }
 
@@ -234,5 +232,3 @@
 
     selectYear.addEventListener("change", jump);
     selectMonth.addEventListener("change", jump);
-
-// });
