@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css"/>
     <title>Customizable Calendar</title>
 </head>
 
@@ -72,11 +72,24 @@
         </div>
     </nav>
 
+    <!-- customized options for calendar -->
+    <section id="custom-options" style="text-align: center;">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Upcoming Movies</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Upcoming Sport Events</label>
+        </div>
+    </section>
+
     <!-- Month View Container -->
     <section id="month-view-container" class="container" style="display:block;">
         <div id="month-view-card" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
+            <div id="image"></div>
             <table class="table table-bordered table-responsive-sm" id="calendar">
                 <thead>
                     <tr>
@@ -250,23 +263,6 @@
         <textarea name="send_mail" id="send_alert">False</textarea>
     </form>
 
-<<<<<<< HEAD
-<footer> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script src="assets/config.js"></script>
-    <script src="assets/email.js"></script>
-    <script src="assets/script.js"></script>
-    <script src="./assets/calendar.js"></script>
-    <script src="assets/NasaAPI.js"></script>
-
-    <script src="./assets/porteraApi.js"></script>
-
-</footer>
-=======
     <footer>
         <!-- CDN attached js files -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -282,7 +278,6 @@
         <script src="./assets/js/NasaAPI.js"></script>
         <script src="./assets/js/porteraApi.js"></script>
     </footer>
->>>>>>> main
 
 </body>
 
