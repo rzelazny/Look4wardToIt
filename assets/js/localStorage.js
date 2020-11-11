@@ -31,8 +31,10 @@
                     dateWithEvent = j;
                 }
             }
-            //display the stored event
-            inputElement[dateWithEvent].value = events[i].event;
+            //display the stored event if a matching date was found
+            if(dateWithEvent !== ""){
+                inputElement[dateWithEvent].value = events[i].event;
+            }
         }
     }
 
