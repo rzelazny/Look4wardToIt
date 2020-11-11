@@ -16,21 +16,39 @@ function displayKanye() {
 
 kanyeRadio.addEventListener("click", displayKanye());
 
-// Dad Joke //
+// // Dad Joke //
 
-var dadJokeRadio = document.querySelector("#dadJoke");
+// var dadJokeRadio = document.querySelector("#dadJoke");
 
-function displayDadJoke() {
-    var dadJokeURL = "https://icanhazdadjoke.com/"
+// function displayDadJoke() {
+//     var dadJokeURL = "https://icanhazdadjoke.com/"
 
-    $.ajax({
-        url: dadJokeURL,
-        method: "GET",
-        dataType: "JSON",
-    }).then(function(data){
-        // console.log("dad" + data.joke);
-        $("#dailyQuote").text(`"${data.joke}" - Dads of the world`);
-    })
-}
+//     $.ajax({
+//         url: dadJokeURL,
+//         method: "GET",
+//         dataType: "JSON",
+//     }).then(function(data){
+//         // console.log("dad" + data.joke);
+//         $("#dailyQuote").text(`"${data.joke}" - Dads of the world`);
+//     })
+// }
 
-dadJokeRadio.addEventListener("click", displayDadJoke());
+// dadJokeRadio.addEventListener("click", displayDadJoke());
+
+// Famous Quote //
+
+// var randoRadio = document.querySelector("#randoQuote");
+
+// function displayRandoQuote() {
+//     var randoQuoteURL = "https://quote-garden.herokuapp.com/api/v2/quotes/random"
+
+//     $.ajax({
+//         url: randoQuoteURL,
+//         method: "GET"
+//     }).then(function(data){
+//         console.log(data.quote);
+//         $("#dailyQuote").text(`"${data.quote.quoteText}" -${data.quote.quoteAuthor}`);
+//     })
+// }
+
+// randoRadio.addEventListener("click", displayRandoQuote());
