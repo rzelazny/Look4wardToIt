@@ -1,31 +1,11 @@
-$(document).ready(function(){
-
-    //sample code to pull upcoming events for a given sports team
-    // var userTeam = "Buffalo Bills";
-    // var teamID = ""
-
-
-    // $.ajax({
-    //     type:"GET",
-    //     url: "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + userTeam,    
-    // }).then(function(data){
-    //     teamID= data.teams[0].idTeam
-    //     console.log(data.teams[0].idTeam);
-    //     $.ajax({
-    //         type:"GET",
-    //         url: "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamID,
-    //     }).then(function(teamData){
-    //         console.log(teamData);
-    //     })
-    // })
-
     //variable for local storage/retrieval of events
     var events = [];
-
-    var inputElement =  $(".input-event")
+    var inputElement = $(".input-event");
 
     //load saved events from local storage if there are any
-    function init() {
+    function loadExistingEvents() {
+        inputElement = $(".input-event");
+        
         // Parsing the JSON string to an object
         var storedEvents = JSON.parse(localStorage.getItem("events"));
 
@@ -34,14 +14,15 @@ $(document).ready(function(){
             events = storedEvents;
 
             //display the stored events
-            displayStoredEvents();
+            displayStoredEvents(inputElement);
+            addInputEvents(inputElement);
         }
     }
 
     //function displays stored events
-    function displayStoredEvents(){
+    function displayStoredEvents(inputElement){
         var dateWithEvent = "";
-
+        console.log(inputElement);
         //for every stored event...
         for (i=0; i < events.length; i++){
             //find the input element with the date equal to the stored event
@@ -50,12 +31,18 @@ $(document).ready(function(){
                     dateWithEvent = j;
                 }
             }
-            //display the stored event
-            inputElement[dateWithEvent].value = events[i].event;
+            //display the stored event if a matching date was found
+            if(dateWithEvent !== ""){
+                inputElement[dateWithEvent].value = events[i].event;
+            }
         }
     }
 
-    //function stores text inputs locally
+//function stores text inputs locally
+function addInputEvents(inputElement) {
+        $("#previousMonth").on("click", loadExistingEvents);
+        $("#nextMonth").on("click", loadExistingEvents);
+
     inputElement.on('input', function(){
 
         var newEvent = {
@@ -88,6 +75,7 @@ $(document).ready(function(){
             localStorage.setItem("events", JSON.stringify(events));
         }
     })
+}
 
     //function to find an attribute with a given value
     function findAttribute(array, attr, value) {
@@ -99,6 +87,7 @@ $(document).ready(function(){
         return -1;
     }
 
-    //always run init to check for stored events
-    init()
-})
+    $(document).ready(loadExistingEvents)
+
+    //load and display events when next or previous buttons are clicked
+    

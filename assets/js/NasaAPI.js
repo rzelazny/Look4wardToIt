@@ -1,6 +1,5 @@
-var req = new XMLHttpRequest();
-var APIKey = configVariables.NASAKey;
-
+// var APIKey = configVariables.NASAKey;
+var APIKey = "GdEg4FRAzH4iSejZ4CKf8uxEy5RpGsDRREKWJeBT"
 var nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=" + APIKey; 
 
 $.ajax({
@@ -13,6 +12,7 @@ $.ajax({
   spaceImg.attr("src", imageUrl);
   spaceImg.attr("alt", "space Image")
 
-  $("#images").prepend(spaceImg); 
+  $("#image").prepend(spaceImg); 
+  // $("#images").css("background-image", url(spaceImg));
+  // $("#images").css("background-size", "300px")
 })
-
