@@ -18,7 +18,7 @@ textarea {
     border: transparent;
 }
 
-#dailyText {
+.dailyText {
     height: 350px;
 }
 
