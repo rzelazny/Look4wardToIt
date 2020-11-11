@@ -231,5 +231,16 @@
     weekButton.addEventListener("click", showWeekView);
     dailyButton.addEventListener("click", showDailyView);
 
+    // function testing() {
+    //     console.log("test button");
+    //     dailyContainer.style.display = "block";
+    //     monthContainer.style.display = "none";
+
+    // };
+
+
+
+    dailyButton.addEventListener("click", testing);
+
     selectYear.addEventListener("change", jump);
     selectMonth.addEventListener("change", jump);

@@ -128,17 +128,6 @@
         </div>
     </nav>
 
-    <!-- customized options for calendar -->
-    <section id="custom-options" style="text-align: center;">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Upcoming Movies</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">Upcoming Sport Events</label>
-        </div>
-    </section>
 
     <!-- Month View Container -->
     <section id="month-view-container" class="container" style="display:block;">
@@ -146,7 +135,7 @@
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
             <div id="image"></div>
-            <table class="table table-bordered table-responsive-sm" id="calendar">
+            <table class="table table-bordered table-responsive-sm" id="monthCalendar">
                 <thead>
                     <tr>
                         <th>Sun</th>
@@ -203,14 +192,14 @@
                 <button class="btn btn-outline-primary col-sm-3" id="nextMonth">&#8250;</button>
             </div>
         </div>
-    </div>
+    </section>
 
 <!-- Week View Container -->
     <div id="week-view-container" class="container" style="display:none;">
         <div id="week-view" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
             <!-- table for calendar -->
-            <table class="table table-bordered table-responsive-sm" id="calendar">
+            <table class="table table-bordered table-responsive-sm" id="weekCalendar">
                 <thead>
                     <tr>
                         <th>Sun</th>
@@ -234,10 +223,10 @@
     </div>
 
     <!-- Daily View Container -->
-    <div id="daily-view-container" class="container" style="display: none;">
+    <div id="daily-view-container" class="container" style="display:none;">
         <div id="daily-view" class="card">
             <h1 class="card-header" id="currentDate" style="text-align: center;"></h1>
-            <table class="table table-bordered table-responsive-sm" id="calendar">
+            <table class="table table-bordered table-responsive-sm" id="dailyCalendar">
                 <thead>
                     <tr>
                         <th id="dailyQuote" style="text-align: center;"></th>
