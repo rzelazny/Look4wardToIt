@@ -44,8 +44,6 @@ function displayStoredEvents(inputElement){
 
 //function puts events into local storage
 function storeInput (source, myElement, sysEvent, sysDate) {
-    console.log("I'm running");
-    console.log(myElement + " " + source + " " + sysEvent + " " +sysDate);
 
     //sysEvent and sysDate are optional parameters
     sysEvent = sysEvent || 0;
