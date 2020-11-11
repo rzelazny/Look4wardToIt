@@ -1,9 +1,6 @@
 //variable for local storage/retrieval of events
 var events = [];
 var inputElement = [];
-var userFavorites = [];
-
-//"faveTeam"
 
 //load saved events from local storage if there are any
 function loadExistingEvents() {
@@ -79,7 +76,7 @@ function storeInput (source, myElement, sysEvent, sysDate) {
         }
         else{
             //if there is already an event, user can overwrite the existing event
-            if (source = "user"){
+            if (source === "user"){
                 events.splice(eventExists, 1, newEvent);
             }
             //if there is already an event, system events get concat'd rather than overwriting 
