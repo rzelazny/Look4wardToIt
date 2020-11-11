@@ -26,14 +26,15 @@ function displayStoredEvents(inputElement){
         for (j=0; j < inputElement.length; j++){
             if(inputElement[j].attributes.date.value === events[i].eventDay){
                 dateWithEvent = j;
+                //display the stored event if a matching date was found
+                if(dateWithEvent !== ""){
+                    inputElement[dateWithEvent].value = events[i].event;
+                    //clear out match for next loop
+                    dateWithEvent = "";
+                }
             }
         }
-        //display the stored event if a matching date was found
-        if(dateWithEvent !== ""){
-            inputElement[dateWithEvent].value = events[i].event;
-            //clear out match for next loop
-            dateWithEvent = "";
-        }
+        
     }
 }
 
@@ -87,9 +88,13 @@ function findAttribute(array, attr, value) {
 
 $(document).ready(function(){
 
-    //load and display events when next or previous buttons are clicked
+    //load and display events when view changes
     $("#previousMonth").on("click", loadExistingEvents);
     $("#nextMonth").on("click", loadExistingEvents);
+    $("#month-button").on("click", loadExistingEvents);
+    $("#daily-button").on("click", loadExistingEvents);
+    $("#previousDate").on("click", loadExistingEvents);
+    $("#nextDate").on("click", loadExistingEvents);
 
     loadExistingEvents();
 })
