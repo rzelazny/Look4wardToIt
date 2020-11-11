@@ -43,25 +43,26 @@ function displayStoredEvents(inputElement){
 }
 
 //function puts events into local storage
-function storeInput (myElement, source, sysEvent, sysDate) {
+function storeInput (source, myElement, sysEvent, sysDate) {
+    console.log("I'm running");
+    console.log(myElement + " " + source + " " + sysEvent + " " +sysDate);
 
     //sysEvent and sysDate are optional parameters
     sysEvent = sysEvent || 0;
     sysDate = sysDate || 0;
 
-    if (source = "user"){
+    if (source === "user"){
         var newEvent = {
             event: myElement.value,
             eventDay: myElement.attributes.date.value
         }
     }
-    else if (source = "system"){
+    else if (source === "system"){
         var newEvent = {
             event: sysEvent,
             eventDay: sysDate
         }
     }
-
      //see if day already has an event saved
     var eventExists = findAttribute(events, "eventDay", newEvent.eventDay)
 
@@ -101,7 +102,7 @@ function addInputEvents(inputElement) {
     
     //function stores text inputs locally
     inputElement.on('input', function(){
-        storeInput(this, "user");
+        storeInput("user", this);
     })
 }
 
