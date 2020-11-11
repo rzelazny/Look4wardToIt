@@ -38,9 +38,6 @@
     // Daily View Functions /////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
 
-    // id for quote area on the daily page //
-    // $("#dailyQuote").text("this is where we will be putting the daily quote :)")
-
     d = 0;
     // this function will be used to generate and display daily cal view //
     function showDailyCalendar() {
@@ -224,8 +221,8 @@
     // previousWeekButton.addEventListener("click", previousWeek); //fnc doesnt exist yet
     // nextWeekButton.addEventListener("click", nextWeek); //fnc doesnt exist yet
 
-    previousDateButton.addEventListener("click", previousDate); //fnc wip
-    nextDateButton.addEventListener("click", nextDate); //fnc wip
+    previousDateButton.addEventListener("click", previousDate);
+    nextDateButton.addEventListener("click", nextDate); 
 
     monthButton.addEventListener("click", showMonthView);
     weekButton.addEventListener("click", showWeekView);

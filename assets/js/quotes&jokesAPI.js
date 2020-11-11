@@ -1,8 +1,11 @@
+// var previousDateButton = document.querySelector("#previousDate");
+// var nextDateButton = document.querySelector("#nextDate");
+
 // Kanye Quote //
 
 var kanyeRadio = document.querySelector("#kanyeQuote");
 
-function displayKanye() {
+// function displayKanye() {
     var kanyeURL = "https://api.kanye.rest"
 
     $.ajax({
@@ -12,9 +15,17 @@ function displayKanye() {
         console.log("i see kanye");
         $("#dailyQuote").text('"' + data.quote + '" - Kanye West');
     })
-}
+// }
 
-kanyeRadio.addEventListener("click", displayKanye());
+// function refreshKanye() {
+//     console.log("i see this attempt")
+//     $("#dailyQuote").text = "";
+//     // displayKanye();
+// }
+
+// kanyeRadio.addEventListener("click", displayKanye());
+// previousDateButton.addEventListener("click", refreshKanye());
+// nextDateButton.addEventListener("click", refreshKanye()); 
 
 // // Dad Joke //
 
