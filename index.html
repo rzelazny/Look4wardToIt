@@ -130,51 +130,99 @@
                     <label class="form-check-label" for="moviesN">No</label>
                 </div>
             </div>
-
-
-
-        
-        <!-- //favorite Genres -->
-        <div class="card">
-            <form action="text" id="faveGenres">
-                <p>What are your favorite genres?
-                    <br>
-                    <input type="checkbox" name="genreType" value="Action" />Action
-                    <input type="checkbox" name="genreType" value="Adventure" />Adventure
-                    <input type="checkbox" name="genreType" value="Animation" />Animation
-                    <input type="checkbox" name="genreType" value="Comedy" />Comedy
-                    <br>
-                    <input type="checkbox" name="genreType" value="Crime" />Crime
-                    <input type="checkbox" name="genreType" value="Documentary" />Documentary
-                    <input type="checkbox" name="genreType" value="Drama" />Drama
-                    <input type="checkbox" name="genreType" value="Family" />Family
-                    <br>
-                    <input type="checkbox" name="genreType" value="Fantasy" />Fantasy
-                    <input type="checkbox" name="genreType" value="History" />History
-                    <input type="checkbox" name="genreType" value="Horror" />Horror
-                    <input type="checkbox" name="genreType" value="Music" />Music
-                    <br>
-                    <input type="checkbox" name="genreType" value="Mystery" />Mystery
-                    <input type="checkbox" name="genreType" value="Romance" />Romance
-                    <input type="checkbox" name="genreType" value="Science Fiction" />Science Fiction
-                    <input type="checkbox" name="genreType" value="TV Movie" /> TV Moive
-                    <br>
-                    <input type="checkbox" name="genreType" value="Thriller" />Thriller
-                    <input type="checkbox" name="genreType" value="War" />War
-                    <input type="checkbox" name="genreType" value="Western" />Western
-                </p>
-            </form>
-        </div>
-        <!-- //Favorite Movie -->
-        <div class="card">
-            <form action="text" id="faveMovie">
-                <p>What is your favorite movie?
-                    <br>
-                    <input type="text" name="Movie name" placeholder="Enter Movie Title">
-                    <input type="submit" Value="Go">
-                </p>
-            </form>
-        </div>
+            <div class="form-group" id="faveGenres">
+                <div>
+                    <label>What are your favorite genres?</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="action" value="Action">
+                    <label class="form-check-label" for="action">Action</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="adventure" value="Adventure">
+                    <label class="form-check-label" for="adventure">Adventure</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="animation" value="Animation">
+                    <label class="form-check-label" for="animation">Animation</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="comedy" value="Comedy">
+                    <label class="form-check-label" for="comedy">Comedy</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="crime" value="Crime">
+                    <label class="form-check-label" for="crime">Crime</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="documentary" value="Documentary">
+                    <label class="form-check-label" for="documentary">Documentary</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="drama" value="Drama">
+                    <label class="form-check-label" for="drama">Drama</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="family" value="Family">
+                    <label class="form-check-label" for="family">Family</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="fantasy" value="Fantasy">
+                    <label class="form-check-label" for="fantasy">Fantasy</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="history" value="History">
+                    <label class="form-check-label" for="history">History</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="horror" value="Horror">
+                    <label class="form-check-label" for="horror">Horror</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="music" value="Music">
+                    <label class="form-check-label" for="music">Music</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="mystery" value="Mystery">
+                    <label class="form-check-label" for="mystery">Mystery</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="romance" value="Romance">
+                    <label class="form-check-label" for="romance">Romance</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="sciFi" value="Science Fiction">
+                    <label class="form-check-label" for="sciFi">Science Fiction</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="tvMovie" value="TV Movie">
+                    <label class="form-check-label" for="tvMovie">TV Movie</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="triller" value="Triller">
+                    <label class="form-check-label" for="triller">Thriller</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="war" value="War">
+                    <label class="form-check-label" for="war">War</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="western" value="Western">
+                    <label class="form-check-label" for="western">Western</label>
+                </div>
+            <div class="form" id="faveMovie">
+                <div>
+                    <label>What is your favorite movie?</label>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="faveMovieInput" placeholder="Enter Movie Title">
+                        </div>
+                        <button id="faveMovieBtn" type="submit" value="Go" class="btn btn-primary">Go</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </section>
 
     <!-- Month View Container -->
