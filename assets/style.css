@@ -27,6 +27,7 @@ th,
 tr,
 td {
     text-align: center;
+    color: black;
 }
 
 /* Form is never displayed but needs to exist for email submission */
@@ -71,7 +72,7 @@ tr{
 }
 
 .image-text {
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: bold;
     position: absolute;
@@ -136,19 +137,19 @@ tr{
 }
 
 .dark-mode #themeSetting {
-    background-color: rgba(21, 1, 201, 0.9);
+    background-color: rgba(21, 1, 201, 0.85);
     color: whitesmoke;
 }
 .dark-mode #quoteSetting {
-    background-color: rgb(21, 1, 201, 0.850);
-    color: whitesmoke;
-}
-.dark-mode #sportsSetting {
     background-color: rgb(21, 1, 201, 0.800);
     color: whitesmoke;
 }
-.dark-mode #moviesSetting {
+.dark-mode #sportsSetting {
     background-color: rgb(21, 1, 201, 0.750);
+    color: whitesmoke;
+}
+.dark-mode #moviesSetting {
+    background-color: rgb(21, 1, 201, 0.700);
     color: whitesmoke;
 }
 
