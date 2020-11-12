@@ -8,8 +8,12 @@ $.ajax({
     dataType: "JSON",
 }).then(function(data){
     for (var i = 0; i < data.response.holidays.length; i++) {
-        console.log(data.response.holidays[i].name);
-        console.log(data.response.holidays[i].date.datetime);
+        var holidayName = data.response.holidays[i].name;
+        var holidayDom= data.response.holidays[i].date.datetime.day;
+        var holidayM = data.response.holidays[i].date.datetime.month;
+        var holidayY = data.response.holidays[i].date.datetime.year;
+        var holidayDate = holidayDom + "-" + holidayM + "-" + holidayY;
+        console.log("Name: " + holidayName + " Date: " + holidayDate);
         i++;
     }
 })
