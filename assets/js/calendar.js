@@ -182,6 +182,12 @@
     // Getting the containers to display when button for section clicked //
     ///////////////////////////////////////////////////////////////////////
 
+    function noCustomization() {
+        if ($(".form-check-input") === false) {
+            console.log("nothing selected");
+        }
+    }
+
     function displaySettings() {
         if (settingsContainer.style.display === "none") {
             settingsContainer.style.display = "block";
