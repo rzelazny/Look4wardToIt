@@ -21,6 +21,7 @@
 
     var previousDateButton = document.querySelector("#previousDate");
     var nextDateButton = document.querySelector("#nextDate");
+    var todaysDateBtn = document.querySelector("#todaysDate");
 
     var today = new Date();
 
@@ -80,7 +81,14 @@
         showDailyCalendar();
     }
 
+    function resetDate() {
+        d = 0;
+        showDailyCalendar();
+    }
+
     showDailyCalendar();
+
+    todaysDateBtn.addEventListener("click", resetDate);
 
     /////////////////////////////////////////////////////////////////////////////////
     // Month View Functions /////////////////////////////////////////////////////////
