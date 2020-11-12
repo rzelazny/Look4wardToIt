@@ -49,13 +49,15 @@ function storeInput (source, myElement, sysEvent, sysDate) {
     if (source === "user"){
         var newEvent = {
             event: myElement.value,
-            eventDay: myElement.attributes.date.value
+            eventDay: myElement.attributes.date.value,
+            reminderSent: false
         }
     }
     else if (source === "system"){
         var newEvent = {
             event: sysEvent,
-            eventDay: sysDate
+            eventDay: sysDate,
+            reminderSent: false
         }
     }
      //see if day already has an event saved
