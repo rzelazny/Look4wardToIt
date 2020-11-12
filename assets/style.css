@@ -1,3 +1,13 @@
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+} 
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
 .container {
     margin: 20px auto;
 }
@@ -95,6 +105,7 @@ p, tr{
     border-radius: 5px;
     padding: 20px;
     margin: 20px;
+    color: black;
 }
 
 #themeSetting {
@@ -111,4 +122,24 @@ p, tr{
 
 #moviesSetting {
     background-color: #b7d1ff;
+}
+.dark-mode #themeSetting {
+    background-color: rgba(21, 1, 201, 0.9);
+    color: whitesmoke;
+}
+.dark-mode #quoteSetting {
+    background-color: rgb(21, 1, 201, 0.850);
+    color: whitesmoke;
+}
+.dark-mode #sportsSetting {
+    background-color: rgb(21, 1, 201, 0.800);
+    color: whitesmoke;
+}
+.dark-mode #moviesSetting {
+    background-color: rgb(21, 1, 201, 0.750);
+    color: whitesmoke;
+}
+
+.dark-mode #nav-color {
+    background-color: blue;
 }
