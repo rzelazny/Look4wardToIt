@@ -4,8 +4,8 @@ body {
     color: black;
 } 
 .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke;
 }
 
 .container {
@@ -123,6 +123,8 @@ p, tr{
 #moviesSetting {
     background-color: #b7d1ff;
 }
+
+/* //Dark Mode Attributes */
 .dark-mode #themeSetting {
     background-color: rgba(21, 1, 201, 0.9);
     color: whitesmoke;
@@ -140,6 +142,32 @@ p, tr{
     color: whitesmoke;
 }
 
-.dark-mode #nav-color {
-    background-color: blue;
+.dark-mode .btn {
+    background-color: rgb(156, 156, 156);
+}
+/* .dark-mode "cog button" {
+    background-color: hotpink;
+} */
+
+.dark-mode #month-view-card{
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke
+}
+.dark-mode #daily-view{
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke;
+}
+.dark-mode .input-event {
+    color: whitesmoke;
+}
+.dark-mode h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -1px; color: whitesmoke;
+}
+
+.dark-mode th, tr td {
+color: whitesmoke;
 }
