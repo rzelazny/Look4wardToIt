@@ -24,10 +24,11 @@ td {
     display: none;
 }
 
-#month-view-card
+/* i commented this out bc it was making the cal look all weird and off center - bri */
+/* #month-view-card
 #monthCalendar {
     width: 960px;
-}
+} */
 
 /* #image{
     background-position: center;
