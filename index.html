@@ -55,6 +55,31 @@
 
     <!-- User Settings -->
     <section id="settings-view-container" class="container" style="display:none;">
+        <!-- User information -->
+        <form id="userSetting">
+            <div class="row">
+                <div class="col-md-11">
+                    <h4>User Information</h4>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="save-user-button" class="btn btn-dark" style="opacity:75%;"><i class="far fa-save"></i>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <div class="form-row">
+                <div class="form-group col-md-6" id="userOptions">
+                    <div class="form-group">
+                        <label for="nameInput">User Name</label>
+                        <input type="user-name" class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="emailInput">Email address</label>
+                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+            </div>
+        </form>
         <!-- Theme -->
         <form id="themeSetting">
             <div class="row">
