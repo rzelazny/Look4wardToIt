@@ -7,7 +7,10 @@ $.ajax({
   method: "GET"
 }).then(function(data){
   var imageUrl = data.url;
+<<<<<<< HEAD
   var imageText = data.explanation
+=======
+>>>>>>> main
   var spaceImg = $("<img>");
   var spaceText = $("<p>");
 
