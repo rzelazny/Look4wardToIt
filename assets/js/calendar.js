@@ -181,12 +181,20 @@
     ///////////////////////////////////////////////////////////////////////
     // Getting the containers to display when button for section clicked //
     ///////////////////////////////////////////////////////////////////////
+    var kanyeRadio = document.querySelector("#kanyeQuote"); 
 
-    function noCustomization() {
-        if ($(".form-check-input") === false) {
-            console.log("nothing selected");
-        }
-    }
+    // function noCustomization() {
+    //     if (kanyeRadio.addEventListener("click"), function() {
+    //         console.log("i can see");
+    //     }) {
+    //         console.log("i can see 2");
+    //     }
+    //     else {
+    //         console.log("not clicked")
+    //     }
+    // }
+
+    // noCustomization();
 
     function displaySettings() {
         if (settingsContainer.style.display === "none") {
