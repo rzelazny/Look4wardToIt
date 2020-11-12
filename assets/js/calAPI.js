@@ -7,5 +7,9 @@ $.ajax({
     method: "GET",
     dataType: "JSON",
 }).then(function(data){
-    console.log("see me here: " + data);
+    for (var i = 0; i < data.response.holidays.length; i++) {
+        console.log(data.response.holidays[i].name);
+        console.log(data.response.holidays[i].date.datetime);
+        i++;
+    }
 })
