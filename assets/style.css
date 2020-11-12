@@ -130,6 +130,11 @@ tr{
 }
 
 /* //Dark Mode Attributes */
+.dark-mode #userSetting {
+    background-color: rgba(21, 1, 201, 0.95);
+    color: whitesmoke;
+}
+
 .dark-mode #themeSetting {
     background-color: rgba(21, 1, 201, 0.9);
     color: whitesmoke;
