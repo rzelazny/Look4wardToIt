@@ -14,6 +14,7 @@ function loadExistingEvents() {
         //display the stored events
         displayStoredEvents(inputElement);
     }
+    //events are loaded after a screen update, so make sure the new elements can still take input
     addInputEvents(inputElement);
 }
 
@@ -38,17 +39,25 @@ function displayStoredEvents(inputElement){
     }
 }
 
-//function makes sure all input elements can store text locally
-function addInputEvents(inputElement) {
-    
-    //function stores text inputs locally
-    inputElement.on('input', function(){
+//function puts events into local storage
+function storeInput (source, myElement, sysEvent, sysDate) {
 
-    var newEvent = {
-        event: this.value,
-        eventDay: this.attributes.date.value
+    //sysEvent and sysDate are optional parameters
+    sysEvent = sysEvent || 0;
+    sysDate = sysDate || 0;
+
+    if (source === "user"){
+        var newEvent = {
+            event: myElement.value,
+            eventDay: myElement.attributes.date.value
+        }
     }
-
+    else if (source === "system"){
+        var newEvent = {
+            event: sysEvent,
+            eventDay: sysDate
+        }
+    }
      //see if day already has an event saved
     var eventExists = findAttribute(events, "eventDay", newEvent.eventDay)
 
@@ -66,13 +75,29 @@ function addInputEvents(inputElement) {
             events.push(newEvent);
         }
         else{
-            //if there is already an event, overwrite the existing event
-            events.splice(eventExists, 1, newEvent);
+            //if there is already an event, user can overwrite the existing event
+            if (source === "user"){
+                events.splice(eventExists, 1, newEvent);
+            }
+            //if there is already an event, system events get concat'd rather than overwriting 
+            else{
+                newEvent.event = events[eventExists].event + "\r\n"+ newEvent.event;
+                events.splice(eventExists, 1, newEvent);
+            }
+            
         }
 
         //store the updated event array
         localStorage.setItem("events", JSON.stringify(events));
     }
+}
+
+//function makes sure all input elements can store text locally
+function addInputEvents(inputElement) {
+    
+    //function stores text inputs locally
+    inputElement.on('input', function(){
+        storeInput("user", this);
     })
 }
 
@@ -95,6 +120,9 @@ $(document).ready(function(){
     $("#daily-button").on("click", loadExistingEvents);
     $("#previousDate").on("click", loadExistingEvents);
     $("#nextDate").on("click", loadExistingEvents);
+    $("#month").on("click", loadExistingEvents);
+    $("#year").on("click", loadExistingEvents);
 
+    //load and display events the first time the page is loaded
     loadExistingEvents();
 })

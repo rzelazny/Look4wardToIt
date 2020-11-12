@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/style.css"/>
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Customizable Calendar</title>
 </head>
 
@@ -22,12 +22,12 @@
         </nav>
         <!-- navbar dropdown menu -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-           <!-- google movie search -->
+            <!-- google movie search -->
             <form action="http://google.com/search" target="_blank">
                 <input name="q" placeholder="Find Showtimes">
                 <input type="submit" value="Go!">
             </form>
-        
+
             <ul class="navbar-nav ml-auto">
                 <!-- view button group -->
                 <!-- <li>
@@ -39,10 +39,13 @@
                 </li> -->
                 <!-- view dropdown menu -->
                 <li class="btn-group dropleft">
-                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         View
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-item" id="form-button">Settings Menu</div>
+                        <div class="dropdown-divider"></div>
                         <div class="dropdown-item" id="month-button">Month View</div>
                         <div class="dropdown-item" id="week-button" style="display:none;">Week View</div>
                         <div class="dropdown-item" id="daily-button">Daily View</div>
@@ -50,8 +53,8 @@
                 </li>
                 <!-- setting button with dropdown options -->
                 <li class="nav-item dropleft" style="display: inline;">
-                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
                         Settings
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="settings-dropdown" style="padding:20px;">
@@ -59,11 +62,13 @@
                             <label>Theme</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" checked>
                             <label class="form-check-label" for="exampleRadios1">NASA</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" disabled>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2" disabled>
                             <label class="form-check-label" for="exampleRadios2">Disabled</label>
                         </div>
                         <div class="dropdown-divider"></div>
@@ -94,19 +99,19 @@
                         </div>
                         <div class="dropdown-divider"></div>
                         <div>
-                            <label>Quote</label>
+                            <label>Quotes & Jokes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="kanyeQuote" value="kanyeQuote" />
-                            <label class="form-check-label" for="kanyeQuote">Kanye</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" id="dadJoke" value="dadJoke" />
+                            <input class="form-check-input" type="radio" id="dadJoke" value="dadJoke" disabled/>
                             <label class="form-check-label" for="dadJoke">Dad Joke</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" disabled>
-                            <label class="form-check-label" for="exampleRadios4">Other Option</label>
+                            <input class="form-check-input" type="radio" id="kanyeQuote" value="kanyeQuote" checked/>
+                            <label class="form-check-label" for="kanyeQuote">Kanye Quote</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="randoQuote" value="randoQuote" disabled/>
+                            <label class="form-check-label" for="randoQuote">Random Quote</label>
                         </div>
                         <!-- <div class="dropdown-divider"></div>
                         <div>
@@ -132,11 +137,118 @@
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="option6" checked>
                             <label class="form-check-label" for="exampleRadios6">Option 2</label>
                         </div> -->
-                    </div>
+                        </div>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <!-- //User Questions -->
+    <section class="container" id="settings-view-container" style="display:block;">
+        <!-- //Do you like sports? -->
+        <div class="card">
+            <form action="text" id="sportsYN">
+                <p>Do you like sports?
+                    <br>
+                    <input type="radio" name="y/n" value="yes" />Yes
+                    <input type="radio" name="y/n" value="no" />No
+                </p>
+            </form>
+        </div>
+
+        <br>
+
+        <!-- //Favorite sport -->
+        <div class="card">
+            <form action="text" id="faveSports">
+                <p>What are your favorite sports?
+                    <br>
+                    <input type="checkbox" name="sportType" value="Baseball" />Baseball
+                    <input type="checkbox" name="sportType" value="American Football" /> American Football
+                    <input type="checkbox" name="sportType" value="Basketball" />Basketball
+                    <input type="checkbox" name="sportType" value="Ice Hockey" />Ice Hockey
+                    <br>
+                    <input type="checkbox" name="sportType" value="Soccer" />Soccer
+                    <input type="checkbox" name="sportType" value="Golf" />Golf
+                    <input type="checkbox" name="sportType" value="Fighting" />Fighting
+                    <input type="checkbox" name="sportType" value="Snooker" />Snooker
+                </p>
+
+            </form>
+        </div>
+
+        <br>
+
+        <!-- //Favorite Team? -->
+        <div class="card">
+            <form action="text" id="faveTeam">
+                <p>What is your favorite team?
+                    <br>
+                    <input type="text" name="Team name" placeholder="Enter Team Name">
+                    <input type="submit" Value="Go">
+                </p>
+            </form>
+        </div>
+
+        <br>
+
+        <!--//do you like movies? -->
+        <div class="card">
+            <form action="text" id="movieYN">
+                <p>Do you like movies?
+                    <br>
+                    <input type="radio" name="y/n" value="yes" />Yes
+                    <input type="radio" name="y/n" value="no" />No
+                </p>
+            </form>
+        </div>
+
+        <br>
+
+        <!-- //favorite Genres -->
+        <div class="card">
+            <form action="text" id="faveGenres">
+                <p>What are your favorite genres?
+                    <br>
+                    <input type="checkbox" name="genreType" value="Action" />Action
+                    <input type="checkbox" name="genreType" value="Adventure" />Adventure
+                    <input type="checkbox" name="genreType" value="Animation" />Animation
+                    <input type="checkbox" name="genreType" value="Comedy" />Comedy
+                    <br>
+                    <input type="checkbox" name="genreType" value="Crime" />Crime
+                    <input type="checkbox" name="genreType" value="Documentary" />Documentary
+                    <input type="checkbox" name="genreType" value="Drama" />Drama
+                    <input type="checkbox" name="genreType" value="Family" />Family
+                    <br>
+                    <input type="checkbox" name="genreType" value="Fantasy" />Fantasy
+                    <input type="checkbox" name="genreType" value="History" />History
+                    <input type="checkbox" name="genreType" value="Horror" />Horror
+                    <input type="checkbox" name="genreType" value="Music" />Music
+                    <br>
+                    <input type="checkbox" name="genreType" value="Mystery" />Mystery
+                    <input type="checkbox" name="genreType" value="Romance" />Romance
+                    <input type="checkbox" name="genreType" value="Science Fiction" />Science Fiction
+                    <input type="checkbox" name="genreType" value="TV Movie" /> TV Moive
+                    <br>
+                    <input type="checkbox" name="genreType" value="Thriller" />Thriller
+                    <input type="checkbox" name="genreType" value="War" />War
+                    <input type="checkbox" name="genreType" value="Western" />Western
+                </p>
+            </form>
+        </div>
+
+
+        <!-- //Favorite Movie -->
+        <div class="card">
+            <form action="text" id="faveMovie">
+                <p>What is your favorite movie?
+                    <br>
+                    <input type="text" name="Movie name" placeholder="Enter Movie Title">
+                    <input type="submit" Value="Go">
+                </p>
+            </form>
+        </div>
+    </section>
 
     <!-- Month View Container -->
     <section id="month-view-container" class="container" style="display:block;">
@@ -210,7 +322,7 @@
         </div>
     </section>
 
-<!-- Week View Container -->
+    <!-- Week View Container -->
     <div id="week-view-container" class="container" style="display:none;">
         <div id="week-view" class="card">
             <h1 class="card-header monthYearClass" style="text-align: center;"></h1>
@@ -227,14 +339,14 @@
                         <th>Sat</th>
                     </tr>
                 </thead>
-                <tbody id= "week-body">
+                <tbody id="week-body">
                 </tbody>
             </table>
             <div class="form-inline">
                 <button class="btn btn-outline-primary col-sm-6" id="previous">&#8249</button>
                 <button class="btn btn-outline-primary col-sm-6" id="next">&#8250;</button>
             </div>
-            <br/>
+            <br />
         </div>
     </div>
 
@@ -258,12 +370,12 @@
             </div>
             <br />
         </div>
-        <br/>
+        <br />
     </div>
-</div>
+    </div>
 
 
-<!-- old way i had calendar with cards -->
+    <!-- old way i had calendar with cards -->
     <!-- <div class="container">
         <div class="row">
             <div class="card">
@@ -314,7 +426,7 @@
             <a href="#" class="next round">&#8250;</a>
         </div>
     </div> -->
-    
+
     <!-- hidden form for email input -->
     <form id="email-form">
         <textarea name="user_name">Bob</textarea>
@@ -337,7 +449,7 @@
         <script src="./assets/js/localStorage.js"></script>
         <script src="./assets/js/calendar.js"></script>
         <script src="./assets/js/NasaAPI.js"></script>
-        <script src="./assets/js/porteraApi.js"></script>
+        <script src="./assets/js/userFavoritesAPIs.js"></script>
         <script src="./assets/js/quotes&jokesAPI.js"></script>
     </footer>
 

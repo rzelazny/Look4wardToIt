@@ -1,8 +1,11 @@
+// var previousDateButton = document.querySelector("#previousDate");
+// var nextDateButton = document.querySelector("#nextDate");
+
 // Kanye Quote //
 
 var kanyeRadio = document.querySelector("#kanyeQuote");
 
-function displayKanye() {
+// function displayKanye() {
     var kanyeURL = "https://api.kanye.rest"
 
     $.ajax({
@@ -12,25 +15,51 @@ function displayKanye() {
         console.log("i see kanye");
         $("#dailyQuote").text('"' + data.quote + '" - Kanye West');
     })
-}
+// }
 
-kanyeRadio.addEventListener("click", displayKanye());
+// function refreshKanye() {
+//     console.log("i see this attempt")
+//     $("#dailyQuote").text = "";
+//     // displayKanye();
+// }
 
-// Dad Joke //
+// kanyeRadio.addEventListener("click", displayKanye());
+// previousDateButton.addEventListener("click", refreshKanye());
+// nextDateButton.addEventListener("click", refreshKanye()); 
 
-var dadJokeRadio = document.querySelector("#dadJoke");
+// // Dad Joke //
 
-function displayDadJoke() {
-    var dadJokeURL = "https://icanhazdadjoke.com/"
+// var dadJokeRadio = document.querySelector("#dadJoke");
 
-    $.ajax({
-        url: dadJokeURL,
-        method: "GET",
-        dataType: "JSON",
-    }).then(function(data){
-        // console.log("dad" + data.joke);
-        $("#dailyQuote").text(`"${data.joke}" - Dads of the world`);
-    })
-}
+// function displayDadJoke() {
+//     var dadJokeURL = "https://icanhazdadjoke.com/"
 
-dadJokeRadio.addEventListener("click", displayDadJoke());
+//     $.ajax({
+//         url: dadJokeURL,
+//         method: "GET",
+//         dataType: "JSON",
+//     }).then(function(data){
+//         // console.log("dad" + data.joke);
+//         $("#dailyQuote").text(`"${data.joke}" - Dads of the world`);
+//     })
+// }
+
+// dadJokeRadio.addEventListener("click", displayDadJoke());
+
+// Famous Quote //
+
+// var randoRadio = document.querySelector("#randoQuote");
+
+// function displayRandoQuote() {
+//     var randoQuoteURL = "https://quote-garden.herokuapp.com/api/v2/quotes/random"
+
+//     $.ajax({
+//         url: randoQuoteURL,
+//         method: "GET"
+//     }).then(function(data){
+//         console.log(data.quote);
+//         $("#dailyQuote").text(`"${data.quote.quoteText}" -${data.quote.quoteAuthor}`);
+//     })
+// }
+
+// randoRadio.addEventListener("click", displayRandoQuote());
