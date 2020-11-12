@@ -84,6 +84,7 @@
     function resetDate() {
         d = 0;
         showDailyCalendar();
+        loadExistingEvents();
     }
 
     showDailyCalendar();
