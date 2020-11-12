@@ -1,6 +1,7 @@
 var saveQuoteBtn = document.querySelector("#save-quotes-button")
 var previousDateButton = document.querySelector("#previousDate");
 var nextDateButton = document.querySelector("#nextDate");
+var todaysDateBtn = document.querySelector("#todaysDate");
 
 // Kanye Quote //
 
@@ -12,10 +13,10 @@ function displayKanye() {
         url: kanyeURL,
         method: "GET"
     }).then(function(data){
-        console.log("i see kanye");
         $("#dailyQuote").text('"' + data.quote + '" - Kanye West');
         previousDateButton.addEventListener("click", refreshKanye);
         nextDateButton.addEventListener("click", refreshKanye); 
+        todaysDateBtn.addEventListener("click", refreshKanye); 
     })
     //can we get this quote to store in local storage for this day?//
 }
@@ -38,10 +39,10 @@ function displayDadJoke() {
         method: "GET",
         dataType: "JSON",
     }).then(function(data){
-        // console.log("dad" + data.joke);
         $("#dailyQuote").text(`"${data.joke}" - Dads of the world`);
         previousDateButton.addEventListener("click", refreshDad);
         nextDateButton.addEventListener("click", refreshDad); 
+        todaysDateBtn.addEventListener("click", refreshDad); 
     })
 
 }
@@ -61,10 +62,10 @@ function displayRandoQuote() {
         url: randoQuoteURL,
         method: "GET"
     }).then(function(data){
-        console.log(data.quote);
         $("#dailyQuote").text(`"${data.quote.quoteText}" -${data.quote.quoteAuthor}`);
         previousDateButton.addEventListener("click", refreshRando);
         nextDateButton.addEventListener("click", refreshRando); 
+        todaysDateBtn.addEventListener("click", refreshRando);
     })
 }
 

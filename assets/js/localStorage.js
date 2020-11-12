@@ -3,6 +3,7 @@ var events = [];
 var inputElement = [];
 var userPreferences = {
     userName: "",
+    userEmail: "",
     theme: "",
     quote: "",
     sports: {
@@ -24,6 +25,10 @@ function loadUserPreferences(){
     // If preferences were retrieved from localStorage, update the preferences object
     if (storedPreferences !== null) {
         userPreferences = storedPreferences;
+    }
+    else{
+        //if there are no stored preferences display the user selection section first
+        $("#settings-view-container").css("display", "block");
     }
 }
 
@@ -128,6 +133,7 @@ function addInputEvents(inputElement) {
     })
 }
 
+
 //function to find an attribute with a given value
 function findAttribute(array, attr, value) {
     for(var i = 0; i < array.length; i++) {
@@ -153,4 +159,77 @@ $(document).ready(function(){
     //load and display events the first time the page is loaded
     loadUserPreferences();
     loadExistingEvents();
+
+    //add save events for user preference section
+    $("#save-user-button").on("click", (function(){
+        userPreferences.userName = $("#nameInput").val();
+        $("#nameInput").val("");
+        userPreferences.userEmail = $("#emailInput").val();
+        $("#emailInput").val("");
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    }));
+    //save theme choice
+    $("input[id=nasa]:radio").click(function (){
+        userPreferences.theme = $("#nasa").val();
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    });
+    //save quote choice
+    $("input[id=kanyeQuote]:radio").click(function (){
+        userPreferences.quote = $("#kanyeQuote").val();
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+    $("input[id=dadJoke]:radio").click(function (){
+        userPreferences.quote = $("#dadJoke").val();
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+    $("input[id=randoQuote]:radio").click(function (){
+        userPreferences.quote = $("#randoQuote").val();
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+
+    //save sports toggle
+    $("input[id=sportsY]:radio").click(function (){
+        userPreferences.sports.likeSports = true;
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+    $("input[id=sportsN]:radio").click(function (){
+        userPreferences.sports.likeSports = false;
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+
+    //save movie toggle
+    $("input[id=moviesY]:radio").click(function (){
+        userPreferences.movies.likesMovies = true;
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+    $("input[id=moviesN]:radio").click(function (){
+        userPreferences.movies.likesMovies = false;
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+
+    $(".form-check-input").change(function (){
+        switch(this.name){
+            case "sportType":
+                userPreferences.sports.favSports.push(this.value);
+            break;
+            case "genreType":
+                userPreferences.movies.favGenres.push(this.value);
+            break;
+        }
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+
+    //save favorite sports team
+    $("#save-sports-button").on("click", (function(){
+        userPreferences.sports.favTeam = $("#faveTeamInput").val();
+        $("#faveTeamInput").val("")
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    }));
+
+    //save movie choices
+    $("#save-movies-button").on("click", (function(){
+        userPreferences.movies.favMovie = $("#faveMovieInput").val();
+        $("#faveMovieInput").val("")
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    }));
 })
