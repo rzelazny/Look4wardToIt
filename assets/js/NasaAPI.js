@@ -20,3 +20,7 @@ $.ajax({
   $(".image-text").prepend(spaceText);
 
 })
+// make onclick event 
+// be able to pass the day that the user has chosen
+// call API 
+// change the src url of the image
