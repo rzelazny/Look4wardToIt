@@ -1,18 +1,14 @@
 #month-view,
 #week-view,
-#daily-view {
+#daily-view,
+#settings-view-container {
     margin: 20px;
 }
 
-/* #test {
-    width: 14%;
-    height: 200px;
-} */
 
 textarea {
     width: 100%;
     height: 100%;
-
     background-color: transparent;
     border: transparent;
 }
@@ -46,7 +42,7 @@ td {
 
 /* #image{
     /* background-position: center; */
-} */
+/* } */ 
 
 /* The Modal (background) */
 .modal {
@@ -86,3 +82,21 @@ td {
     text-decoration: none;
     cursor: pointer;
   }
+
+#settings-view-container {
+    /* text-align: center; */
+}
+
+#sportsSetting {
+    border-radius: 5px;
+    background-color: #E2ECFE;
+    padding: 20px;
+    margin: 20px;
+}
+
+#moviesSetting {
+    border-radius: 5px;
+    background-color: #D4E3FF;
+    padding: 20px;
+    margin: 20px;
+}
