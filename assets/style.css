@@ -19,11 +19,6 @@ td {
     text-align: center;
 }
 
-/* Form is never displayed but needs to exist for email submission */
-#email-form {
-    display: none;
-}
-
 /* i commented this out bc it was making the cal look all weird and off center - bri */
 /* #month-view-card
 #monthCalendar {
