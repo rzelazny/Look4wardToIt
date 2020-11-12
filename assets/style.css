@@ -1,3 +1,13 @@
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+} 
+.dark-mode {
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke;
+}
+
 .container {
     margin: 20px auto;
 }
@@ -96,6 +106,7 @@ tr{
     border-radius: 5px;
     padding: 20px;
     margin: 20px;
+    color: black;
 }
 
 #userSetting {
@@ -116,4 +127,52 @@ tr{
 
 #moviesSetting {
     background-color: #b7d1ff;
+}
+
+/* //Dark Mode Attributes */
+.dark-mode #themeSetting {
+    background-color: rgba(21, 1, 201, 0.9);
+    color: whitesmoke;
+}
+.dark-mode #quoteSetting {
+    background-color: rgb(21, 1, 201, 0.850);
+    color: whitesmoke;
+}
+.dark-mode #sportsSetting {
+    background-color: rgb(21, 1, 201, 0.800);
+    color: whitesmoke;
+}
+.dark-mode #moviesSetting {
+    background-color: rgb(21, 1, 201, 0.750);
+    color: whitesmoke;
+}
+
+.dark-mode .btn {
+    background-color: rgb(156, 156, 156);
+}
+/* .dark-mode "cog button" {
+    background-color: hotpink;
+} */
+
+.dark-mode #month-view-card{
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke
+}
+.dark-mode #daily-view{
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke;
+}
+.dark-mode .input-event {
+    color: whitesmoke;
+}
+.dark-mode h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -1px; color: whitesmoke;
+}
+
+.dark-mode th, tr td {
+color: whitesmoke;
 }
