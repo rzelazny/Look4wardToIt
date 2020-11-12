@@ -18,44 +18,105 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <!-- navbar heading -->
         <nav class="navbar navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1">Look4wardToIt</span>
+            <span class="navbar-brand mb-0 h1" style="opacity:75%;">Look4ward2It</span>
         </nav>
         <!-- search for show times -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- google movie search -->
-            <form action="http://google.com/search" target="_blank">
-                <input name="q" placeholder="Find Showtimes">
-                <input type="submit" value="Go!">
-            </form>
-        </div>
-        <!-- list of buttons -->
-        <div class="navbar-nav ml-auto">
-            <!-- view dropdown menu -->
-            <div class="btn-group dropleft">
-                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View</button>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <div class="dropdown-item" id="month-button">Month View</div>
-                    <div class="dropdown-item" id="week-button" style="display:none;">Week View</div>
-                    <div class="dropdown-item" id="daily-button">Daily View</div>
-                </div>
+            <!-- google movie search -->
+            <div class="navbar-nav mr auto">
+                <form class="form-inline" action="http://google.com/search" target="_blank">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="searchShowtimes" placeholder="Find Showtimes">
+                        </div>
+                        <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark" style="opacity:75%;">Go</button>
+                    </div>
+                </form>
             </div>
-            <!-- setting button to open settings container -->
-            <div>
-                <button type="button" id="settings-button" class="btn btn-light" style="margin-left: 5px;"><i class="fas fa-cogs">
-                </i>
-                </button>
-            </div> 
+            <!-- list of buttons -->
+            <div class="navbar-nav ml-auto">
+                <!-- view dropdown menu -->
+                <div class="btn-group dropleft">
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="opacity:75%;">View</button>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-item" id="month-button">Month View</div>
+                        <div class="dropdown-item" id="week-button" style="display:none;">Week View</div>
+                        <div class="dropdown-item" id="daily-button">Daily View</div>
+                    </div>
+                </div>
+                <!-- setting button to open settings container -->
+                <div>
+                    <button type="button" id="settings-button" class="btn btn-light" style="margin-left: 5px; opacity:75%;"><i class="fas fa-cogs">
+                    </i>
+                    </button>
+                </div> 
+            </div>
         </div>
     </nav>
 
     <!-- User Settings -->
     <section id="settings-view-container" class="container" style="display:none;">
+        <!-- Theme -->
+        <form id="themeSetting">
+            <div class="row">
+                <div class="col-11">
+                    <h4>Themes</h4>
+                </div>
+                <div class="col-1">
+                    <button type="button" id="save-theme-button" class="btn btn-dark" style="opacity:75%;"><i class="far fa-save"></i>
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <div class="form-group" id="themeOptions">
+                <div>
+                    <label>Pick one theme from the list below:</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="nasa" value="NASA">
+                    <label class="form-check-label" for="nasa">NASA</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="option" value="Option" disabled>
+                    <label class="form-check-label" for="option">Option</label>
+                </div>
+            </div>
+        </form>
+        <!-- Quotes & Jokes -->
+        <form id="quoteSetting">
+            <div class="form-group" id="quoteOptions">
+                <div>
+                    <h4>Quotes & Jokes</h4>
+                    <hr>
+                    <label>Pick a quote/ joke type from the list below:</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="dadJoke" value="Dad Joke" disabled>
+                    <label class="form-check-label" for="dadJoke">Dad Joke</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="kanyeQuote" value="Kanye Quote">
+                    <label class="form-check-label" for="kanyeQuote">Kanye Quote</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="randoQuote" value="Random Quote" disabled>
+                    <label class="form-check-label" for="randoQuote">Random Quote</label>
+                </div>
+            </div>
+        </form>
         <!-- Sports -->
         <form id="sportsSetting">
+            <div class="row">
+                <div class="col-11">
+                    <h4>Sports</h4>
+                </div>
+                <div class="col-1">
+                    <button type="button" id="save-sports-button" class="btn btn-light" style="background-color: transparent;"><i class="far fa-save"></i>
+                    </button>
+                </div>
+            </div>
+            <hr>
             <div class="form-group" id="sportsYN">
                 <div>
-                    <h4>Sports</h4>
-                    <hr>
                     <label>Do you like sports?</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -111,7 +172,6 @@
                 <div class="form-inline">
                     <div class="form-group">
                         <input type="text" class="form-control" id="faveTeamInput" placeholder="Enter Team Name">
-                        </div>
                         <button id="faveTeamBtn" type="submit" value="Go" class="btn btn-primary">Go</button>
                     </div>
                 </div>
@@ -224,46 +284,6 @@
                         </div>
                         <button id="faveMovieBtn" type="submit" value="Go" class="btn btn-primary">Go</button>
                     </div>
-                </div>
-            </div>
-        </form>
-        <!-- Theme -->
-        <form id="themeSetting">
-            <div class="form-group" id="themeOptions">
-                <div>
-                    <h4>Themes</h4>
-                    <hr>
-                    <label>Pick one theme from the list below:</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="nasa" value="NASA">
-                    <label class="form-check-label" for="nasa">NASA</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="option" value="Option" disabled>
-                    <label class="form-check-label" for="option">Option</label>
-                </div>
-            </div>
-        </form>
-        <!-- Quotes & Jokes -->
-        <form id="quoteSetting">
-            <div class="form-group" id="quoteOptions">
-                <div>
-                    <h4>Quotes & Jokes</h4>
-                    <hr>
-                    <label>Pick a quote/ joke type from the list below:</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="dadJoke" value="Dad Joke" disabled>
-                    <label class="form-check-label" for="dadJoke">Dad Joke</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="kanyeQuote" value="Kanye Quote">
-                    <label class="form-check-label" for="kanyeQuote">Kanye Quote</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="randoQuote" value="Random Quote" disabled>
-                    <label class="form-check-label" for="randoQuote">Random Quote</label>
                 </div>
             </div>
         </form>
