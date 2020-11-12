@@ -1,6 +1,31 @@
 //variable for local storage/retrieval of events
 var events = [];
 var inputElement = [];
+var userPreferences = {
+    userName: "",
+    theme: "",
+    quote: "",
+    sports: {
+        likeSports: false,
+        favSports: [],
+        favTeam: ""
+    },
+    movies: {
+        likesMovies: false,
+        favGenres: [],
+        favMovie: ""
+    }
+}
+
+//load stored user preferences
+function loadUserPreferences(){
+    // Parsing the JSON string to an object
+    var storedPreferences = JSON.parse(localStorage.getItem("preferences"));
+    // If preferences were retrieved from localStorage, update the preferences object
+    if (storedPreferences !== null) {
+        userPreferences = storedPreferences;
+    }
+}
 
 //load saved events from local storage if there are any
 function loadExistingEvents() {
@@ -49,13 +74,15 @@ function storeInput (source, myElement, sysEvent, sysDate) {
     if (source === "user"){
         var newEvent = {
             event: myElement.value,
-            eventDay: myElement.attributes.date.value
+            eventDay: myElement.attributes.date.value,
+            reminderSent: false
         }
     }
     else if (source === "system"){
         var newEvent = {
             event: sysEvent,
-            eventDay: sysDate
+            eventDay: sysDate,
+            reminderSent: false
         }
     }
      //see if day already has an event saved
@@ -124,5 +151,6 @@ $(document).ready(function(){
     $("#year").on("click", loadExistingEvents);
 
     //load and display events the first time the page is loaded
+    loadUserPreferences();
     loadExistingEvents();
 })
