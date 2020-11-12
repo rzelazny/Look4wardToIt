@@ -100,4 +100,17 @@ td {
     padding: 20px;
     margin: 20px;
 }
-C2D8FF
+
+#themeSetting {
+    border-radius: 5px;
+    background-color: #C2D8FF;
+    padding: 20px;
+    margin: 20px;
+}
+
+#quoteSetting {
+    border-radius: 5px;
+    background-color: #B7D1FF;
+    padding: 20px;
+    margin: 20px;
+}
