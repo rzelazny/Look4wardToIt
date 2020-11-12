@@ -44,9 +44,18 @@ td {
     width: 960px;
 }
 
+<<<<<<< HEAD
 /* #image{
     /* background-position: center; */
 } */
+=======
+/* #image{ */
+
+/*     background-position: center;
+}; */
+    /* background-position: center; */
+/* } */
+>>>>>>> main
 
 /* The Modal (background) */
 .modal {
