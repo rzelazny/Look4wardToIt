@@ -3,6 +3,7 @@ window.onload = function() {
   //object stores the parameters used to populate email template
   var emailParams = {
     user_name: "",
+    user_email: "",
     upcoming_event: "",
     message: ""
   }
@@ -20,7 +21,7 @@ window.onload = function() {
   //function sends an email if there is an event tomorrow that hasn't had a reminder sent yet
   function eventReminder(){
     
-    emailParams.message = "This is a test message";
+    emailParams.message = "Remember, there are always things to look forward to! You have an event coming up: ";
     emailParams.user_name = "Ryan";
     emailParams.upcoming_event = "Pinewood Derby";
 
