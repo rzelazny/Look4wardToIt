@@ -15,9 +15,9 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-sm" id="nav-color" style="background-color: lightgray";>
+    <nav class="navbar navbar-expand-sm" id="nav-color" style="background-color: lightgray" ;>
         <!-- navbar heading -->
-        <nav class="navbar" id="nav-head-color" style="background-color: lightgray";>
+        <nav class="navbar" id="nav-head-color" style="background-color: lightgray" ;>
             <span class="navbar-brand mb-0 h1" style="opacity:100%; color: black;">Look4ward2It</span>
         </nav>
         <!-- search for show times -->
@@ -26,30 +26,34 @@
             <div class="navbar-nav mr auto">
                 <form class="form-inline" action="http://google.com/search" target="_blank">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="searchShowtimes" placeholder="Find Showtimes">
-                        </div>
-                        <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark" style="opacity:100%;">Go</button>
+                        <input type="text" class="form-control" id="searchShowtimes" name="q"
+                            placeholder="Find Showtimes">
                     </div>
-                </form>
+                    <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark"
+                        style="opacity:100%;">Go</button>
             </div>
-            <!-- list of buttons -->
-            <div class="navbar-nav ml-auto">
-                <!-- view dropdown menu -->
-                <div class="btn-group dropleft">
-                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="opacity:100%;">View</button>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <div class="dropdown-item" id="month-button">Month View</div>
-                        <div class="dropdown-item" id="week-button" style="display:none;">Week View</div>
-                        <div class="dropdown-item" id="daily-button">Daily View</div>
-                    </div>
+            </form>
+        </div>
+        <!-- list of buttons -->
+        <div class="navbar-nav ml-auto">
+            <!-- view dropdown menu -->
+            <div class="btn-group dropleft">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" style="opacity:100%;">View</button>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-item" id="month-button">Month View</div>
+                    <div class="dropdown-item" id="week-button" style="display:none;">Week View</div>
+                    <div class="dropdown-item" id="daily-button">Daily View</div>
                 </div>
-                <!-- setting button to open settings container -->
-                <div>
-                    <button type="button" id="settings-button" class="btn btn-light" style="margin-left: 5px; opacity:100%;"><i class="fas fa-cogs">
-                    </i>
-                    </button>
-                </div> 
             </div>
+            <!-- setting button to open settings container -->
+            <div>
+                <button type="button" id="settings-button" class="btn btn-light"
+                    style="margin-left: 5px; opacity:100%;"><i class="fas fa-cogs">
+                    </i>
+                </button>
+            </div>
+        </div>
         </div>
     </nav>
 
@@ -62,7 +66,8 @@
                     <h4>User Information</h4>
                 </div>
                 <div class="col-md-1">
-                    <button type="button" id="save-user-button" class="btn btn-dark" style="opacity:75%;"><i class="far fa-save"></i>
+                    <button type="button" id="save-user-button" class="btn btn-dark" style="opacity:100%;"><i
+                            class="far fa-save"></i>
                     </button>
                 </div>
             </div>
@@ -71,12 +76,14 @@
                 <div class="form-group col-md-6" id="userOptions">
                     <div class="form-group">
                         <label for="nameInput">User Name</label>
-                        <input type="user-name" class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter your name">
+                        <input type="user-name" class="form-control" id="nameInput" aria-describedby="nameHelp"
+                            placeholder="Enter your name">
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="emailInput">Email address</label>
-                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
+                        placeholder="Enter email">
                 </div>
             </div>
         </form>
@@ -97,7 +104,8 @@
                     <label>Pick one theme from the list below:</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="nasa" value="NASA" onclick="darkMode()">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="nasa" value="NASA"
+                        onclick="darkMode()">
                     <label class="form-check-label" for="nasa">NASA</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -113,7 +121,8 @@
                     <h4>Quotes & Jokes</h4>
                 </div>
                 <div class="col-1">
-                    <button type="submit" id="save-quotes-button" class="btn btn-dark" style="opacity:100%;" disabled><i class="far fa-save"></i>
+                    <button type="submit" id="save-quotes-button" class="btn btn-dark" style="opacity:100%;" disabled><i
+                            class="far fa-save"></i>
                     </button>
                 </div> -->
             </div>
@@ -131,7 +140,8 @@
                     <label class="form-check-label" for="dadJoke">Dad Joke</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="randoQuote" value="Random Quote">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="randoQuote"
+                        value="Random Quote">
                     <label class="form-check-label" for="randoQuote">Random Quote</label>
                 </div>
             </div>
@@ -143,9 +153,14 @@
                     <h4>Sports</h4>
                 </div>
                 <div class="col-1">
-
-                    <button type="submit" id="save-sports-button" class="btn btn-dark" style="opacity:100%;"><i class="far fa-save"></i>
-                    </button>
+                    <<<<<<< HEAD <button type="submit" id="save-sports-button" class="btn btn-dark"
+                        style="opacity:100%;"><i class="far fa-save"></i>
+                        =======
+                        <<<<<<< HEAD=======>>>>>>> 223f8aeb5d6ce74cfdd66c328d0199f6ba99ae31
+                            <button type="submit" id="save-sports-button" class="btn btn-dark" style="opacity:100%;"><i
+                                    class="far fa-save"></i>
+                                >>>>>>> main
+                            </button>
                 </div>
             </div>
             <hr>
@@ -171,7 +186,8 @@
                     <label class="form-check-label" for="baseball">Baseball</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="sportType" id="americanFootball" value="American Football">
+                    <input class="form-check-input" type="checkbox" name="sportType" id="americanFootball"
+                        value="American Football">
                     <label class="form-check-label" for="americanFootball">American Football</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -218,7 +234,8 @@
                     <h4>Movies</h4>
                 </div>
                 <div class="col-1">
-                    <button type="submit" id="save-movies-button" class="btn btn-dark" style="opacity:100%;"><i class="far fa-save"></i>
+                    <button type="submit" id="save-movies-button" class="btn btn-dark" style="opacity:100%;"><i
+                            class="far fa-save"></i>
                     </button>
                 </div>
             </div>
@@ -261,7 +278,8 @@
                     <label class="form-check-label" for="crime">Crime</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="genreType" id="documentary" value="Documentary">
+                    <input class="form-check-input" type="checkbox" name="genreType" id="documentary"
+                        value="Documentary">
                     <label class="form-check-label" for="documentary">Documentary</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -316,13 +334,13 @@
                     <input class="form-check-input" type="checkbox" name="genreType" id="western" value="Western">
                     <label class="form-check-label" for="western">Western</label>
                 </div>
-            <div class="form" id="faveMovie">
-                <div>
-                    <label>What is your favorite movie?</label>
-                </div>
-                <div class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="faveMovieInput" placeholder="Enter Movie Title">
+                <div class="form" id="faveMovie">
+                    <div>
+                        <label>What is your favorite movie?</label>
+                    </div>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="faveMovieInput" placeholder="Enter Movie Title">
                         </div>
                         <button id="faveMovieBtn" type="button" value="Go" class="btn btn-primary">Go</button>
                     </div>
@@ -344,7 +362,7 @@
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
             <table class="table table-bordered table-responsive-sm" id="monthCalendar">
                 <thead>
                     <tr>
@@ -474,7 +492,7 @@
 
         <script src="./assets/js/themes.js"></script>
         <script src="./assets/js/calAPI.js"></script>
-
+        <script src="./assets/js/themes.js"></script>
     </footer>
 
 </body>
