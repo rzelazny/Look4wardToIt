@@ -15,10 +15,10 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm" id="nav-color" style="background-color: lightgray";>
         <!-- navbar heading -->
-        <nav class="navbar navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1" style="opacity:75%;">Look4ward2It</span>
+        <nav class="navbar" id="nav-head-color" style="background-color: lightgray";>
+            <span class="navbar-brand mb-0 h1" style="opacity:100%; color: black;">Look4ward2It</span>
         </nav>
         <!-- search for show times -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,7 +28,7 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="searchShowtimes" placeholder="Find Showtimes">
                         </div>
-                        <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark" style="opacity:75%;">Go</button>
+                        <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark" style="opacity:100%;">Go</button>
                     </div>
                 </form>
             </div>
@@ -36,7 +36,7 @@
             <div class="navbar-nav ml-auto">
                 <!-- view dropdown menu -->
                 <div class="btn-group dropleft">
-                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="opacity:75%;">View</button>
+                    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="opacity:100%;">View</button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div class="dropdown-item" id="month-button">Month View</div>
                         <div class="dropdown-item" id="week-button" style="display:none;">Week View</div>
@@ -45,7 +45,7 @@
                 </div>
                 <!-- setting button to open settings container -->
                 <div>
-                    <button type="button" id="settings-button" class="btn btn-light" style="margin-left: 5px; opacity:75%;"><i class="fas fa-cogs">
+                    <button type="button" id="settings-button" class="btn btn-light" style="margin-left: 5px; opacity:100%;"><i class="fas fa-cogs">
                     </i>
                     </button>
                 </div> 
@@ -83,13 +83,13 @@
         <!-- Theme -->
         <form id="themeSetting">
             <div class="row">
-                <div class="col-11">
+                <div class="col-12">
                     <h4>Themes</h4>
                 </div>
                 <div class="col-1">
-                    <button type="submit" id="save-theme-button" class="btn btn-dark" style="opacity:75%;"><i class="far fa-save"></i>
+                    <button type="submit" id="save-theme-button" class="btn btn-dark"><i class="far fa-save"></i>
                     </button>
-                </div>
+                </div> -->
             </div>
             <hr>
             <div class="form-group" id="themeOptions">
@@ -97,7 +97,7 @@
                     <label>Pick one theme from the list below:</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="nasa" value="NASA">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="nasa" value="NASA" onclick="darkMode()">
                     <label class="form-check-label" for="nasa">NASA</label>
                 </div>
                 <div class="form-check form-check-inline">
@@ -109,13 +109,13 @@
         <!-- Quotes & Jokes -->
         <form id="quoteSetting">
             <div class="row">
-                <div class="col-11">
+                <div class="col-12">
                     <h4>Quotes & Jokes</h4>
                 </div>
                 <div class="col-1">
-                    <button type="submit" id="save-quotes-button" class="btn btn-dark" style="opacity:75%;" disabled><i class="far fa-save"></i>
+                    <button type="submit" id="save-quotes-button" class="btn btn-dark" style="opacity:100%;" disabled><i class="far fa-save"></i>
                     </button>
-                </div>
+                </div> -->
             </div>
             <hr>
             <div class="form-group" id="quoteOptions">
@@ -143,7 +143,8 @@
                     <h4>Sports</h4>
                 </div>
                 <div class="col-1">
-                    <button type="submit" id="save-sports-button" class="btn btn-dark" style="opacity:75%;"><i class="far fa-save"></i>
+
+                    <button type="submit" id="save-sports-button" class="btn btn-dark" style="opacity:100%;"><i class="far fa-save"></i>
                     </button>
                 </div>
             </div>
@@ -205,7 +206,7 @@
                 <div class="form-inline">
                     <div class="form-group">
                         <input type="text" class="form-control" id="faveTeamInput" placeholder="Enter Team Name">
-                        <button id="faveTeamBtn" type="submit" value="Go" class="btn btn-primary">Go</button>
+                        <button id="faveTeamBtn" type="button" value="Go" class="btn btn-primary">Go</button>
                     </div>
                 </div>
             </div>
@@ -217,7 +218,7 @@
                     <h4>Movies</h4>
                 </div>
                 <div class="col-1">
-                    <button type="submit" id="save-movies-button" class="btn btn-dark" style="opacity:75%;"><i class="far fa-save"></i>
+                    <button type="submit" id="save-movies-button" class="btn btn-dark" style="opacity:100%;"><i class="far fa-save"></i>
                     </button>
                 </div>
             </div>
@@ -323,7 +324,7 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="faveMovieInput" placeholder="Enter Movie Title">
                         </div>
-                        <button id="faveMovieBtn" type="submit" value="Go" class="btn btn-primary">Go</button>
+                        <button id="faveMovieBtn" type="button" value="Go" class="btn btn-primary">Go</button>
                     </div>
                 </div>
             </div>
@@ -463,12 +464,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
         <!-- these are our attached js files -->
+        <script src="assets/js/config.js"></script>
         <script src="./assets/js/localStorage.js"></script>
         <script src="./assets/js/email.js"></script>
         <script src="./assets/js/calendar.js"></script>
         <script src="./assets/js/NasaAPI.js"></script>
         <script src="./assets/js/userFavoritesAPIs.js"></script>
         <script src="./assets/js/quotes&jokesAPI.js"></script>
+
+        <script src="./assets/js/themes.js"></script>
+        <script src="./assets/js/calAPI.js"></script>
+
     </footer>
 
 </body>
