@@ -1,18 +1,10 @@
-#month-view,
-#week-view,
-#daily-view {
-    margin: 20px;
+.container {
+    margin: 20px auto;
 }
-
-/* #test {
-    width: 14%;
-    height: 200px;
-} */
 
 textarea {
     width: 100%;
     height: 100%;
-
     background-color: transparent;
     border: transparent;
 }
@@ -21,68 +13,87 @@ textarea {
     height: 350px;
 }
 
-th, 
-tr, 
+th,
+tr,
 td {
     text-align: center;
 }
 
 /* Form is never displayed but needs to exist for email submission */
-#email-form{
-    display: none;  
+#email-form {
+    display: none;
 }
 
-#month-view-container{
-    position: center;
-}
-
-#month-view-card{
+/* i commented this out bc it was making the cal look all weird and off center - bri */
+/* #month-view-card
+#monthCalendar {
     width: 960px;
-}
-
-#monthCalendar{
-    width: 960px;
-}
+} */
 
 /* #image{
-    /* background-position: center; */
-} */
+    background-position: center;
+}  */
 
 /* The Modal (background) */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+#themeSetting,
+#quoteSetting,
+#sportsSetting,
+#moviesSetting {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#themeSetting {
+    background-color: #e2ecfe;
+}
+
+#quoteSetting {
+    background-color: #d4e3ff;
+}
+
+#sportsSetting {
+    background-color: #c2d8ff;
+}
+
+#moviesSetting {
+    background-color: #b7d1ff;
+}
