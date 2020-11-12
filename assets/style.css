@@ -27,6 +27,7 @@ th,
 tr,
 td {
     text-align: center;
+    color: black;
 }
 
 /* Form is never displayed but needs to exist for email submission */
@@ -178,6 +179,8 @@ tr{
     letter-spacing: -1px; color: whitesmoke;
 }
 
-.dark-mode th, tr td {
+.dark-mode th, 
+.dark-mode tr,
+.dark-mode td {
 color: whitesmoke;
 }
