@@ -6,7 +6,7 @@ $.ajax({
   url: nasaUrl,
   method: "GET"
 }).then(function(data){
-  var imageUrl = data.hdurl;
+  var imageUrl = data.url;
   var spaceImg = $("<img>");
   
   spaceImg.attr("src", imageUrl);
