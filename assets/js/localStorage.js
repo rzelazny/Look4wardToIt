@@ -1,6 +1,31 @@
 //variable for local storage/retrieval of events
 var events = [];
 var inputElement = [];
+var userPreferences = {
+    userName: "",
+    theme: "",
+    quote: "",
+    sports: {
+        likeSports: false,
+        favSports: [],
+        favTeam: ""
+    },
+    movies: {
+        likesMovies: false,
+        favGenres: [],
+        favMovie: ""
+    }
+}
+
+//load stored user preferences
+function loadUserPreferences(){
+    // Parsing the JSON string to an object
+    var storedPreferences = JSON.parse(localStorage.getItem("preferences"));
+    // If preferences were retrieved from localStorage, update the preferences object
+    if (storedPreferences !== null) {
+        userPreferences = storedPreferences;
+    }
+}
 
 //load saved events from local storage if there are any
 function loadExistingEvents() {
@@ -126,5 +151,6 @@ $(document).ready(function(){
     $("#year").on("click", loadExistingEvents);
 
     //load and display events the first time the page is loaded
+    loadUserPreferences();
     loadExistingEvents();
 })
