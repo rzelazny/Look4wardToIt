@@ -3,6 +3,7 @@ var events = [];
 var inputElement = [];
 var userPreferences = {
     userName: "",
+    userEmail: "",
     theme: "",
     quote: "",
     sports: {
@@ -24,6 +25,10 @@ function loadUserPreferences(){
     // If preferences were retrieved from localStorage, update the preferences object
     if (storedPreferences !== null) {
         userPreferences = storedPreferences;
+    }
+    else{
+        //if there are no stored preferences display the user selection section first
+        $("#settings-view-container").css("display", "block");
     }
 }
 
@@ -128,6 +133,7 @@ function addInputEvents(inputElement) {
     })
 }
 
+
 //function to find an attribute with a given value
 function findAttribute(array, attr, value) {
     for(var i = 0; i < array.length; i++) {
@@ -153,4 +159,10 @@ $(document).ready(function(){
     //load and display events the first time the page is loaded
     loadUserPreferences();
     loadExistingEvents();
+
+    $("#save-user-button").on("click", (function(){
+        userPreferences.userName = $("#nameInput").val();
+        userPreferences.userEmail = $("#emailInput").val();
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    }));
 })
