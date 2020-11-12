@@ -7,16 +7,16 @@ $.ajax({
   method: "GET"
 }).then(function(data){
   var imageUrl = data.url;
-<<<<<<< HEAD
-  var imageText = data.explanation
-=======
->>>>>>> main
+  var imageText = data.explanation;
   var spaceImg = $("<img>");
   var spaceText = $("<p>");
 
   spaceImg.attr("src", imageUrl);
   spaceImg.attr("alt", "space Image")
+  spaceText.text(imageText)
+  spaceText.attr("alt", "space text")
 
   $(".image").prepend(spaceImg); 
+  $(".image-text").prepend(spaceText);
 
 })
