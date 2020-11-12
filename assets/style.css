@@ -71,7 +71,7 @@ tr{
 }
 
 .image-text {
-    color: white;
+    color: black;
     font-size: 20px;
     font-weight: bold;
     position: absolute;
@@ -131,7 +131,7 @@ tr{
 
 /* //Dark Mode Attributes */
 .dark-mode #userSetting {
-    background-color: rgba(21, 1, 201, 0.95);
+    background-color:  rgba(21, 1, 201, 0.95);;
     color: whitesmoke;
 }
 
@@ -178,6 +178,12 @@ tr{
     letter-spacing: -1px; color: whitesmoke;
 }
 
-.dark-mode th, tr td {
-color: whitesmoke;
+.dark-mode th {
+    color: whitesmoke;
+}
+.dark-mode tr {
+    color: whitesmoke;
+}
+.dark-mode td {
+    color: whitesmoke;
 }
