@@ -19,12 +19,10 @@ td {
     text-align: center;
 }
 
-/* i commented this out bc it was making the cal look all weird and off center - bri */
-/* #month-view-card
-#monthCalendar {
-    width: 960px;
-} */
-
+/* Form is never displayed but needs to exist for email submission */
+#email-form {
+    display: none;
+}
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
@@ -32,45 +30,47 @@ h1{
     line-height: 40px;
     letter-spacing: -1px; color: #444;
 }
-p, tr{
+
+tr{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
 }
 
-#image{
-    width: 2000px;
-    height: auto;
-    object-fit: cover;
+.container-image {
+    position: relative;
+    widows: 100%;
 }
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.image{
+    text-align: center;
+    margin: 0, auto;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 65px;
+    right: 0;
+    height: 100%;
+    width: 86%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+.container-image:hover .overlay{
+    opacity: 0.5;
 }
 
-/* The Modal (background) */
-/* .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-  } */
-  
-  /* Modal Content */
-  /* .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+.image-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 /* The Close Button */
