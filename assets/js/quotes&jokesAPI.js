@@ -3,6 +3,7 @@ var saveQuoteBtn = document.querySelector("#save-quotes-button")
 // Kanye Quote //
 
 var kanyeRadio = document.querySelector("#kanyeQuote");
+
 function displayKanye() {
     var kanyeURL = "https://api.kanye.rest"
     $.ajax({
@@ -55,15 +56,10 @@ function displayRandoQuote() {
     })
 }
 
+///////////////////////////////////////////////////////////////////
+// statements to display quotes //////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
-// if statements to display quote //
-
-if (kanyeRadio === true) {
-    saveQuoteBtn.addEventListener("click", displayKanye());
-}
-else if (dadJokeRadio === true) {
-    saveQuoteBtn.addEventListener("click", displayDadJoke());
-}
-else if (randoRadio === true) {
-    saveQuoteBtn.addEventListener("click", displayRandoQuote());
-}
+kanyeRadio.addEventListener("click", displayKanye);
+dadJokeRadio.addEventListener("click", displayDadJoke);
+randoRadio.addEventListener("click", displayRandoQuote)
