@@ -23,13 +23,6 @@ td {
 #email-form {
     display: none;
 }
-
-/* i commented this out bc it was making the cal look all weird and off center - bri */
-/* #month-view-card
-#monthCalendar {
-    width: 960px;
-} */
-
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
@@ -37,16 +30,48 @@ h1{
     line-height: 40px;
     letter-spacing: -1px; color: #444;
 }
-p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: italic;
-}
+
 tr{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
 }
-/* #image{
-    /* background-position: center; */
+
+.container-image {
+    position: relative;
+    widows: 100%;
+}
+.image{
+    text-align: center;
+    margin: 0, auto;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 65px;
+    right: 0;
+    height: 100%;
+    width: 86%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+.container-image:hover .overlay{
+    opacity: 0.5;
+}
+
+.image-text {
+    color: yellow;
+    font-size: 80px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 /* The Modal (background) */
 /* .modal {
