@@ -13,7 +13,7 @@ $.ajax({
         var holidayM = data.response.holidays[i].date.datetime.month;
         var holidayY = data.response.holidays[i].date.datetime.year;
         var holidayDate = holidayDom + "-" + holidayM + "-" + holidayY;
-        console.log("Name: " + holidayName + " Date: " + holidayDate);
+        // console.log("Name: " + holidayName + " Date: " + holidayDate);
         i++;
     }
 })
