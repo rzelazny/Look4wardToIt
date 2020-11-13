@@ -15,10 +15,10 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-sm" id="nav-color" style="background-color: #f7f7f7;">
+    <nav class="navbar navbar-expand-sm">
         <!-- navbar heading -->
-        <nav class="navbar" id="nav-head-color" style="background-color: #f7f7f7;">
-            <span class="navbar-brand mb-0 h1" style="opacity: 100%; color: black;">Look4ward2It</span>
+        <nav class="navbar">
+            <span class="navbar-brand mb-0 h1" id="navTitle">Look4ward2It</span>
         </nav>
         <!-- search for show times -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -29,8 +29,7 @@
                         <input type="text" class="form-control" id="searchShowtimes" name="q"
                             placeholder="Find Showtimes">
                     </div>
-                    <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark"
-                        style="opacity:100%;">Go</button>
+                    <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark">Go</button>
             </div>
             </form>
         </div>
@@ -38,8 +37,8 @@
         <div class="navbar-nav ml-auto">
             <!-- view dropdown menu -->
             <div class="btn-group dropleft">
-                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false" style="opacity:100%;">View</button>
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" id="viewBtn">View</button>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <div class="dropdown-item" id="month-button">Month View</div>
                     <div class="dropdown-item" id="week-button" style="display:none;">Week View</div>
@@ -48,8 +47,8 @@
             </div>
             <!-- setting button to open settings container -->
             <div>
-                <button type="button" id="settings-button" class="btn btn-light"
-                    style="margin-left: 5px; opacity:100%;"><i class="fas fa-cogs">
+                <button type="button" id="settings-button" class="btn"
+                    style="margin-left: 5px;"><i id="settingsIcon" class="fas fa-cogs">
                     </i>
                 </button>
             </div>
@@ -66,8 +65,8 @@
                     <h4>User Information</h4>
                 </div>
                 <div class="col-md-1">
-                    <button type="button" id="save-user-button" class="btn btn-dark" style="opacity:100%;"><i
-                            class="far fa-save"></i>
+                    <button type="button" id="save-user-button" class="btn"><i
+                            class="far fa-save" id="userIcon"></i>
                     </button>
                 </div>
             </div>
@@ -94,7 +93,7 @@
                     <h4>Themes</h4>
                 </div>
                 <div class="col-md-1">
-                    <button type="submit" id="save-theme-button" class="btn btn-dark"><i class="far fa-save"></i>
+                    <button type="submit" id="save-theme-button" class="btn"><i class="far fa-save"></i>
                     </button>
                 </div>
             </div>
@@ -121,7 +120,7 @@
                     <h4>Quotes & Jokes</h4>
                 </div>
                 <div class="col-md-1">
-                    <button type="submit" id="save-quotes-button" class="btn btn-dark" style="opacity:100%;"><i
+                    <button type="submit" id="save-quotes-button" class="btn";"><i
                             class="far fa-save"></i>
                     </button>
                 </div>
@@ -153,8 +152,7 @@
                     <h4>Sports</h4>
                 </div>
                 <div class="col-md-1">
-                    <button type="submit" id="save-sports-button" class="btn btn-dark"
-                        style="opacity:100%;"><i class="far fa-save"></i>
+                    <button type="submit" id="save-sports-button" class="btn"><i class="far fa-save"></i>
                     </button>
                 </div>
             </div>
@@ -229,7 +227,7 @@
                     <h4>Movies</h4>
                 </div>
                 <div class="col-1">
-                    <button type="submit" id="save-movies-button" class="btn btn-dark" style="opacity:100%;"><i
+                    <button type="submit" id="save-movies-button" class="btn"><i
                             class="far fa-save"></i>
                     </button>
                 </div>
