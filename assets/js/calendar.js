@@ -234,7 +234,6 @@
         }
     }
     var todayMonth = document.querySelector(".today-month");
-    console.log(todayMonth);
     todayMonth.addEventListener("click", showDailyView);
 
     ///////////////////////////////////////////////////////////////////////
