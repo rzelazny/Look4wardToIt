@@ -4,6 +4,7 @@ var inputElement = [];
 var userPreferences = {
     userName: "",
     userEmail: "",
+    newUser: true,
     theme: "",
     quote: "",
     sports: {
