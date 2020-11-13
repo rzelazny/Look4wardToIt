@@ -171,6 +171,7 @@
             //     });
             // });
         }
+    // var dailyPhoto = document.querySelector("#dailyPhoto")
     }
 
     function daysInMonth(iMonth, iYear) {
