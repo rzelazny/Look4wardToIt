@@ -3,10 +3,6 @@ body {
     background-color: white;
     color: black;
 } 
-.dark-mode {
-    background-color: rgb(29, 29, 29);
-    color: whitesmoke;
-}
 
 .container {
     margin: 20px auto;
@@ -130,6 +126,11 @@ tr{
     background-color: #b7d1ff;
 }
 
+.dark-mode {
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke;
+}
+
 /* //Dark Mode Attributes */
 .dark-mode #userSetting {
     background-color: rgba(21, 1, 201, 0.95);
@@ -184,3 +185,14 @@ tr{
 .dark-mode td {
 color: whitesmoke;
 }
+
+/* .dark-mode #nav-color{
+    background-color: #292b2c;
+    color:white;
+}
+
+
+.dark-mode #nav-head-color {
+    background-color: #292b2c;
+    color:white;
+} */
