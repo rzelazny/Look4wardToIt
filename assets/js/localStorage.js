@@ -266,3 +266,10 @@ $(document).ready(function(){
 
     
 })
+
+
+//////////////////trying to get the username & email to show in input box on reload////////////////////
+// $(document).ready(function(){
+//     var displayUserInfo = JSON.parse(localStorage.getItem('preferences'));
+//     console.log(displayUserInfo);
+// })

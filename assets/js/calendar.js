@@ -156,7 +156,7 @@
                     cell.appendChild(input);
 
                     if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                        cell.classList.add("bg-warning")
+                        cell.classList.add("today-month");
                     }
                     date++;
                 }
@@ -182,20 +182,6 @@
     ///////////////////////////////////////////////////////////////////////
     // Getting the containers to display when button for section clicked //
     ///////////////////////////////////////////////////////////////////////
-    var kanyeRadio = document.querySelector("#kanyeQuote"); 
-
-    // function noCustomization() {
-    //     if (kanyeRadio.addEventListener("click"), function() {
-    //         console.log("i can see");
-    //     }) {
-    //         console.log("i can see 2");
-    //     }
-    //     else {
-    //         console.log("not clicked")
-    //     }
-    // }
-
-    // noCustomization();
 
     function displaySettings() {
         if (settingsContainer.style.display === "none") {
@@ -243,8 +229,13 @@
             weekContainer.style.display = "none";
             dailyContainer.style.display = "block";
         }
+        else if (dailyContainer.style.display === "none") {
+            dailyContainer.style.display = "block";
+        }
     }
-
+    var todayMonth = document.querySelector(".today-month");
+    console.log(todayMonth);
+    todayMonth.addEventListener("click", showDailyView);
 
     ///////////////////////////////////////////////////////////////////////
     // Event Listeners //////////////////////////////////////////////////
