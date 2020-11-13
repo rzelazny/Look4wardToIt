@@ -147,14 +147,10 @@ function findAttribute(array, attr, value) {
 $(document).ready(function(){
 
     //load and display events when view changes
-    $("#previousMonth").on("click", loadExistingEvents);
-    $("#nextMonth").on("click", loadExistingEvents);
-    $("#month-button").on("click", loadExistingEvents);
-    $("#daily-button").on("click", loadExistingEvents);
-    $("#previousDate").on("click", loadExistingEvents);
-    $("#nextDate").on("click", loadExistingEvents);
-    $("#month").on("click", loadExistingEvents);
-    $("#year").on("click", loadExistingEvents);
+    $("#previousMonth, #nextMonth").on("click", loadExistingEvents);
+    $("#month-button, #daily-button").on("click", loadExistingEvents);
+    $("#previousDate, #nextDate").on("click", loadExistingEvents);
+    $("#month, #year").on("click", loadExistingEvents);
 
     //load and display events the first time the page is loaded
     loadUserPreferences();
@@ -168,56 +164,6 @@ $(document).ready(function(){
         $("#emailInput").val("");
         localStorage.setItem("preferences", JSON.stringify(userPreferences));
     }));
-    //save theme choice
-    $("input[id=nasa]:radio").click(function (){
-        userPreferences.theme = $("#nasa").val();
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    });
-    //save quote choice
-    $("input[id=kanyeQuote]:radio").click(function (){
-        userPreferences.quote = $("#kanyeQuote").val();
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    })
-    $("input[id=dadJoke]:radio").click(function (){
-        userPreferences.quote = $("#dadJoke").val();
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    })
-    $("input[id=randoQuote]:radio").click(function (){
-        userPreferences.quote = $("#randoQuote").val();
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    })
-
-    //save sports toggle
-    $("input[id=sportsY]:radio").click(function (){
-        userPreferences.sports.likeSports = true;
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    })
-    $("input[id=sportsN]:radio").click(function (){
-        userPreferences.sports.likeSports = false;
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    })
-
-    //save movie toggle
-    $("input[id=moviesY]:radio").click(function (){
-        userPreferences.movies.likesMovies = true;
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    })
-    $("input[id=moviesN]:radio").click(function (){
-        userPreferences.movies.likesMovies = false;
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    })
-
-    $(".form-check-input").change(function (){
-        switch(this.name){
-            case "sportType":
-                userPreferences.sports.favSports.push(this.value);
-            break;
-            case "genreType":
-                userPreferences.movies.favGenres.push(this.value);
-            break;
-        }
-        localStorage.setItem("preferences", JSON.stringify(userPreferences));
-    })
 
     //save favorite sports team
     $("#save-sports-button").on("click", (function(){
@@ -226,10 +172,53 @@ $(document).ready(function(){
         localStorage.setItem("preferences", JSON.stringify(userPreferences));
     }));
 
-    //save movie choices
+    //save favorite movie choice
     $("#save-movies-button").on("click", (function(){
         userPreferences.movies.favMovie = $("#faveMovieInput").val();
         $("#faveMovieInput").val("")
         localStorage.setItem("preferences", JSON.stringify(userPreferences));
     }));
+
+    //toggles checkmark and radio button data in local storage
+    $(".form-check-input").change(function (){
+        switch(this.name){
+            case "optionRadio": //handles radio toggle buttons
+                switch(($(this).closest(".form-group").attr("id"))){
+                    case "themeOptions" :
+                        userPreferences.theme = $(this).val();
+                    break;
+                    case "quoteOptions":
+                        userPreferences.quote = $(this).val();
+                    break;
+                    case "sportsYN":
+                        userPreferences.sports.likeSports = $(this).val();
+                    break;
+                    case "moviesYN":
+                        userPreferences.movies.likesMovies = $(this).val();
+                    break;
+                }
+                break;
+            case "sportType": //handles sports category checkboxes
+                //if the data exists already delete it
+                if(userPreferences.sports.favSports.includes(this.value)){
+                    userPreferences.sports.favSports.splice(userPreferences.sports.favSports.indexOf(this.value), 1)
+                }
+                else{ //otherwise add it
+                    userPreferences.sports.favSports.push(this.value);
+                }
+                break;
+            case "genreType": //handles movie genre checkboxes
+                //if the data exists already delete it
+                if(userPreferences.movies.favGenres.includes(this.value)){
+                    userPreferences.movies.favGenres.splice(userPreferences.movies.favGenres.indexOf(this.value), 1)
+                }
+                else{ //otherwise add it
+                    userPreferences.movies.favGenres.push(this.value);
+                }
+            break;
+        }
+        localStorage.setItem("preferences", JSON.stringify(userPreferences));
+    })
+
+    
 })
