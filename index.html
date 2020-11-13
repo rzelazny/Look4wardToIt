@@ -23,7 +23,7 @@
         <!-- search for show times -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- google movie search -->
-            <div class="navbar-nav mr auto">
+            <div class="navbar-nav mr auto" id="movieSearchBar" style="display:none;">
                 <form class="form-inline" action="http://google.com/search" target="_blank">
                     <div class="form-group">
                         <input type="text" class="form-control" id="searchShowtimes" name="q"
@@ -31,7 +31,6 @@
                     </div>
                     <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark">Go</button>
             </div>
-            </form>
         </div>
         <!-- list of buttons -->
         <div class="navbar-nav ml-auto">
@@ -55,6 +54,10 @@
         </div>
         </div>
     </nav>
+    <!-- New User explaination panel -->
+    <section class="container" id="newUser" style="display:none;">
+        <p>This is a test</p>
+    </section>
 
     <!-- User Settings -->
     <section id="settings-view-container" class="container" style="display:none;">
