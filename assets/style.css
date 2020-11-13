@@ -116,6 +116,7 @@ tr{
     cursor: pointer;
 }
 
+#newUser,
 #userSetting,
 #themeSetting,
 #quoteSetting,
@@ -126,7 +127,9 @@ tr{
     margin: 20px;
     color: black;
 }
-
+#newUser{
+    background-color: #b1c9ff;
+}
 #userSetting {
     background-color: #eef3ff;
 }
