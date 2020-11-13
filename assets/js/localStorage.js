@@ -1,4 +1,4 @@
-//variable for local storage/retrieval of events
+//variables for local storage/retrieval of events and user preferences
 var events = [];
 var inputElement = [];
 var userPreferences = {
@@ -25,6 +25,13 @@ function loadUserPreferences(){
     // If preferences were retrieved from localStorage, update the preferences object
     if (storedPreferences !== null) {
         userPreferences = storedPreferences;
+
+        //set toggles and checkmarks to match saved preferences
+        var usertheme = userPreferences.theme
+        $("input[type='radio'][value='NASA']")
+        
+        $("#option").prop("checked", true);
+        
     }
     else{
         //if there are no stored preferences display the user selection section first
