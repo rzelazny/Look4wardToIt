@@ -23,6 +23,13 @@
     var nextDateButton = document.querySelector("#nextDate");
     var todaysDateBtn = document.querySelector("#todaysDate");
 
+    var sportsYN = document.querySelector("#previousDate");
+    var moviesYN = document.querySelector("#previousDate");
+
+    //new user experience buttons
+    var nuPickActivites = document.querySelectorAll(".newUserExperience");
+    console.log(nuPickActivites);
+
     var today = new Date();
 
     var currentDay = today.getDay();
@@ -233,6 +240,67 @@
             dailyContainer.style.display = "block";
         }
     }
+    //function moves the user through setting up their initial preferences
+    function nuExperience(myObject, newUser){
+        //only make changes for new users
+        if(newUser === true){
+            //show the entire settings panel, but hide the individual pieces so they can be shown piecemeal
+            $("#settings-view-container").show();
+            $("#userSetting").hide();
+            $("#newUser").hide();
+            $("#themeSetting").hide();
+            $("#quoteSetting").hide();
+            $("#sportsYN").hide();
+            $("#faveSports").hide();
+            $("#faveTeam").hide();
+            $("#moviesSetting").hide();
+            console.log(myObject.id)
+            //show the next section depending on what the user clicked
+            switch(myObject.id){
+                case "newUserPickActivites": //this is the first button
+                    $("#sportsYN").show();
+                    break;
+                case "sportsY": //if they choose yes to sports let them pick a team
+                    $("#sportsYN").show();
+                    $("#faveTeam").show();
+                    break;
+                case "faveTeamBtn":
+                    $("#sportsYN").show();
+                    $("#faveTeam").show();
+                    $("#nuSportsMoveOn").show();
+                    break;
+                case "sportsN": //if they choose no to sports move on to the movie section
+                    $("#sportsSetting").hide();
+                    $("#moviesSetting").show();
+                    $("#faveGenres").hide();
+                    $("#faveMovie").hide();
+                    break;
+                case "moviesY": //if they choose yes to movies let them pick a favorite movie
+                    $("#movieSearchBar").show();
+                    $("#newUserThemesNext").show();
+                    $("#movieBarBlurb").show();
+                    break;
+                case "nuShowThemes": //Show them that they can change themes
+                    $("#newUserThemesNext").hide();
+                    $("#sportsSetting").hide();
+                    $("#themeSetting").show();
+                    break;
+                case "nuShowThemesBtn": //Show them that they can change themes
+                    $("#newUserThemesNext").hide();
+                    $("#sportsSetting").hide();
+                    $("#themeSetting").show();
+                    break;
+                case "default": //once they're choosing themes they can toggle between the choices
+                    $("#themeSetting").show();
+                    $("#nu")
+                    break;
+                case "nasa": //once they're choosing themes they can toggle between the choices
+                    $("#themeSetting").show();
+                    break;
+            }
+        }
+    }
+
     var todayMonth = document.querySelector(".today-month");
     console.log(todayMonth);
     todayMonth.addEventListener("click", showDailyView);
@@ -258,3 +326,9 @@
     selectMonth.addEventListener("change", jump);
 
     settingsButton.addEventListener("click", displaySettings);
+
+    //new user experience event listeners
+    for(i=0; i < nuPickActivites.length; i++)
+        nuPickActivites[i].addEventListener("click", function(){
+        nuExperience(this, userPreferences.newUser);
+    });

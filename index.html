@@ -56,9 +56,10 @@
         </div>
     </nav>
     <!-- New User explaination panel -->
-    <section class="container" id="newUser" style="display:none;">
+    <section class="nuContainer" id="newUser" style="display:none;">
         <header>
             <h2 style="text-align: center;">Welcome to the Look4ward2It Calendar App</h2>
+            <hr>
         </header>
         <main>
             <br>
@@ -66,7 +67,22 @@
                 events. It's always good to have something to look forward to!</p>
             <p>To help us with that, we'll need some topics you're interested in.</p>
             <br>
-            <button class="btn btn-primary" id="newUserOkay">Pick Some Activities</button>
+            <button class="btn btn-primary newUserExperience" id="newUserPickActivites">Pick Some Activities</button>
+        </main>
+    </section>
+    <section class="nuContainer" id="newUserThemesNext" style="display:none;">
+        <header>
+            <h3 style="text-align: center;">User Set up</h3>
+            <hr>
+        </header>
+        <main>
+            <br>
+            <div id="movieBarBlurb"style="display:none;">
+                <p>We've added a movie Search Bar to your navigation bar. Find some local showings!</p>
+            </div>
+            <p>There are other settings we can change as well</p>
+            <br>
+            <button class="btn btn-primary newUserExperience" id="nuShowThemes">Choose a Theme</button>
         </main>
     </section>
 
@@ -117,11 +133,11 @@
                     <label>Pick one theme from the list below:</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="default" value="Default">
+                    <input class="form-check-input newUserExperience" type="radio" name="optionRadio" id="default" value="Default">
                     <label class="form-check-label" for="default">Default</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="nasa" value="NASA">
+                    <input class="form-check-input newUserExperience" type="radio" name="optionRadio" id="nasa" value="NASA">
                     <label class="form-check-label" for="nasa">NASA</label>
                 </div>
             </div>
@@ -175,11 +191,11 @@
                     <label>Do you like sports?</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="sportsY" value=true>
+                    <input class="form-check-input newUserExperience" type="radio" name="optionRadio" id="sportsY" value=true>
                     <label class="form-check-label" for="sportsY">Yes</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="sportsN" value=false>
+                    <input class="form-check-input newUserExperience" type="radio" name="optionRadio" id="sportsN" value=false>
                     <label class="form-check-label" for="sportsN">No</label>
                 </div>
             </div>
@@ -228,13 +244,15 @@
                 <div class="form-inline">
                     <div class="form-group">
                         <input type="text" class="form-control" id="faveTeamInput" placeholder="Enter Team Name">
-                        <button id="faveTeamBtn" type="button" value="Go" class="btn btn-primary">Go</button>
+                        <button id="faveTeamBtn" type="button" value="Go" class="btn btn-primary newUserExperience">Go</button>
                     </div>
                 </div>
+                    <div id="nuSportsMoveOn" style="display:none;">
+                        <button id="nuShowThemesBtn" type="button" value="Go" class="btn btn-primary newUserExperience">Ready to Move on?</button>
+                    </div>
             </div>
-            <!-- display form when user input results in multiple possible teams -->
+            <!-- display results of team event search -->
             <div class="form" id="teamsFeedback" style="display:none;"> 
-                <div id="tooManyTeams"><br></div>
             </div>
         </form>
         <!-- Movies -->
@@ -255,11 +273,11 @@
                     <label>Do you like movies?</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="moviesY" value=true>
+                    <input class="form-check-input newUserExperience" type="radio" name="optionRadio" id="moviesY" value=true>
                     <label class="form-check-label" for="moviesY">Yes</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="moviesN" value=false>
+                    <input class="form-check-input newUserExperience" type="radio" name="optionRadio" id="moviesN" value=false>
                     <label class="form-check-label" for="moviesN">No</label>
                 </div>
             </div>
@@ -344,16 +362,16 @@
                     <input class="form-check-input" type="checkbox" name="genreType" id="western" value="Western">
                     <label class="form-check-label" for="western">Western</label>
                 </div>
-                <div class="form" id="faveMovie">
-                    <div>
-                        <label>What is your favorite movie?</label>
+            </div>
+            <div class="form" id="faveMovie">
+                <div>
+                    <label>What is your favorite movie?</label>
+                </div>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="faveMovieInput" placeholder="Enter Movie Title">
                     </div>
-                    <div class="form-inline">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="faveMovieInput" placeholder="Enter Movie Title">
-                        </div>
-                        <button id="faveMovieBtn" type="button" value="Go" class="btn btn-primary">Go</button>
-                    </div>
+                    <button id="faveMovieBtn newUserExperience" type="button" value="Go" class="btn btn-primary">Go</button>
                 </div>
             </div>
         </form>

@@ -116,7 +116,7 @@ tr{
     cursor: pointer;
 }
 
-#newUser,
+.nuContainer,
 #userSetting,
 #themeSetting,
 #quoteSetting,
@@ -127,7 +127,7 @@ tr{
     margin: 20px;
     color: black;
 }
-#newUser{
+.nuContainer{
     background-color: #b1c9ff;
 }
 #userSetting {
