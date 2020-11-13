@@ -1,12 +1,8 @@
 body {
-    padding: 25px;
+    /* padding: 25px; */
     background-color: white;
     color: black;
 } 
-.dark-mode {
-    background-color: rgb(29, 29, 29);
-    color: whitesmoke;
-}
 
 .container {
     margin: 20px auto;
@@ -27,6 +23,7 @@ th,
 tr,
 td {
     text-align: center;
+    color: black;
 }
 
 /* Form is never displayed but needs to exist for email submission */
@@ -129,6 +126,11 @@ tr{
     background-color: #b7d1ff;
 }
 
+.dark-mode {
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke;
+}
+
 /* //Dark Mode Attributes */
 .dark-mode #userSetting {
     background-color: rgba(21, 1, 201, 0.95);
@@ -178,6 +180,19 @@ tr{
     letter-spacing: -1px; color: whitesmoke;
 }
 
-.dark-mode th, tr td {
+.dark-mode th, 
+.dark-mode tr,
+.dark-mode td {
 color: whitesmoke;
 }
+
+/* .dark-mode #nav-color{
+    background-color: #292b2c;
+    color:white;
+}
+
+
+.dark-mode #nav-head-color {
+    background-color: #292b2c;
+    color:white;
+} */

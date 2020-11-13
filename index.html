@@ -15,10 +15,10 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-sm" id="nav-color" style="background-color: lightgray" ;>
+    <nav class="navbar navbar-expand-sm" id="nav-color" style="background-color: #f7f7f7;">
         <!-- navbar heading -->
-        <nav class="navbar" id="nav-head-color" style="background-color: lightgray" ;>
-            <span class="navbar-brand mb-0 h1" style="opacity:100%; color: black;">Look4ward2It</span>
+        <nav class="navbar" id="nav-head-color" style="background-color: #f7f7f7;">
+            <span class="navbar-brand mb-0 h1" style="opacity: 100%; color: black;">Look4ward2It</span>
         </nav>
         <!-- search for show times -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -87,16 +87,16 @@
                 </div>
             </div>
         </form>
-        <!-- Theme -->
+        <!-- Themes -->
         <form id="themeSetting">
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-11">
                     <h4>Themes</h4>
                 </div>
-                <div class="col-1">
+                <div class="col-md-1">
                     <button type="submit" id="save-theme-button" class="btn btn-dark"><i class="far fa-save"></i>
                     </button>
-                </div> -->
+                </div>
             </div>
             <hr>
             <div class="form-group" id="themeOptions">
@@ -104,27 +104,27 @@
                     <label>Pick one theme from the list below:</label>
                 </div>
                 <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="optionRadio" id="option" value="Option">
+                    <label class="form-check-label" for="option">Default</label>
+                </div>
+                <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="optionRadio" id="nasa" value="NASA"
                         onclick="darkMode()">
                     <label class="form-check-label" for="nasa">NASA</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="optionRadio" id="option" value="Option" disabled>
-                    <label class="form-check-label" for="option">Option</label>
                 </div>
             </div>
         </form>
         <!-- Quotes & Jokes -->
         <form id="quoteSetting">
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-11">
                     <h4>Quotes & Jokes</h4>
                 </div>
-                <div class="col-1">
-                    <button type="submit" id="save-quotes-button" class="btn btn-dark" style="opacity:100%;" disabled><i
+                <div class="col-md-1">
+                    <button type="submit" id="save-quotes-button" class="btn btn-dark" style="opacity:100%;"><i
                             class="far fa-save"></i>
                     </button>
-                </div> -->
+                </div>
             </div>
             <hr>
             <div class="form-group" id="quoteOptions">
@@ -149,18 +149,13 @@
         <!-- Sports -->
         <form id="sportsSetting">
             <div class="row">
-                <div class="col-11">
+                <div class="col-md-11">
                     <h4>Sports</h4>
                 </div>
-                <div class="col-1">
-                    <<<<<<< HEAD <button type="submit" id="save-sports-button" class="btn btn-dark"
+                <div class="col-md-1">
+                    <button type="submit" id="save-sports-button" class="btn btn-dark"
                         style="opacity:100%;"><i class="far fa-save"></i>
-                        =======
-                        <<<<<<< HEAD=======>>>>>>> 223f8aeb5d6ce74cfdd66c328d0199f6ba99ae31
-                            <button type="submit" id="save-sports-button" class="btn btn-dark" style="opacity:100%;"><i
-                                    class="far fa-save"></i>
-                                >>>>>>> main
-                            </button>
+                    </button>
                 </div>
             </div>
             <hr>
@@ -469,11 +464,9 @@
                 <button class="btn btn-primary col-sm-4" id="todaysDate">Today</button>
                 <button class="btn btn-outline-primary col-sm-4" id="nextDate">&#8250;</button>
             </div>
-            <br />
         </div>
-        <br />
     </div>
-    </div>
+
     <footer>
         <!-- CDN attached js files -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -482,15 +475,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
         <!-- these are our attached js files -->
-        <script src="assets/js/config.js"></script>
         <script src="./assets/js/localStorage.js"></script>
         <script src="./assets/js/email.js"></script>
         <script src="./assets/js/calendar.js"></script>
         <script src="./assets/js/NasaAPI.js"></script>
         <script src="./assets/js/userFavoritesAPIs.js"></script>
         <script src="./assets/js/quotes&jokesAPI.js"></script>
-
-        <script src="./assets/js/themes.js"></script>
         <script src="./assets/js/calAPI.js"></script>
         <script src="./assets/js/themes.js"></script>
     </footer>
