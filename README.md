@@ -1,6 +1,6 @@
-# Look4wardToIt - project1WIP
+# Look4ward2It - Project1WIP
 
-## Tean Members
+## Team Members
 - Ryan Zelazny
 - Brianna Hebeler
 - Alexander (Zander) Portera
@@ -8,7 +8,7 @@
 
 ##  Introduction
 
-Our project is a calendar, Look4wardToIt, with multiple functions. Just like any other calendars ours can record upcoming events, specify the day of the week, and help users stay on task. We were able to link several APIs so that this calendar can be customiziable . If you're interested in Sports, Movies, and even Astronomy this calendar is for you. 
+Our project is a calendar, Look4ward2It, with multiple functions. Just like any other calendars ours can record upcoming events, specify the day of the week, and help users stay on task. We were able to link several APIs so that this calendar can be customiziable . If you're interested in Sports, Movies, and even Astronomy this calendar is for you. 
 
 ## How to use
 
@@ -29,11 +29,14 @@ Our project is a calendar, Look4wardToIt, with multiple functions. Just like any
 ## Tools and APIs
 - HTML
 - CSS (BootStrap)
+- JavaScript
 - Moment JS
 - Email JS
-- JavaScript
 - Nasa API 
 - The Sport DB API
 - The Movie DB API
+- Kanye API
+- icanhazdadjoke API
+- Quote Garden API
 
 ## Link to Look4wardToIt
