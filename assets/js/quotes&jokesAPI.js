@@ -81,3 +81,16 @@ function refreshRando() {
 kanyeRadio.addEventListener("click", displayKanye);
 dadJokeRadio.addEventListener("click", displayDadJoke);
 randoRadio.addEventListener("click", displayRandoQuote)
+
+//on load set quote to saved user preference
+$(document).ready(function(){
+    if(userPreferences.quote === "Kanye Quote"){
+        displayKanye();
+    }
+    else if(userPreferences.quote === "Dad Joke"){
+        displayDadJoke();
+    }
+    else if(userPreferences.quote === "Random Quote"){
+        displayRandoQuote();
+    }
+})
