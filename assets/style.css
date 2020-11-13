@@ -1,11 +1,32 @@
 body {
-    /* padding: 25px; */
     background-color: white;
-    color: black;
+    color: #292b2c;
 } 
 
 .container {
     margin: 20px auto;
+}
+
+nav,
+#settings-button {
+    background-color: #f7f7f7;
+}
+
+#navTitle,
+#settingsIcon {
+    color: #292b2c;
+}
+
+
+#viewBtn,
+#searchShowtimesBtn,
+#save-user-button,
+#save-theme-button,
+#save-quotes-button,
+#save-sports-button,
+#save-movies-button {
+    background-color: #292b2c;
+    color:#f7f7f7;
 }
 
 textarea {
@@ -26,10 +47,6 @@ td {
     color: black;
 }
 
-/* Form is never displayed but needs to exist for email submission */
-#email-form {
-    display: none;
-}
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
@@ -126,50 +143,41 @@ tr{
     background-color: #b7d1ff;
 }
 
-.dark-mode {
+/* ///////////////////////////DARKMODE////////////////////////////////////// */
+.dark-mode,
+.dark-mode #month-view-card,
+.dark-mode #daily-view {
     background-color: rgb(29, 29, 29);
     color: whitesmoke;
 }
 
-/* //Dark Mode Attributes */
-.dark-mode #userSetting {
-    background-color: rgba(21, 1, 201, 0.95);
+.dark-mode #userSetting,
+.dark-mode #save-user-button {
+    background-color: #3D488A;
     color: whitesmoke;
 }
 
 .dark-mode #themeSetting {
-    background-color: rgba(21, 1, 201, 0.9);
+    background-color: #2D3874;
     color: whitesmoke;
 }
 .dark-mode #quoteSetting {
-    background-color: rgb(21, 1, 201, 0.850);
+    background-color: #212A60;
     color: whitesmoke;
 }
 .dark-mode #sportsSetting {
-    background-color: rgb(21, 1, 201, 0.800);
+    background-color: #1C2556;
     color: whitesmoke;
 }
 .dark-mode #moviesSetting {
-    background-color: rgb(21, 1, 201, 0.750);
+    background-color: #131B42;
     color: whitesmoke;
 }
 
-.dark-mode .btn {
-    background-color: rgb(156, 156, 156);
-}
-/* .dark-mode "cog button" {
-    background-color: hotpink;
-} */
-
-.dark-mode #month-view-card{
-    background-color: rgb(29, 29, 29);
-    color: whitesmoke
-}
-.dark-mode #daily-view{
-    background-color: rgb(29, 29, 29);
-    color: whitesmoke;
-}
-.dark-mode .input-event {
+.dark-mode .input-event,
+.dark-mode th, 
+.dark-mode tr,
+.dark-mode td {
     color: whitesmoke;
 }
 .dark-mode h1{
@@ -180,19 +188,86 @@ tr{
     letter-spacing: -1px; color: whitesmoke;
 }
 
-.dark-mode th, 
-.dark-mode tr,
-.dark-mode td {
-color: whitesmoke;
-}
 
-/* .dark-mode #nav-color{
-    background-color: #292b2c;
-    color:white;
+.dark-mode nav,
+.dark-mode #settings-button {
+    background-color: rgb(30, 30, 30);
+    color:whitesmoke;
 }
 
 
-.dark-mode #nav-head-color {
-    background-color: #292b2c;
-    color:white;
-} */
+.dark-mode #navTitle,
+.dark-mode #settingsIcon {
+    color: whitesmoke;
+}
+
+.dark-mode #viewBtn,
+.dark-mode #searchShowtimesBtn,
+.dark-mode #save-user-button,
+.dark-mode #save-theme-button,
+.dark-mode #save-quotes-button,
+.dark-mode #save-sports-button,
+.dark-mode #save-movies-button {
+    background-color: #f7f7f7;
+    color: #292b2c;
+}
+
+.dark-mode #todaysDate {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.dark-mode #todaysDate:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.dark-mode #todaysDate:active {
+    color: #000
+}
+
+.dark-mode #todaysDate:active:after {
+    background: transparent;
+}
+
+.dark-mode #todaysDate:hover:before {
+    opacity: 1;
+}
+
+.dark-mode #todaysDate:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
