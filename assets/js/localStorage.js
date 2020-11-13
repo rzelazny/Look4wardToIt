@@ -59,6 +59,8 @@ function loadUserPreferences(){
         //check saved movie pref choice
         if(userPreferences.movies.likesMovies === "true"){
             $("input[type='radio'][id='moviesY']").prop("checked", true);
+            //also display movie search bar if user likes movies
+            $("#movieSearchBar").css("display", "block");
         }
         else{
             $("input[type='radio'][id='moviesN']").prop("checked", true);
@@ -68,11 +70,12 @@ function loadUserPreferences(){
         for(i=0; i < userPreferences.movies.favGenres.length; i++){
             $("input[type='checkbox'][value='" + userPreferences.movies.favGenres[i] + "']").prop("checked", true);
         };
-        
     }
     else{
-        //if there are no stored preferences display the user selection section first
-        $("#settings-view-container").css("display", "block");
+        //if there are no stored preferences display the new user section
+        $("#newUser").css("display", "block");
+        $("#month-view-container").css("display", "none");
+        
     }
 }
 
