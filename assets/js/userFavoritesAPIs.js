@@ -1,26 +1,65 @@
 //function adds events to the calendar based on the user's favorite team
 function addFavoriteSportTeamEvents(userTeam){
     
+    //clear out response panel
+    $("#teamsFeedback").empty();
+
     //ajax call takes userTeam string and returns the teamID
     $.ajax({
         type:"GET",
-        url: "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + userTeam,    
-    }).then(function(data){
-        var teamID = data.teams[0].idTeam
-        //find upcoming events for given team
-        $.ajax({
-            type:"GET",
-            url: "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamID,
-        }).then(function(teamData){
-            //create events for upcoming games
-            for(var i=0; i < teamData.events.length; i++){
-                storeInput ("system", "", teamData.events[i].strEventAlternate, moment(teamData.events[i].dateEvent).format("DD-MM-YYYY"));
+        url: "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + userTeam,
+        success: function(data){
+            //if no results stop
+            if(data.teams === null){
+                var listEle = $("<p>");
+                listEle.text("No team match found");
+                $("#teamsFeedback").append(listEle);
+                $("#teamsFeedback").attr("style", "display=block");
+                return;
             }
-        })
-    })
-}
+            //if there are multiple possible teams returned give user suggestions
+            if(data.teams.length > 1){
+                $("#teamsFeedback").attr("style", "display=block");
+    
+                var listHeader = $("<h4>");
+                listHeader.text("Did you mean one of these teams?");
+                $("#teamsFeedback").append(listHeader);
+    
+                for (i=0; i < data.teams.length; i++){
+                    var listEle = $("<ol>");
+                    listEle.text(data.teams[i].strTeam)
+                    $("#teamsFeedback").append(listEle);
+                }
+            }
+            else{ 
+                //when there's only 1 team, find upcoming events for the given team
+                $.ajax({
+                    type:"GET",
+                    url: "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + data.teams[0].idTeam,
+                }).then(function(teamData){
+                    //if no results stop
+                    if(teamData.events === null){
+                    var listEle = $("<p>");
+                        listEle.text("No upcoming games for " + data.teams[0].strTeam);
+                        $("#teamsFeedback").append(listEle);
+                        $("#teamsFeedback").attr("style", "display=block");
+                        return;
+                    }
+                    //create events for upcoming games
+                    for(var i=0; i < teamData.events.length; i++){
+                        storeInput ("system", "", teamData.events[i].strEventAlternate, moment(teamData.events[i].dateEvent).format("DD-MM-YYYY"));
+                    }
+                    var listEle = $("<p>");
+                    listEle.text("Upcoming games added to your calendar");
+                    $("#teamsFeedback").append(listEle);
+                    $("#teamsFeedback").attr("style", "display=block");
+                })
+            }
+        }
+        })    
+    }
 
-//function adds Upcoming Movie release dates, weeding out movies that already released
+//WIP function adds Upcoming Movie release dates, weeding out movies that already released
 function addUpcomingMovies(){
     // variables
     var today = new Date();
@@ -67,7 +106,7 @@ function addNowPlayingMovies(){
 })
 }
 
-//function finds similar movies based on genre and keywords
+//WIP function finds similar movies based on genre and keywords
 function findSimilarMovies(userMovie){
 
     var movieId = "";
@@ -88,7 +127,6 @@ function findSimilarMovies(userMovie){
             console.log(dataMovie);
         })
     })
-
     //looking up a genre list
     // $.ajax({
     //     type: "GET",
@@ -99,6 +137,10 @@ function findSimilarMovies(userMovie){
     // })
 }
 
+$(document).ready(function(){
 
-
-
+    $("#faveTeamBtn").on("click", function(event){
+        event.preventDefault();
+        addFavoriteSportTeamEvents($("#faveTeamInput").val());
+    })
+})
