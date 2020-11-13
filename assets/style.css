@@ -216,6 +216,8 @@ tr{
     color: #292b2c;
 }
 
+/* /////////////////Glow btn, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
+
 .dark-mode #todaysDate {
     width: 220px;
     height: 50px;
@@ -269,6 +271,8 @@ tr{
     top: 0;
     border-radius: 10px;
 }
+
+/* /////////////////Glow cell, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
 
 .dark-mode .today-month {
     border: none;
@@ -325,3 +329,7 @@ tr{
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+/* .td.11-11-2020 {
+    background-color: pink;
+} */

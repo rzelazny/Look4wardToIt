@@ -147,6 +147,7 @@
 
                 else {
                     cell = document.createElement("td");
+                    cell.classList.add(date + "-" + (month+1) + "-" + year);
                     cellText = document.createTextNode(date);
                     input = document.createElement("textarea")
                     input.classList.value = "input-event";
