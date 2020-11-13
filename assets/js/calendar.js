@@ -156,7 +156,7 @@
                     cell.appendChild(input);
 
                     if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                        cell.classList.add("bg-warning")
+                        cell.classList.add("today-month");
                     }
                     date++;
                 }

@@ -40,6 +40,10 @@ textarea {
     height: 350px;
 }
 
+.today-month {
+    background-color: yellow;
+}
+
 th,
 tr,
 td {
@@ -270,4 +274,8 @@ tr{
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+.dark-mode .today-month {
+    background-color: violet;
 }
