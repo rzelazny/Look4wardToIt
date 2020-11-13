@@ -13,3 +13,10 @@ function defaultMode() {
 }
 
 $("#default").on("click", defaultMode);
+
+//on load set theme to saved user preference
+$(document).ready(function(){
+    if(userPreferences.theme === "NASA"){
+        darkMode();
+    }
+})
