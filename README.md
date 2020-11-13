@@ -39,4 +39,5 @@ Our project is a calendar, Look4ward2It, with multiple functions. Just like any 
 - icanhazdadjoke API
 - Quote Garden API
 
-## Link to Look4wardToIt
+## Link to Look4ward2It
+https://rzelazny.github.io/Look4wardToIt/ 
