@@ -7,6 +7,28 @@ body {
     margin: 20px auto;
 }
 
+nav,
+#settings-button {
+    background-color: #f7f7f7;
+}
+
+#navTitle,
+#settingsIcon {
+    color: #292b2c;
+}
+
+
+#viewBtn,
+#searchShowtimesBtn,
+#save-user-button,
+#save-theme-button,
+#save-quotes-button,
+#save-sports-button,
+#save-movies-button {
+    background-color: #292b2c;
+    color:#f7f7f7;
+}
+
 textarea {
     width: 100%;
     height: 100%;
@@ -25,10 +47,6 @@ td {
     color: black;
 }
 
-/* Form is never displayed but needs to exist for email submission */
-/* #email-form {
-    display: none;
-} */
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
@@ -125,12 +143,14 @@ tr{
     background-color: #b7d1ff;
 }
 
-.dark-mode {
+/* ///////////////////////////DARKMODE////////////////////////////////////// */
+.dark-mode,
+.dark-mode #month-view-card,
+.dark-mode #daily-view {
     background-color: rgb(29, 29, 29);
     color: whitesmoke;
 }
 
-/* //Dark Mode Attributes */
 .dark-mode #userSetting,
 .dark-mode #save-user-button {
     background-color: #3D488A;
@@ -154,19 +174,10 @@ tr{
     color: whitesmoke;
 }
 
-/* .dark-mode "cog button" {
-    background-color: hotpink;
-} */
-
-.dark-mode #month-view-card{
-    background-color: rgb(29, 29, 29);
-    color: whitesmoke
-}
-.dark-mode #daily-view{
-    background-color: rgb(29, 29, 29);
-    color: whitesmoke;
-}
-.dark-mode .input-event {
+.dark-mode .input-event,
+.dark-mode th, 
+.dark-mode tr,
+.dark-mode td {
     color: whitesmoke;
 }
 .dark-mode h1{
@@ -177,51 +188,17 @@ tr{
     letter-spacing: -1px; color: whitesmoke;
 }
 
-.dark-mode th, 
-.dark-mode tr,
-.dark-mode td {
-color: whitesmoke;
-}
 
-.dark-mode nav {
-    background-color: rgb(30, 30, 30);
-    color:white;
-}
-
-nav,
-#settings-button {
-    background-color: #f7f7f7;
-}
-
-#navTitle {
-    color: #292b2c;
-}
-
-.dark-mode #navTitle {
-    color: white;
-}
-
-#settingsIcon {
-    color:#292b2c;
-}
-
-.dark-mode #settingsIcon {
-    color:white;
-}
-
+.dark-mode nav,
 .dark-mode #settings-button {
-    background-color:  rgb(30, 30, 30);
+    background-color: rgb(30, 30, 30);
+    color:whitesmoke;
 }
 
-#viewBtn,
-#searchShowtimesBtn,
-#save-user-button,
-#save-theme-button,
-#save-quotes-button,
-#save-sports-button,
-#save-movies-button {
-    background-color: #292b2c;
-    color:#f7f7f7;
+
+.dark-mode #navTitle,
+.dark-mode #settingsIcon {
+    color: whitesmoke;
 }
 
 .dark-mode #viewBtn,
