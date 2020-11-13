@@ -26,11 +26,48 @@ function loadUserPreferences(){
     if (storedPreferences !== null) {
         userPreferences = storedPreferences;
 
-        //set toggles and checkmarks to match saved preferences
-        var usertheme = userPreferences.theme
-        $("input[type='radio'][value='NASA']")
-        
-        $("#option").prop("checked", true);
+    //Set toggles and checkmarks to match saved preferences
+        //check saved theme choice
+        if(userPreferences.theme !== ""){
+            $("input[type='radio'][value='" + userPreferences.theme + "']").prop("checked", true);
+        }
+        else{
+            $("input[type='radio'][value='Default']").prop("checked", true);
+        }
+
+        //check saved quote choice
+        if(userPreferences.quote !== ""){
+            $("input[type='radio'][value='" + userPreferences.quote + "']").prop("checked", true);
+        }
+        else{
+            $("input[type='radio'][value='Random Quote']").prop("checked", true);
+        }
+
+        //check saved sports toggle choice
+        if(userPreferences.sports.likeSports === "true"){
+            $("input[type='radio'][id='sportsY']").prop("checked", true);
+        }
+        else{
+            $("input[type='radio'][id='sportsN']").prop("checked", true);
+        }
+
+        //check saved sports checkboxes
+        for(i=0; i < userPreferences.sports.favSports.length; i++){
+            $("input[type='checkbox'][value='" + userPreferences.sports.favSports[i] + "']").prop("checked", true);
+        };
+
+        //check saved movie pref choice
+        if(userPreferences.movies.likesMovies === "true"){
+            $("input[type='radio'][id='moviesY']").prop("checked", true);
+        }
+        else{
+            $("input[type='radio'][id='moviesN']").prop("checked", true);
+        }
+
+        //check saved movie checkboxes
+        for(i=0; i < userPreferences.movies.favGenres.length; i++){
+            $("input[type='checkbox'][value='" + userPreferences.movies.favGenres[i] + "']").prop("checked", true);
+        };
         
     }
     else{
