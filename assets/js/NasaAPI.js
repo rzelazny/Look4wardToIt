@@ -1,3 +1,5 @@
+
+
 // var APIKey = configVariables.NASAKey;
 var APIKey = "GdEg4FRAzH4iSejZ4CKf8uxEy5RpGsDRREKWJeBT"
 var nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=" + APIKey; 
@@ -21,6 +23,12 @@ $.ajax({
 
 })
 // make onclick event 
+// document.getElementById("td").addEventListener("click", previousPic);
+
+// function previousPic(){
+//   document.getElementById("td").innerHTML = " "
+// }
+
 // be able to pass the day that the user has chosen
 // call API 
 // change the src url of the image
