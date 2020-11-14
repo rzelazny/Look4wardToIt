@@ -77,14 +77,6 @@ tr{
     margin: 20px;
     color: black;
 }
-.nuContainer{
-    background-color: #d4e3ff;
-}
-
-#yesToEmail,
-#noToEmail {
-    margin: 10px;
-}
 
 #userSetting {
     background-color: #eef3ff;
@@ -104,6 +96,15 @@ tr{
 
 #moviesSetting {
     background-color: #b7d1ff;
+}
+
+.nuContainer{
+    background-color: #d4e3ff;
+}
+
+#yesToEmail,
+#noToEmail {
+    margin: 10px;
 }
 
 /* ////////////////////////////////////NASA///////////////////////////////// */
