@@ -80,9 +80,22 @@
             <div id="movieBarBlurb"style="display:none;">
                 <p>We've added a movie Search Bar to your navigation bar. Find some local showings!</p>
             </div>
-            <p>Now that's we've found some interests, there are other settings we can change as well.</p>
+            <div id="beforeThemeBlurb"style="display:none;">
+                <p>Now that's we've found some interests, there are other settings we can change as well.</p>
+            </div>
+            <div id="beforeEmailBlurb"style="display:none;">
+                <p>Would you like to recieve email alerts the day before your events?</p>
+            </div>
             <br>
-            <button class="btn btn-primary newUserExperience" id="nuShowThemes">Choose a Theme</button>
+            <div id="nuThemeButton" style="display:none;">
+                <button class="btn btn-primary newUserExperience" id="nuShowThemes">Choose a Theme</button>
+            </div>
+            <div class="form-inline" id="nuEmailButtons" style="display:none;">
+                <div class="form-group">
+                    <button id="yesToEmail" type="button" value="yesEmail" class="btn btn-primary newUserExperience">I'd like to get alerts</button>
+                    <button id="noToEmail" type="button" value="noEmail" class="btn btn-primary newUserExperience">I'm fine without</button>
+                </div>
+            </div>
         </main>
     </section>
 
@@ -91,13 +104,8 @@
         <!-- User information -->
         <form id="userSetting">
             <div class="row">
-                <div class="col-md-11">
+                <div class="col-md-12">
                     <h4>User Information</h4>
-                </div>
-                <div class="col-md-1">
-                    <button type="button" id="save-user-button" class="btn" style="display:none;"><i
-                            class="far fa-save" id="userIcon"></i>
-                    </button>
                 </div>
             </div>
             <hr>
@@ -114,6 +122,11 @@
                     <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
                         placeholder="Enter email">
                 </div>
+            </div>
+            <div class="form-row">
+                <button type="button" id="save-user-button" class="btn"><i
+                    class="far fa-save" id="userIcon"></i>
+            </button>
             </div>
         </form>
         <!-- Themes -->
@@ -142,7 +155,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center" id="nuThemeMoveOn" style="display:none;">
-                <button class="btn btn-primary newUserExperience" id="nuShowEmailInput">Ready to move on?</button>
+                <button id="nuThemeMoveOnButton" type="button" value="Go" class="btn btn-primary newUserExperience">Ready to Move on?</button>
             </div>
         </form>
         <!-- Quotes & Jokes -->

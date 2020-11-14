@@ -279,6 +279,8 @@
                     $("#movieSearchBar").show();
                     $("#newUserInformation").show();
                     $("#movieBarBlurb").show();
+                    $("#beforeThemeBlurb").show();
+                    $("#nuThemeButton").show();
                     break;
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
@@ -286,10 +288,15 @@
                     $("#themeSetting").show();
                     //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
-                case "nuSportsMoveOn": //Show them that they can change themes 
-                    $("#newUserThemesNext").hide();
-                    $("#sportsSetting").hide();
+                case "nuThemeMoveOnButton": //After setting themes ask about email and user name
+                    $("#themeSetting").hide();
                     $("#newUserInformation").show();
+                    $("#movieBarBlurb").hide();
+                    $("#beforeThemeBlurb").hide();
+                    $("#beforeEmailBlurb").show();
+                    $("#nuThemeButton").hide();
+                    $("#nuEmailButtons").show();
+                    
                     //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "default": //once they're choosing themes they can toggle between the choices
@@ -300,9 +307,16 @@
                     $("#themeSetting").show();
                     $("#nuThemeMoveOn").show();
                     break;
-                case "nuShowEmailInput":
-
-                break;
+                case "noToEmail": //If no emails then setup is done, display the calendar
+                    userPreferences.newUser = "false";
+                    localStorage.setItem("preferences", JSON.stringify(userPreferences));
+                    $("#newUserInformation").hide();
+                    $("#month-view-container").css("display", "block");
+                    break;
+                case "yesToEmail": //Display user name and email prompt
+                    $("#newUserInformation").hide();
+                    $("#userSetting").show();
+                    break;
             }
         }
     }
