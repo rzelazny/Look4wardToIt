@@ -30,8 +30,8 @@
                             placeholder="Find Showtimes">
                     </div>
                     <button id="searchShowtimesBtn" type="submit" value="Go" class="btn btn-dark">Go</button>
+                </form>
             </div>
-            </form>
         </div>
         <!-- list of buttons -->
         <div class="navbar-nav ml-auto">
@@ -53,9 +53,8 @@
                 </button>
             </div>
         </div>
-        </div>
     </nav>
-    <!-- New User explaination panel -->
+    <!-- New User Panel -->
     <section class="nuContainer" id="newUser" style="display:none;">
         <header>
             <h2 style="text-align: center;">Welcome to Look4ward2It!</h2>
@@ -63,11 +62,8 @@
         </header>
         <main>
             <br>
-            <p>Unlike other calendars that simply hang on your wall until you add events, Look4ward2It will help you
-                find events.</p>
-            <strong>
-                <p>It's always good to have something to look forward to!</p>
-            </strong>
+            <p>Unlike other calendars that simply hang on your wall until you add events, Look4ward2It will help you find events.</p>
+            <p>It's always good to have something to look forward to!</p>
             <p>To help us with that, we'll need some topics you're interested in.</p>
             <br>
             <button class="btn btn-primary newUserExperience" id="newUserPickActivites">Pick Some Activities</button>
@@ -75,16 +71,19 @@
     </section>
     <section class="nuContainer" id="newUserInformation" style="display:none;">
         <header>
-            <h3 style="text-align: center;">User Set up</h3>
+            <h3 style="text-align: center;">User Set Up</h3>
             <hr>
         </header>
         <main>
             <br>
             <div id="movieBarBlurb" style="display:none;">
-                <p>We've added a movie Search Bar to your navigation bar. Find some local showings!</p>
+                <p>We've added a movie search box to your navigation bar. Find some local showings!</p>
             </div>
             <div id="beforeThemeBlurb" style="display:none;">
-                <p>Now that's we've found some interests, there are other settings we can change as well.</p>
+                <p>Now that's we've found out about some of your interests, there are other settings we can change as well.</p>
+            </div>
+            <div id="beforeQuoteBlurb" style="display:none;">
+                <p>You can choose to display a quote or joke to brighten up your daily calendar view. If you want to laugh pick a dad joke or a silly Kanye quote. If you want something more... inspirational, choose a random quote.</p>
             </div>
             <div id="beforeEmailBlurb" style="display:none;">
                 <p>Would you like to receive email alerts the day before your events?</p>
@@ -95,8 +94,7 @@
             </div>
             <div class="form-inline" id="nuEmailButtons" style="display:none;">
                 <div class="form-group">
-                    <button id="yesToEmail" type="button" value="yesEmail" class="btn btn-primary newUserExperience">I'd
-                        like to get alerts</button>
+                    <button id="yesToEmail" type="button" value="yesEmail" class="btn btn-primary newUserExperience">I'd like to get alerts</button>
                     <button id="noToEmail" type="button" value="noEmail" class="btn btn-primary newUserExperience">I'm fine without</button>
                 </div>
             </div>
@@ -196,6 +194,10 @@
                         value="Random Quote">
                     <label class="form-check-label" for="randoQuote">Random Quote</label>
                 </div>
+            </div>
+            <div class="d-flex justify-content-center" id="nuQuoteMoveOn" style="display:none;">
+                <button id="nuQuoteMoveOnButton" type="button" value="Go"
+                    class="btn btn-primary newUserExperience">Ready to Move on?</button>
             </div>
         </form>
         <!-- Sports -->

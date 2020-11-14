@@ -256,6 +256,13 @@
                 case "newUserPickActivites": //this is the first button they see
                     $("#sportsYN").show();
                     break;
+                case "sportsN": //if they choose no to sports show the movie section
+                    $("#sportsSetting").show();
+                    $("#sportsYN").show();
+                    $("#moviesSetting").hide();
+                    $("#faveGenres").hide();
+                    $("#faveMovie").hide();
+                    break;
                 case "sportsY": //if they choose yes to sports let them pick a team
                     $("#sportsYN").show();
                     $("#faveTeam").show();
@@ -264,6 +271,13 @@
                     $("#sportsYN").show();
                     $("#faveTeam").show();
                     //$("#nuSportsMoveOn").show(); //need to use Bootstrap .d-none class to hide
+                    break;
+                case "sportsN": //if they choose no to sports show the movie section
+                    $("#sportsSetting").show();
+                    $("#sportsYN").show();
+                    $("#moviesSetting").hide();
+                    $("#faveGenres").hide();
+                    $("#faveMovie").hide();
                     break;
                 case "nuSportsMoveOn":
                     $("#sportsSetting").hide();
@@ -274,16 +288,16 @@
                     // $("#beforeThemeBlurb").show();
                     // $("#nuThemeButton").show();
                     break;
-                case "sportsN": //if they choose no to sports show the movie section
-                    $("#sportsSetting").hide();
-                    $("#moviesSetting").show();
-                    $("#faveGenres").hide();
-                    $("#faveMovie").hide();
-                    break;
                 case "moviesY": //if they choose yes to movies add the movie search bar and head to themes
                     $("#movieSearchBar").show();
-                    $("#newUserInformation").show();
+                    $("#newUserInformation").hide();
                     $("#movieBarBlurb").show();
+                    $("#beforeThemeBlurb").show();
+                    $("#nuThemeButton").show();
+                    break;
+                case "moviesN":
+                    $("#moviesSetting").hide();
+                    $("#newUserInformation").hide();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
                     break;
@@ -293,15 +307,25 @@
                     $("#themeSetting").show();
                     //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
-                case "nuThemeMoveOnButton": //After setting themes ask about email and user name
+                case "nuThemeMoveOnButton":
+                    $("#themeSetting").hide();
+                    $("#newUserInformation").hide();
+                    $("#movieBarBlurb").hide();
+                    $("#beforeThemeBlurb").hide();
+                    $("#beforeEmailBlurb").hide();
+                    $("#nuThemeButton").hide();
+                    $("#nuEmailButtons").hide();
+                    $("beforeQuoteBlurb").show();
+                    $("#quoteSetting").show();
+                    $("#beforeEmailBlurb").hide();
+
+                case "nuQuoteMoveOnButton": //After setting themes ask about email and user name
                     $("#themeSetting").hide();
                     $("#newUserInformation").show();
                     $("#movieBarBlurb").hide();
                     $("#beforeThemeBlurb").hide();
-                    $("#beforeEmailBlurb").show();
+                    $("#beforeEmailBlurb").hide();
                     $("#nuThemeButton").hide();
-                    $("#nuEmailButtons").show();
-                    
                     //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "default": //once they're choosing themes they can toggle between the choices
