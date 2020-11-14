@@ -302,6 +302,9 @@
                     $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
+                    console.log($("#nuShowThemes"));
+                    $("#nuShowThemes").toggleClass("invisible", "visible");
+                    console.log($("#nuShowThemes").classList);
                     break;
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
@@ -330,6 +333,8 @@
                     $("#nuThemeButton").hide();
                     $("#nuQuotesButton").show();
                     $("#nuEmailButtons").hide();
+                    $("#nuShowThemes").toggleClass("invisible", "visible");
+                    $("#nuShowQuotes").toggleClass("invisible", "visible");
                     break;
                 case "nuShowQuotes":$("#quoteSetting").hide();
                     $("#themeSetting").hide();
@@ -352,7 +357,7 @@
                     $("#beforeEmailBlurb").show();
                     $("#nuThemeButton").hide();
                     $("#nuEmailButtons").show();
-                    $("#nuQuotesButton").hide();
+                    $("#nuQuotesButton").toggleClass("invisible", "visible");
                     break;
                 case "noToEmail": //If no emails then setup is done, display the calendar
                     userPreferences.newUser = false;
