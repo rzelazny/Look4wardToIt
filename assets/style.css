@@ -53,12 +53,13 @@ td {
     color: black;
 }
 
-h1{
+h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
     font-size: 30px;
     line-height: 40px;
     letter-spacing: -1px; color: #444;
+    text-align: end;
 }
 
 tr{
@@ -349,6 +350,17 @@ tr{
 
 .rm-mode{
 background-image: url(./images/rmwallpaper.jpg);
+font-family: 'Oswald', sans-serif;
+font-style: normal;
+}
+
+.rm-mode th,
+.rm-mode tr,
+.rm-mode td,
+.rm-mode h1 {
+    font-style: normal;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
 .rm-mode,
@@ -389,8 +401,6 @@ background-image: url(./images/rmwallpaper.jpg);
     color: white;
 }
 .rm-mode h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: italic;
     font-size: 30px;
     line-height: 40px;
     letter-spacing: -1px; color: white;
