@@ -420,6 +420,10 @@ background-image: url(./images/rmwallpaper.jpg);
     color: black;
 }
 
+.rm-mode #month-view-card {
+    border-width: thick;
+}
+
 /* /////////////////Glow btn, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
 
 .rm-mode #todaysDate {
@@ -428,7 +432,7 @@ background-image: url(./images/rmwallpaper.jpg);
     border: none;
     outline: none;
     color: #fff;
-    background-color: #63d12b;
+    background: black;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -437,13 +441,13 @@ background-image: url(./images/rmwallpaper.jpg);
 
 .rm-mode #todaysDate:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg,#63d12b, #c6ff9d, #c3fb61, #3aa213,#379114, #3fda07, #52b920, #d5ff8c, #56e210);
     position: absolute;
     top: -2px;
     left:-2px;
-    background-size: 400%;
+    background-size: 600%;
     z-index: -1;
-    filter: blur(5px);
+    filter: blur(10px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
@@ -453,7 +457,7 @@ background-image: url(./images/rmwallpaper.jpg);
 }
 
 .rm-mode #todaysDate:active {
-    color: #63d12b
+    color: black
 }
 
 .rm-mode #todaysDate:active:after {
@@ -470,7 +474,7 @@ background-image: url(./images/rmwallpaper.jpg);
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #63d12b;
+    background: black;
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -482,7 +486,7 @@ background-image: url(./images/rmwallpaper.jpg);
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
+    background: black;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -490,13 +494,13 @@ background-image: url(./images/rmwallpaper.jpg);
 
 .rm-mode .today-month:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #63d12b, #c6ff9d, #c3fb61, #3aa213,#379114, #3fda07, #52b920, #d5ff8c, #56e210);
     position: absolute;
     top: -2px;
     left:-2px;
-    background-size: 400%;
+    background-size: 600%;
     z-index: -1;
-    filter: blur(5px);
+    filter: blur(10px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
@@ -505,7 +509,7 @@ background-image: url(./images/rmwallpaper.jpg);
 }
 
 .rm-mode .today-month:active {
-    color: #000
+    color: black;
 }
 
 .rm-mode .today-month:active:after {
@@ -522,7 +526,7 @@ background-image: url(./images/rmwallpaper.jpg);
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #111;
+    background: black;
     left: 0;
     top: 0;
 }
@@ -530,6 +534,6 @@ background-image: url(./images/rmwallpaper.jpg);
 
 @keyframes glowing {
     0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
+    50% { background-position: 600% 0; }
     100% { background-position: 0 0; }
 }
