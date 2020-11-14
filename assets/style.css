@@ -67,6 +67,35 @@ tr{
     font-style: italic;
 }
 
+#previousMonth,
+#nextMonth, 
+#previous
+#next,
+#previousDate,
+#nextDate {
+    border-color: #2196F3;
+    color: dodgerblue;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#todaysDate {
+    background: #2196F3;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#previousMonth:hover,
+#nextMonth:hover, 
+#previous:hover
+#next:hover,
+#previousDate:hover,
+#nextDate:hover {
+    background: #2196F3;
+    color: white;
+}
+
 .nuContainer,
 #userSetting,
 #themeSetting,
@@ -428,6 +457,36 @@ font-style: normal;
 
 .rm-mode #month-view-card {
     border-width: thick;
+}
+
+.rm-mode #previousMonth,
+.rm-mode #nextMonth, 
+.rm-mode #previous
+.rm-mode #next,
+.rm-mode #previousDate,
+.rm-mode #nextDate {
+    border: 2px solid;
+    border-color: #4CAF50;
+    color: green;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* .rm-mode #todaysDate {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+} */
+
+.rm-mode #previousMonth:hover,
+.rm-mode #nextMonth:hover, 
+.rm-mode #previous:hover
+.rm-mode #next:hover,
+.rm-mode #previousDate:hover,
+.rm-mode #nextDate:hover {
+    background-color: #4CAF50;
+    color: white;
 }
 
 /* /////////////////Glow btn, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
