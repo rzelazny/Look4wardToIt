@@ -147,7 +147,8 @@
 
                 else {
                     cell = document.createElement("td");
-                    cell.classList.add(date + "-" + (month+1) + "-" + year);
+                    // cell.classList.add("selected-day");
+                    // cell.setAttribute("id", date + "-" + (month+1) + "-" + year);
                     cellText = document.createTextNode(date);
                     input = document.createElement("textarea")
                     input.classList.value = "input-event";
@@ -164,13 +165,6 @@
             }
             // append each row into calendar body //
             monthBody.appendChild(row);
-
-            //WIP to target specific day on month view//
-            // document.querySelectorAll("#month-body .cell").forEach(cell => {
-            //     cell.addEventListener("click", event => {
-            //         console.log(event.currentTarget);
-            //     });
-            // });
         }
     // var dailyPhoto = document.querySelector("#dailyPhoto")
     }
@@ -237,6 +231,7 @@
     }
     var todayMonth = document.querySelector(".today-month");
     todayMonth.addEventListener("click", showDailyView);
+
 
     ///////////////////////////////////////////////////////////////////////
     // Event Listeners //////////////////////////////////////////////////
