@@ -357,14 +357,16 @@ font-style: normal;
 .rm-mode th,
 .rm-mode tr,
 .rm-mode td,
-.rm-mode h1 {
+.rm-mode h1,
+.rm-mode .input-event {
     font-style: normal;
     font-family: 'Oswald', sans-serif;
     text-align: center;
+    color: white;
 }
 
 .rm-mode,
-.rm-mode, #month-view-card,
+.rm-mode #month-view-card,
 .rm-mode #daily-view {
     background-color:black;
     color: white;
@@ -394,12 +396,6 @@ font-style: normal;
     color: white;
 }
 
-.rm-mode .input-event,
-.rm-mode th, 
-.rm-mode tr,
-.rm-mode td {
-    color: white;
-}
 .rm-mode h1{
     font-size: 30px;
     line-height: 40px;
