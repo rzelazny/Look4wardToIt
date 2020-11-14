@@ -20,12 +20,7 @@ nav,
 
 
 #viewBtn,
-#searchShowtimesBtn,
-#save-user-button,
-#save-theme-button,
-#save-quotes-button,
-#save-sports-button,
-#save-movies-button {
+#searchShowtimesBtn {
     background-color: #292b2c;
     color:#f7f7f7;
 }
@@ -72,7 +67,17 @@ tr{
 #previous
 #next,
 #previousDate,
-#nextDate {
+#nextDate,
+#save-user-button,
+#nuThemeMoveOnButton,
+#nuQuoteMoveOnButton,
+#nuSportsMoveOnButton,
+#nuMovieMoveOnButton,
+#nuShowThemes,
+#nuShowQuotes,
+#newUserPickActivites,
+#yesToEmail,
+#noToEmail {
     border-color: #2196F3;
     color: dodgerblue;
     cursor: pointer;
@@ -91,7 +96,17 @@ tr{
 #previous:hover
 #next:hover,
 #previousDate:hover,
-#nextDate:hover {
+#nextDate:hover,
+#save-user-button:hover,
+#nuThemeMoveOnButton:hover,
+#nuQuoteMoveOnButton:hover,
+#nuSportsMoveOnButton:hover,
+#nuMovieMoveOnButton:hover,
+#nuShowThemes:hover,
+#nuShowQuotes:hover,
+#newUserPickActivites:hover,
+#yesToEmail:hover,
+#noToEmail:hover {
     background: #2196F3;
     color: white;
 }
