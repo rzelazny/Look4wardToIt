@@ -298,7 +298,6 @@
                     break;
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
-                    // $("#sportsSetting").hide();
                     $("#themeSetting").show();
                     //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
