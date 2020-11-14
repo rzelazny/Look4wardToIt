@@ -344,3 +344,192 @@ tr{
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+/* ////////////////////////////////////Rick&Morty///////////////////////////////// */
+
+.rm-mode{
+background-image: url(./images/rmwallpaper.jpg);
+}
+
+.rm-mode,
+.rm-mode, #month-view-card,
+.rm-mode #daily-view {
+    background-color:black;
+    color: white;
+}
+
+.rm-mode #userSetting,
+.rm-mode #save-user-button {
+    background-color: green;
+    color: white;
+}
+
+.rm-mode #themeSetting,
+.rm-mode #newUserInformation {
+    background-color: green;
+    color: white;
+}
+.rm-mode #quoteSetting {
+    background-color: green;
+    color: white;
+}
+.rm-mode #sportsSetting {
+    background-color: green;
+    color: white;
+}
+.rm-mode #moviesSetting {
+    background-color: green;
+    color: white;
+}
+
+.rm-mode .input-event,
+.rm-mode th, 
+.rm-mode tr,
+.rm-mode td {
+    color: white;
+}
+.rm-mode h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -1px; color: white;
+}
+
+
+.rm-mode nav,
+.rm-mode #settings-button {
+    background-color: black;
+    color:white;
+}
+
+
+.rm-mode #navTitle,
+.rm-mode #settingsIcon {
+    color: white;
+}
+
+.rm-mode #viewBtn,
+.rm-mode #searchShowtimesBtn,
+.rm-mode #save-user-button,
+.rm-mode #save-theme-button,
+.rm-mode #save-quotes-button,
+.rm-mode #save-sports-button,
+.rm-mode #save-movies-button {
+    background-color: white;
+    color: black;
+}
+
+/* /////////////////Glow btn, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
+
+.rm-mode #todaysDate {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #63d12b;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.rm-mode #todaysDate:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.rm-mode #todaysDate:active {
+    color: #63d12b
+}
+
+.rm-mode #todaysDate:active:after {
+    background: transparent;
+}
+
+.rm-mode #todaysDate:hover:before {
+    opacity: 1;
+}
+
+.rm-mode #todaysDate:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #63d12b;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* /////////////////Glow cell, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
+
+.rm-mode .today-month {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.rm-mode .today-month:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.rm-mode .today-month:active {
+    color: #000
+}
+
+.rm-mode .today-month:active:after {
+    background: transparent;
+}
+
+.rm-mode .today-month:hover:before {
+    opacity: 1;
+}
+
+.rm-mode .today-month:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

@@ -1,8 +1,8 @@
 ///////////////////////DARK MODE///////////////////////////////
 function darkMode() {
     var element = document.body;
-    element.classList.add("dark-mode");
     element.classList.remove("rm-mode");
+    element.classList.add("dark-mode");
 }
 $("#nasa").on("click", darkMode);
 
@@ -20,8 +20,8 @@ $("#default").on("click", defaultMode);
 
 function rmMode() {
     var element = document.body;
-    element.classList.add("rm-mode");
     element.classList.remove("dark-mode");
+    element.classList.add("rm-mode");
 }
 
 $("#rm").on("click", rmMode);
