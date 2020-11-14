@@ -56,10 +56,10 @@ td {
 h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 50px;
     letter-spacing: -1px; color: #444;
-    text-align: end;
+    text-align: center;
 }
 
 tr{
@@ -232,8 +232,8 @@ tr{
 .dark-mode h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 50px;
     letter-spacing: -1px; color: whitesmoke;
 }
 
@@ -396,38 +396,21 @@ font-style: normal;
 
 .rm-mode,
 .rm-mode #month-view-card,
-.rm-mode #daily-view {
-    background-color:black;
-    color: white;
-}
-
+.rm-mode #daily-view,
 .rm-mode #userSetting,
-.rm-mode #save-user-button {
-    background-color: green;
-    color: white;
-}
-
+.rm-mode #save-user-button ,
 .rm-mode #themeSetting,
-.rm-mode #newUserInformation {
-    background-color: green;
-    color: white;
-}
-.rm-mode #quoteSetting {
-    background-color: green;
-    color: white;
-}
-.rm-mode #sportsSetting {
-    background-color: green;
-    color: white;
-}
+.rm-mode #newUserInformation,
+.rm-mode #quoteSetting,
+.rm-mode #sportsSetting,
 .rm-mode #moviesSetting {
-    background-color: green;
+    background-color: 	black;
     color: white;
 }
 
 .rm-mode h1{
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 50px;
     letter-spacing: -1px; color: white;
 }
 
