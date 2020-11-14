@@ -1,6 +1,7 @@
 body {
     background-color: white;
     color: #292b2c;
+
 } 
 
 .container {
@@ -28,6 +29,7 @@ nav,
     background-color: #292b2c;
     color:#f7f7f7;
 }
+
 
 textarea {
     width: 100%;
@@ -130,6 +132,12 @@ tr{
 .nuContainer{
     background-color: #b1c9ff;
 }
+
+#yesToEmail,
+#noToEmail {
+    margin: 10px;
+}
+
 #userSetting {
     background-color: #eef3ff;
 }

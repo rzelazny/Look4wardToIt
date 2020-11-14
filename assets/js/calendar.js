@@ -267,9 +267,12 @@
                     break;
                 case "nuSportsMoveOn":
                     $("#sportsSetting").hide();
-                    $("#newUserInformation").show();
-                    $("#beforeThemeBlurb").show();
-                    $("#nuThemeButton").show();
+                    $("#moviesSetting").show();
+                    $("#faveGenres").hide();
+                    $("#faveMovie").hide();
+                    // $("#newUserInformation").show();
+                    // $("#beforeThemeBlurb").show();
+                    // $("#nuThemeButton").show();
                     break;
                 case "sportsN": //if they choose no to sports show the movie section
                     $("#sportsSetting").hide();
