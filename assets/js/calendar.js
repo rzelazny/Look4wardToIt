@@ -244,7 +244,7 @@
     function nuExperience(myObject, newUser){
         //only make changes for new users
         if(newUser === true){
-            //show the entire settings panel, but hide the individual pieces so they can be shown piecemeal
+            //display the entire settings panel, but hide the individual pieces so they can be shown piecemeal
             $("#settings-view-container").show();
             $("#userSetting").hide();
             $("#newUser").hide();
@@ -257,46 +257,52 @@
             console.log(myObject.id)
             //show the next section depending on what the user clicked
             switch(myObject.id){
-                case "newUserPickActivites": //this is the first button
+                case "newUserPickActivites": //this is the first button they see
                     $("#sportsYN").show();
                     break;
                 case "sportsY": //if they choose yes to sports let them pick a team
                     $("#sportsYN").show();
                     $("#faveTeam").show();
                     break;
-                case "faveTeamBtn":
+                case "faveTeamBtn": //once they've picked a team display the move-on button
                     $("#sportsYN").show();
                     $("#faveTeam").show();
-                    $("#nuSportsMoveOn").show();
+                    //$("#nuSportsMoveOn").show(); //need to use Bootstrap .d-none class to hide
                     break;
-                case "sportsN": //if they choose no to sports move on to the movie section
+                case "sportsN": //if they choose no to sports show the movie section
                     $("#sportsSetting").hide();
                     $("#moviesSetting").show();
                     $("#faveGenres").hide();
                     $("#faveMovie").hide();
                     break;
-                case "moviesY": //if they choose yes to movies let them pick a favorite movie
+                case "moviesY": //if they choose yes to movies add the movie search bar and head to themes
                     $("#movieSearchBar").show();
-                    $("#newUserThemesNext").show();
+                    $("#newUserInformation").show();
                     $("#movieBarBlurb").show();
                     break;
                 case "nuShowThemes": //Show them that they can change themes
-                    $("#newUserThemesNext").hide();
+                    $("#newUserInformation").hide(); 
                     $("#sportsSetting").hide();
                     $("#themeSetting").show();
+                    //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
-                case "nuShowThemesBtn": //Show them that they can change themes
+                case "nuSportsMoveOn": //Show them that they can change themes 
                     $("#newUserThemesNext").hide();
                     $("#sportsSetting").hide();
-                    $("#themeSetting").show();
+                    $("#newUserInformation").show();
+                    //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "default": //once they're choosing themes they can toggle between the choices
                     $("#themeSetting").show();
-                    $("#nu")
+                    $("#nuThemeMoveOn").show();
                     break;
                 case "nasa": //once they're choosing themes they can toggle between the choices
                     $("#themeSetting").show();
+                    $("#nuThemeMoveOn").show();
                     break;
+                case "nuShowEmailInput":
+
+                break;
             }
         }
     }
