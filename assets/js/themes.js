@@ -2,6 +2,7 @@
 function darkMode() {
     var element = document.body;
     element.classList.add("dark-mode");
+    element.classList.remove("rm-mode");
 }
 $("#nasa").on("click", darkMode);
 
@@ -10,9 +11,20 @@ $("#nasa").on("click", darkMode);
 function defaultMode() {
     var element = document.body;
     element.classList.remove("dark-mode");
+    element.classList.remove("rm-mode");
 }
 
 $("#default").on("click", defaultMode);
+
+///////////////////RM///////////////////////////////////
+
+function rmMode() {
+    var element = document.body;
+    element.classList.add("rm-mode");
+    element.classList.remove("dark-mode");
+}
+
+$("#rm").on("click", rmMode);
 
 //on load set theme to saved user preference///////////////////////////
 $(document).ready(function(){
@@ -22,4 +34,7 @@ $(document).ready(function(){
     else if(userPreferences.theme === "Default"){
         defaultMode();
     }
+    else if(userPreferences.theme === "Rick & Morty"){
+        rmMode();
+    } 
 })

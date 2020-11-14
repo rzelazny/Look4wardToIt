@@ -14,7 +14,8 @@ function displayRM() {
         method: "GET",
         dataType: "JSON",
     }).then(function(data){
-        $("#dailyQuote").text('"' + data.quote + '" - Rick & Morty');
+        console.log(data.data);
+        $("#dailyQuote").text('"' + data.data + '" - Rick & Morty');
         previousDateButton.addEventListener("click", refreshRM);
         nextDateButton.addEventListener("click", refreshRM); 
         todaysDateBtn.addEventListener("click", refreshRM); 
