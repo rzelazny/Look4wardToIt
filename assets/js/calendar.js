@@ -269,6 +269,12 @@
                     $("#faveTeam").show();
                     //$("#nuSportsMoveOn").show(); //need to use Bootstrap .d-none class to hide
                     break;
+                case "nuSportsMoveOn":
+                    $("#sportsSetting").hide();
+                    $("#newUserInformation").show();
+                    $("#beforeThemeBlurb").show();
+                    $("#nuThemeButton").show();
+                    break;
                 case "sportsN": //if they choose no to sports show the movie section
                     $("#sportsSetting").hide();
                     $("#moviesSetting").show();
@@ -310,12 +316,18 @@
                 case "noToEmail": //If no emails then setup is done, display the calendar
                     userPreferences.newUser = "false";
                     localStorage.setItem("preferences", JSON.stringify(userPreferences));
-                    $("#newUserInformation").hide();
-                    $("#month-view-container").css("display", "block");
+                    location.reload();
                     break;
                 case "yesToEmail": //Display user name and email prompt
                     $("#newUserInformation").hide();
                     $("#userSetting").show();
+                    break;
+                case "save-user-button": //last button they hit is to save username/email
+                    userPreferences.newUser = "false";
+                    localStorage.setItem("preferences", JSON.stringify(userPreferences));
+                    location.reload();
+                    // $("#userSetting").hide();
+                    // $("#month-view-container").css("display", "block");
                     break;
             }
         }
