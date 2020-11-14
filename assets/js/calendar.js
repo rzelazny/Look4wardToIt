@@ -23,6 +23,13 @@
     var nextDateButton = document.querySelector("#nextDate");
     var todaysDateBtn = document.querySelector("#todaysDate");
 
+    var sportsYN = document.querySelector("#previousDate");
+    var moviesYN = document.querySelector("#previousDate");
+
+    //new user experience buttons
+    var nuPickActivites = document.querySelectorAll(".newUserExperience");
+    console.log(nuPickActivites);
+
     var today = new Date();
 
     var currentDay = today.getDay();
@@ -234,6 +241,99 @@
             dailyContainer.style.display = "block";
         }
     }
+    //function moves the user through setting up their initial preferences
+    function nuExperience(myObject, newUser){
+        //only make changes for new users
+        if(newUser === true){
+            //display the entire settings panel, but hide the individual pieces so they can be shown piecemeal
+            $("#settings-view-container").show();
+            $("#userSetting").hide();
+            $("#newUser").hide();
+            $("#themeSetting").hide();
+            $("#quoteSetting").hide();
+            $("#sportsYN").hide();
+            $("#faveSports").hide();
+            $("#faveTeam").hide();
+            $("#moviesSetting").hide();
+            console.log(myObject.id)
+            //show the next section depending on what the user clicked
+            switch(myObject.id){
+                case "newUserPickActivites": //this is the first button they see
+                    $("#sportsYN").show();
+                    break;
+                case "sportsY": //if they choose yes to sports let them pick a team
+                    $("#sportsYN").show();
+                    $("#faveTeam").show();
+                    break;
+                case "faveTeamBtn": //once they've picked a team display the move-on button
+                    $("#sportsYN").show();
+                    $("#faveTeam").show();
+                    //$("#nuSportsMoveOn").show(); //need to use Bootstrap .d-none class to hide
+                    break;
+                case "nuSportsMoveOn":
+                    $("#sportsSetting").hide();
+                    $("#newUserInformation").show();
+                    $("#beforeThemeBlurb").show();
+                    $("#nuThemeButton").show();
+                    break;
+                case "sportsN": //if they choose no to sports show the movie section
+                    $("#sportsSetting").hide();
+                    $("#moviesSetting").show();
+                    $("#faveGenres").hide();
+                    $("#faveMovie").hide();
+                    break;
+                case "moviesY": //if they choose yes to movies add the movie search bar and head to themes
+                    $("#movieSearchBar").show();
+                    $("#newUserInformation").show();
+                    $("#movieBarBlurb").show();
+                    $("#beforeThemeBlurb").show();
+                    $("#nuThemeButton").show();
+                    break;
+                case "nuShowThemes": //Show them that they can change themes
+                    $("#newUserInformation").hide(); 
+                    $("#sportsSetting").hide();
+                    $("#themeSetting").show();
+                    //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
+                    break;
+                case "nuThemeMoveOnButton": //After setting themes ask about email and user name
+                    $("#themeSetting").hide();
+                    $("#newUserInformation").show();
+                    $("#movieBarBlurb").hide();
+                    $("#beforeThemeBlurb").hide();
+                    $("#beforeEmailBlurb").show();
+                    $("#nuThemeButton").hide();
+                    $("#nuEmailButtons").show();
+                    
+                    //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
+                    break;
+                case "default": //once they're choosing themes they can toggle between the choices
+                    $("#themeSetting").show();
+                    $("#nuThemeMoveOn").show();
+                    break;
+                case "nasa": //once they're choosing themes they can toggle between the choices
+                    $("#themeSetting").show();
+                    $("#nuThemeMoveOn").show();
+                    break;
+                case "noToEmail": //If no emails then setup is done, display the calendar
+                    userPreferences.newUser = "false";
+                    localStorage.setItem("preferences", JSON.stringify(userPreferences));
+                    location.reload();
+                    break;
+                case "yesToEmail": //Display user name and email prompt
+                    $("#newUserInformation").hide();
+                    $("#userSetting").show();
+                    break;
+                case "save-user-button": //last button they hit is to save username/email
+                    userPreferences.newUser = "false";
+                    localStorage.setItem("preferences", JSON.stringify(userPreferences));
+                    location.reload();
+                    // $("#userSetting").hide();
+                    // $("#month-view-container").css("display", "block");
+                    break;
+            }
+        }
+    }
+
     var todayMonth = document.querySelector(".today-month");
     console.log(todayMonth);
     todayMonth.addEventListener("click", showDailyView);
@@ -259,3 +359,9 @@
     selectMonth.addEventListener("change", jump);
 
     settingsButton.addEventListener("click", displaySettings);
+
+    //new user experience event listeners
+    for(i=0; i < nuPickActivites.length; i++)
+        nuPickActivites[i].addEventListener("click", function(){
+        nuExperience(this, userPreferences.newUser);
+    });
