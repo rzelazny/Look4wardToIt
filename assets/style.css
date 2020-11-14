@@ -66,6 +66,48 @@ tr{
     font-style: italic;
 }
 
+.nuContainer,
+#userSetting,
+#themeSetting,
+#quoteSetting,
+#sportsSetting,
+#moviesSetting {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    color: black;
+}
+.nuContainer{
+    background-color: #d4e3ff;
+}
+
+#yesToEmail,
+#noToEmail {
+    margin: 10px;
+}
+
+#userSetting {
+    background-color: #eef3ff;
+}
+
+#themeSetting {
+    background-color: #e2ecfe;
+}
+
+#quoteSetting {
+    background-color: #d4e3ff;
+}
+
+#sportsSetting {
+    background-color: #c2d8ff;
+}
+
+#moviesSetting {
+    background-color: #b7d1ff;
+}
+
+/* ////////////////////////////////////NASA///////////////////////////////// */
+
 .container-image {
     position: relative;
     widows: 100%;
@@ -118,46 +160,6 @@ tr{
     cursor: pointer;
 }
 
-.nuContainer,
-#userSetting,
-#themeSetting,
-#quoteSetting,
-#sportsSetting,
-#moviesSetting {
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-    color: black;
-}
-.nuContainer{
-    background-color: #b1c9ff;
-}
-
-#yesToEmail,
-#noToEmail {
-    margin: 10px;
-}
-
-#userSetting {
-    background-color: #eef3ff;
-}
-
-#themeSetting {
-    background-color: #e2ecfe;
-}
-
-#quoteSetting {
-    background-color: #d4e3ff;
-}
-
-#sportsSetting {
-    background-color: #c2d8ff;
-}
-
-#moviesSetting {
-    background-color: #b7d1ff;
-}
-
 /* ///////////////////////////DARKMODE////////////////////////////////////// */
 .dark-mode,
 .dark-mode #month-view-card,
@@ -167,13 +169,13 @@ tr{
 }
 
 .dark-mode #userSetting,
-.dark-mode #save-user-button,
-.dark-mode #newUserInformation {
+.dark-mode #save-user-button {
     background-color: #3D488A;
     color: whitesmoke;
 }
 
-.dark-mode #themeSetting {
+.dark-mode #themeSetting,
+.dark-mode #newUserInformation {
     background-color: #2D3874;
     color: whitesmoke;
 }
