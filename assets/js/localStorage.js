@@ -5,6 +5,7 @@ var userPreferences = {
     userName: "",
     userEmail: "",
     newUser: true,
+    newUserWelcomeSent: false,
     theme: "",
     quote: "",
     sports: {
