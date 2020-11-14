@@ -3,6 +3,31 @@ var previousDateButton = document.querySelector("#previousDate");
 var nextDateButton = document.querySelector("#nextDate");
 var todaysDateBtn = document.querySelector("#todaysDate");
 
+// Rick & Morty Quote //
+
+var rmRadio = document.querySelector("#rmQuote");
+
+function displayRM() {
+    var rmURL = "http://loremricksum.com/api/?paragraphs=1"
+    $.ajax({
+        url: rmURL,
+        method: "GET",
+        dataType: "JSON",
+    }).then(function(data){
+        console.log(data.data);
+        $("#dailyQuote").text('"' + data.data + '" - Rick & Morty');
+        previousDateButton.addEventListener("click", refreshRM);
+        nextDateButton.addEventListener("click", refreshRM); 
+        todaysDateBtn.addEventListener("click", refreshRM); 
+    })
+    //can we get this quote to store in local storage for this day?//
+}
+
+function refreshRM() {
+    $("#dailyQuote").text = "";
+    displayRM();
+}
+
 // Kanye Quote //
 
 var kanyeRadio = document.querySelector("#kanyeQuote");
@@ -11,7 +36,7 @@ function displayKanye() {
     var kanyeURL = "https://api.kanye.rest"
     $.ajax({
         url: kanyeURL,
-        method: "GET"
+        method: "GET",
     }).then(function(data){
         $("#dailyQuote").text('"' + data.quote + '" - Kanye West');
         previousDateButton.addEventListener("click", refreshKanye);
@@ -25,8 +50,6 @@ function refreshKanye() {
     $("#dailyQuote").text = "";
     displayKanye();
 }
-
-
 
 // Dad Joke //
 
@@ -80,11 +103,15 @@ function refreshRando() {
 
 kanyeRadio.addEventListener("click", displayKanye);
 dadJokeRadio.addEventListener("click", displayDadJoke);
-randoRadio.addEventListener("click", displayRandoQuote)
+randoRadio.addEventListener("click", displayRandoQuote);
+rmRadio.addEventListener("click", displayRM);
 
 //on load set quote to saved user preference
 $(document).ready(function(){
-    if(userPreferences.quote === "Kanye Quote"){
+    if (userPreferences.quote === "Rick and Morty Quote"){
+        displayRM();
+    }
+    else if(userPreferences.quote === "Kanye Quote"){
         displayKanye();
     }
     else if(userPreferences.quote === "Dad Joke"){

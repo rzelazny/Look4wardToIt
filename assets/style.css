@@ -1,6 +1,7 @@
 body {
     background-color: white;
     color: #292b2c;
+
 } 
 
 .container {
@@ -29,6 +30,7 @@ nav,
     color:#f7f7f7;
 }
 
+
 textarea {
     width: 100%;
     height: 100%;
@@ -51,18 +53,91 @@ td {
     color: black;
 }
 
-h1{
+h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
     font-size: 30px;
     line-height: 40px;
     letter-spacing: -1px; color: #444;
+    text-align: end;
 }
 
 tr{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
 }
+
+#previousMonth,
+#nextMonth, 
+#previous
+#next,
+#previousDate,
+#nextDate {
+    border-color: #2196F3;
+    color: dodgerblue;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#todaysDate {
+    background: #2196F3;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#previousMonth:hover,
+#nextMonth:hover, 
+#previous:hover
+#next:hover,
+#previousDate:hover,
+#nextDate:hover {
+    background: #2196F3;
+    color: white;
+}
+
+.nuContainer,
+#userSetting,
+#themeSetting,
+#quoteSetting,
+#sportsSetting,
+#moviesSetting {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    color: black;
+}
+
+#userSetting {
+    background-color: #eef3ff;
+}
+
+#themeSetting {
+    background-color: #e2ecfe;
+}
+
+#quoteSetting {
+    background-color: #d4e3ff;
+}
+
+#sportsSetting {
+    background-color: #c2d8ff;
+}
+
+#moviesSetting {
+    background-color: #b7d1ff;
+}
+
+.nuContainer{
+    background-color: #d4e3ff;
+}
+
+#yesToEmail,
+#noToEmail {
+    margin: 10px;
+}
+
+/* ////////////////////////////////////NASA///////////////////////////////// */
 
 .container-image {
     position: relative;
@@ -116,40 +191,6 @@ tr{
     cursor: pointer;
 }
 
-.nuContainer,
-#userSetting,
-#themeSetting,
-#quoteSetting,
-#sportsSetting,
-#moviesSetting {
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-    color: black;
-}
-.nuContainer{
-    background-color: #b1c9ff;
-}
-#userSetting {
-    background-color: #eef3ff;
-}
-
-#themeSetting {
-    background-color: #e2ecfe;
-}
-
-#quoteSetting {
-    background-color: #d4e3ff;
-}
-
-#sportsSetting {
-    background-color: #c2d8ff;
-}
-
-#moviesSetting {
-    background-color: #b7d1ff;
-}
-
 /* ///////////////////////////DARKMODE////////////////////////////////////// */
 .dark-mode,
 .dark-mode #month-view-card,
@@ -164,7 +205,8 @@ tr{
     color: whitesmoke;
 }
 
-.dark-mode #themeSetting {
+.dark-mode #themeSetting,
+.dark-mode #newUserInformation {
     background-color: #2D3874;
     color: whitesmoke;
 }
@@ -218,6 +260,8 @@ tr{
     background-color: #f7f7f7;
     color: #292b2c;
 }
+
+/* /////////////////Glow btn, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
 
 .dark-mode #todaysDate {
     width: 220px;
@@ -273,6 +317,8 @@ tr{
     border-radius: 10px;
 }
 
+/* /////////////////Glow cell, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
+
 .dark-mode .today-month {
     border: none;
     outline: none;
@@ -326,5 +372,233 @@ tr{
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* ////////////////////////////////////Rick&Morty///////////////////////////////// */
+
+.rm-mode{
+background-image: url(./images/rmwallpaper.jpg);
+font-family: 'Oswald', sans-serif;
+font-style: normal;
+}
+
+.rm-mode th,
+.rm-mode tr,
+.rm-mode td,
+.rm-mode h1,
+.rm-mode .input-event {
+    font-style: normal;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.rm-mode,
+.rm-mode #month-view-card,
+.rm-mode #daily-view {
+    background-color:black;
+    color: white;
+}
+
+.rm-mode #userSetting,
+.rm-mode #save-user-button {
+    background-color: green;
+    color: white;
+}
+
+.rm-mode #themeSetting,
+.rm-mode #newUserInformation {
+    background-color: green;
+    color: white;
+}
+.rm-mode #quoteSetting {
+    background-color: green;
+    color: white;
+}
+.rm-mode #sportsSetting {
+    background-color: green;
+    color: white;
+}
+.rm-mode #moviesSetting {
+    background-color: green;
+    color: white;
+}
+
+.rm-mode h1{
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -1px; color: white;
+}
+
+
+.rm-mode nav,
+.rm-mode #settings-button {
+    background-color: black;
+    color:white;
+}
+
+
+.rm-mode #navTitle,
+.rm-mode #settingsIcon {
+    color: white;
+}
+
+.rm-mode #viewBtn,
+.rm-mode #searchShowtimesBtn,
+.rm-mode #save-user-button,
+.rm-mode #save-theme-button,
+.rm-mode #save-quotes-button,
+.rm-mode #save-sports-button,
+.rm-mode #save-movies-button {
+    background-color: white;
+    color: black;
+}
+
+.rm-mode #month-view-card {
+    border-width: thick;
+}
+
+.rm-mode #previousMonth,
+.rm-mode #nextMonth, 
+.rm-mode #previous
+.rm-mode #next,
+.rm-mode #previousDate,
+.rm-mode #nextDate {
+    border: 2px solid;
+    border-color: #4CAF50;
+    color: green;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* .rm-mode #todaysDate {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+} */
+
+.rm-mode #previousMonth:hover,
+.rm-mode #nextMonth:hover, 
+.rm-mode #previous:hover
+.rm-mode #next:hover,
+.rm-mode #previousDate:hover,
+.rm-mode #nextDate:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* /////////////////Glow btn, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
+
+.rm-mode #todaysDate {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.rm-mode #todaysDate:before {
+    content: '';
+    background: linear-gradient(45deg,#63d12b, #c6ff9d, #c3fb61, #3aa213,#379114, #3fda07, #52b920, #d5ff8c, #56e210);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 600%;
+    z-index: -1;
+    filter: blur(10px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.rm-mode #todaysDate:active {
+    color: black
+}
+
+.rm-mode #todaysDate:active:after {
+    background: transparent;
+}
+
+.rm-mode #todaysDate:hover:before {
+    opacity: 1;
+}
+
+.rm-mode #todaysDate:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* /////////////////Glow cell, based off https://codepen.io/kocsten/pen/rggjXp //////////////////// */
+
+.rm-mode .today-month {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.rm-mode .today-month:before {
+    content: '';
+    background: linear-gradient(45deg, #63d12b, #c6ff9d, #c3fb61, #3aa213,#379114, #3fda07, #52b920, #d5ff8c, #56e210);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 600%;
+    z-index: -1;
+    filter: blur(10px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.rm-mode .today-month:active {
+    color: black;
+}
+
+.rm-mode .today-month:active:after {
+    background: transparent;
+}
+
+.rm-mode .today-month:hover:before {
+    opacity: 1;
+}
+
+.rm-mode .today-month:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 600% 0; }
     100% { background-position: 0 0; }
 }
