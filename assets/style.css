@@ -214,8 +214,7 @@ tr{
     color: whitesmoke;
 }
 
-.dark-mode #userSetting,
-.dark-mode #save-user-button {
+.dark-mode #userSetting {
     background-color: #3D488A;
     color: whitesmoke;
 }
@@ -267,7 +266,6 @@ tr{
 
 .dark-mode #viewBtn,
 .dark-mode #searchShowtimesBtn,
-.dark-mode #save-user-button,
 .dark-mode #save-theme-button,
 .dark-mode #save-quotes-button,
 .dark-mode #save-sports-button,
@@ -413,7 +411,6 @@ font-style: normal;
 .rm-mode #month-view-card,
 .rm-mode #daily-view,
 .rm-mode #userSetting,
-.rm-mode #save-user-button ,
 .rm-mode #themeSetting,
 .rm-mode #newUserInformation,
 .rm-mode #quoteSetting,
@@ -444,7 +441,6 @@ font-style: normal;
 
 .rm-mode #viewBtn,
 .rm-mode #searchShowtimesBtn,
-.rm-mode #save-user-button,
 .rm-mode #save-theme-button,
 .rm-mode #save-quotes-button,
 .rm-mode #save-sports-button,
@@ -462,7 +458,17 @@ font-style: normal;
 .rm-mode #previous
 .rm-mode #next,
 .rm-mode #previousDate,
-.rm-mode #nextDate {
+.rm-mode #nextDate,
+.rm-mode #save-user-button,
+.rm-mode #nuThemeMoveOnButton,
+.rm-mode #nuQuoteMoveOnButton,
+.rm-mode #nuSportsMoveOnButton,
+.rm-mode #nuMovieMoveOnButton,
+.rm-mode #nuShowThemes,
+.rm-mode #nuShowQuotes,
+.rm-mode #newUserPickActivites,
+.rm-mode #yesToEmail,
+.rm-mode #noToEmail {
     border: 2px solid;
     border-color: #4CAF50;
     color: green;
@@ -470,19 +476,22 @@ font-style: normal;
     border-radius: 5px;
 }
 
-/* .rm-mode #todaysDate {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-} */
-
 .rm-mode #previousMonth:hover,
 .rm-mode #nextMonth:hover, 
 .rm-mode #previous:hover
 .rm-mode #next:hover,
 .rm-mode #previousDate:hover,
-.rm-mode #nextDate:hover {
+.rm-mode #nextDate:hover,
+.rm-mode #save-user-button:hover,
+.rm-mode #nuThemeMoveOnButton:hover,
+.rm-mode #nuQuoteMoveOnButton:hover,
+.rm-mode #nuSportsMoveOnButton:hover,
+.rm-mode #nuMovieMoveOnButton:hover,
+.rm-mode #nuShowThemes:hover,
+.rm-mode #nuShowQuotes:hover,
+.rm-mode #newUserPickActivites:hover,
+.rm-mode #yesToEmail:hover,
+.rm-mode #noToEmail:hover{
     background-color: #4CAF50;
     color: white;
 }
