@@ -277,7 +277,7 @@
                     $("#sportsSetting").show();
                     $("#sportsYN").show();
                     break;
-                case "nuSportsMoveOn":
+                case "nuSportsMoveOnButton":
                     $("#sportsSetting").hide();
                     $("#sportsYN").hide();
                     $("#faveTeam").hide();
@@ -303,6 +303,8 @@
                     $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
+                    $("#nuQuotesButton").hide();
+                    $("#quoteSetting").hide();
                     break;
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
@@ -314,6 +316,10 @@
                     $("#nuThemeMoveOn").show();
                     break;
                 case "nasa": //once they're choosing themes they can toggle between the choices
+                    $("#themeSetting").show();
+                    $("#nuThemeMoveOn").show();
+                    break;
+                case "rm": //once they're choosing themes they can toggle between the choices
                     $("#themeSetting").show();
                     $("#nuThemeMoveOn").show();
                     break;
