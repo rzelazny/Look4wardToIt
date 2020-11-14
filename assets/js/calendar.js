@@ -284,14 +284,22 @@
                     $("#moviesSetting").show();
                     $("#faveGenres").hide();
                     $("#faveMovie").hide();
+                    $("#nuMovieMoveOnButton").show();
                     break;
                 case "moviesY": //if they choose yes to movies add the movie search bar and head to themes
-                    $("#movieBarBlurb").show();
-                    $("#newUserInformation").show();
-                    $("#beforeThemeBlurb").show();
-                    $("#nuThemeButton").show();
+                    $("#moviesSetting").show();
+                    $("#faveGenres").show();
+                    $("#faveMovie").hide();
+                    $("#nuMovieMoveOnButton").show();
                     break;
-                case "moviesN":
+                case "moviesN": //if they choose yes to movies add the movie search bar and head to themes
+                    $("#moviesSetting").show();
+                    $("#nuMovieMoveOnButton").show();
+                    break;
+                case "nuMovieMoveOnButton":
+                    $("#moviesSetting").hide();
+                    $("#nuMovieMoveOnButton").hide();
+                    $("#movieBarBlurb").show();
                     $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
