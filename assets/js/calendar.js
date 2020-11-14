@@ -255,19 +255,20 @@
             switch(myObject.id){
                 case "newUserPickActivites": //this is the first button they see
                     $("#sportsYN").show();
+                    // $("nuSportsMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
-                case "sportsN": //if they choose no to sports show the movie section
+                case "sportsN": // if they say no to sports they will need to press the move on button to go to the movies section 
                     $("#sportsSetting").show();
                     $("#sportsYN").show();
-                    $("#moviesSetting").hide();
-                    $("#faveGenres").hide();
-                    $("#faveMovie").hide();
+                    // $("nuSportsMoveOn").show(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "sportsY": //if they choose yes to sports let them pick a team
+                    $("#sportsSetting").show();
                     $("#sportsYN").show();
                     $("#faveTeam").show();
                     break;
                 case "faveTeamBtn": //once they've picked a team display the move-on button
+                    $("#sportsSetting").show();
                     $("#sportsYN").show();
                     $("#faveTeam").show();
                     //$("#nuSportsMoveOn").show(); //need to use Bootstrap .d-none class to hide
@@ -275,57 +276,30 @@
                 case "sportsN": //if they choose no to sports show the movie section
                     $("#sportsSetting").show();
                     $("#sportsYN").show();
-                    $("#moviesSetting").hide();
-                    $("#faveGenres").hide();
-                    $("#faveMovie").hide();
                     break;
                 case "nuSportsMoveOn":
                     $("#sportsSetting").hide();
+                    $("#sportsYN").hide();
+                    $("#faveTeam").hide();
                     $("#moviesSetting").show();
                     $("#faveGenres").hide();
                     $("#faveMovie").hide();
-                    // $("#newUserInformation").show();
-                    // $("#beforeThemeBlurb").show();
-                    // $("#nuThemeButton").show();
                     break;
                 case "moviesY": //if they choose yes to movies add the movie search bar and head to themes
-                    $("#movieSearchBar").show();
-                    $("#newUserInformation").hide();
                     $("#movieBarBlurb").show();
+                    $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
                     break;
                 case "moviesN":
-                    $("#moviesSetting").hide();
-                    $("#newUserInformation").hide();
+                    $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
                     break;
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
-                    $("#sportsSetting").hide();
+                    // $("#sportsSetting").hide();
                     $("#themeSetting").show();
-                    //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
-                    break;
-                case "nuThemeMoveOnButton":
-                    $("#themeSetting").hide();
-                    $("#newUserInformation").hide();
-                    $("#movieBarBlurb").hide();
-                    $("#beforeThemeBlurb").hide();
-                    $("#beforeEmailBlurb").hide();
-                    $("#nuThemeButton").hide();
-                    $("#nuEmailButtons").hide();
-                    $("beforeQuoteBlurb").show();
-                    $("#quoteSetting").show();
-                    $("#beforeEmailBlurb").hide();
-
-                case "nuQuoteMoveOnButton": //After setting themes ask about email and user name
-                    $("#themeSetting").hide();
-                    $("#newUserInformation").show();
-                    $("#movieBarBlurb").hide();
-                    $("#beforeThemeBlurb").hide();
-                    $("#beforeEmailBlurb").hide();
-                    $("#nuThemeButton").hide();
                     //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "default": //once they're choosing themes they can toggle between the choices
@@ -335,6 +309,42 @@
                 case "nasa": //once they're choosing themes they can toggle between the choices
                     $("#themeSetting").show();
                     $("#nuThemeMoveOn").show();
+                    break;
+                case "nuThemeMoveOnButton":
+                    $("#quoteSetting").hide();
+                    $("#themeSetting").hide();
+                    $("#newUserInformation").show();
+                    $("#movieBarBlurb").hide();
+                    $("#beforeThemeBlurb").hide();
+                    $("#beforeEmailBlurb").hide();
+                    $("#beforeQuoteBlurb").show();
+                    $("#nuThemeButton").hide();
+                    $("#nuQuotesButton").show();
+                    $("#nuEmailButtons").hide();
+                    break;
+                case "nuShowQuotes":$("#quoteSetting").hide();
+                    $("#themeSetting").hide();
+                    $("#newUserInformation").hide();
+                    $("#movieBarBlurb").hide();
+                    $("#beforeThemeBlurb").hide();
+                    $("#beforeEmailBlurb").hide();
+                    $("#beforeQuoteBlurb").hide();
+                    $("#nuThemeButton").hide();
+                    $("#nuQuotesButton").show();
+                    $("#nuEmailButtons").hide();
+                    $("#quoteSetting").show();
+                    break;
+                case "nuQuoteMoveOnButton": //After setting themes ask about email and user name
+                    $("#quoteSetting").hide();
+                    $("#themeSetting").hide();
+                    $("#newUserInformation").show();
+                    $("#movieBarBlurb").hide();
+                    $("#beforeThemeBlurb").hide();
+                    $("#beforeEmailBlurb").show();
+                    $("#nuThemeButton").hide();
+                    $("#nuEmailButtons").show();
+                    $("#nuQuotesButton").hide();
+                    //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "noToEmail": //If no emails then setup is done, display the calendar
                     userPreferences.newUser = "false";

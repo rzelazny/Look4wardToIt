@@ -167,7 +167,8 @@ tr{
 }
 
 .dark-mode #userSetting,
-.dark-mode #save-user-button {
+.dark-mode #save-user-button,
+.dark-mode #newUserInformation {
     background-color: #3D488A;
     color: whitesmoke;
 }
