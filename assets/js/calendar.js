@@ -306,7 +306,8 @@
                     break;
                 case "nuMovieMoveOnButton":
                     $("#moviesSetting").hide();
-                    if(userPreferences.movies.likesMovies == true){
+                    console.log(userPreferences.movies.likesMovies)
+                    if(userPreferences.movies.likesMovies == "true"){
                         $("#movieBarBlurb").show();
                         $("#movieSearchBar").show(); //make the movie search appear
                     }
