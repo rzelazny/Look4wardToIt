@@ -108,7 +108,7 @@ rmRadio.addEventListener("click", displayRM);
 
 //on load set quote to saved user preference
 $(document).ready(function(){
-    if (userPreferences.quote === "Rick and Morty Quote"){
+    if (userPreferences.quote === "Rick & Morty Quote"){
         displayRM();
     }
     else if(userPreferences.quote === "Kanye Quote"){
