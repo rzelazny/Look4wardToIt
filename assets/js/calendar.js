@@ -29,7 +29,6 @@
 
     //new user experience buttons
     var nuPickActivites = document.querySelectorAll(".newUserExperience");
-    console.log(nuPickActivites);
 
     var today = new Date();
 
@@ -193,6 +192,8 @@
         } else {
             settingsContainer.style.display = "none";
         }
+        //hide new user experience buttons
+        $(".btn-primary.newUserExperience").attr("class", "invisible");
     }
 
 
@@ -267,12 +268,10 @@
             switch(myObject.id){
                 case "newUserPickActivites": //this is the first button they see
                     $("#sportsYN").show();
-                    // $("nuSportsMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "sportsN": // if they say no to sports they will need to press the move on button to go to the movies section 
                     $("#sportsSetting").show();
                     $("#sportsYN").show();
-                    // $("nuSportsMoveOn").show(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "sportsY": //if they choose yes to sports let them pick a team
                     $("#sportsSetting").show();
@@ -283,16 +282,13 @@
                     $("#sportsSetting").show();
                     $("#sportsYN").show();
                     $("#faveTeam").show();
-                    //$("#nuSportsMoveOn").show(); //need to use Bootstrap .d-none class to hide
                     break;
-                case "sportsN": //if they choose no to sports show the movie section
+                case "sportsN": //if they choose no to sports they don't need to see faveTeam
                     $("#sportsSetting").show();
                     $("#sportsYN").show();
                     break;
                 case "nuSportsMoveOnButton":
                     $("#sportsSetting").hide();
-                    $("#sportsYN").hide();
-                    $("#faveTeam").hide();
                     $("#moviesSetting").show();
                     $("#faveGenres").hide();
                     $("#faveMovie").hide();
@@ -310,8 +306,11 @@
                     break;
                 case "nuMovieMoveOnButton":
                     $("#moviesSetting").hide();
+                    if(userPreferences.movies.likesMovies === "true"){
+                        $("#movieBarBlurb").show();
+                        $("#movieSearchBar").show(); //make the movie search appear
+                    }
                     $("#nuMovieMoveOnButton").hide();
-                    $("#movieBarBlurb").show();
                     $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
@@ -321,7 +320,6 @@
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
                     $("#themeSetting").show();
-                    //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
                     break;
                 case "default": //once they're choosing themes they can toggle between the choices
                     $("#themeSetting").show();
@@ -346,6 +344,8 @@
                     $("#nuThemeButton").hide();
                     $("#nuQuotesButton").show();
                     $("#nuEmailButtons").hide();
+                    $("#nuShowThemes").toggleClass("invisible", "visible");
+                    $("#nuShowQuotes").toggleClass("invisible", "visible");
                     break;
                 case "nuShowQuotes":$("#quoteSetting").hide();
                     $("#themeSetting").hide();
@@ -368,11 +368,10 @@
                     $("#beforeEmailBlurb").show();
                     $("#nuThemeButton").hide();
                     $("#nuEmailButtons").show();
-                    $("#nuQuotesButton").hide();
-                    //$("#nuThemeMoveOn").hide(); //need to use Bootstrap .d-none class to hide
+                    $("#nuQuotesButton").toggleClass("invisible", "visible");
                     break;
                 case "noToEmail": //If no emails then setup is done, display the calendar
-                    userPreferences.newUser = "false";
+                    userPreferences.newUser = false;
                     localStorage.setItem("preferences", JSON.stringify(userPreferences));
                     location.reload();
                     break;
@@ -381,11 +380,9 @@
                     $("#userSetting").show();
                     break;
                 case "save-user-button": //last button they hit is to save username/email
-                    userPreferences.newUser = "false";
+                    userPreferences.newUser = false;
                     localStorage.setItem("preferences", JSON.stringify(userPreferences));
                     location.reload();
-                    // $("#userSetting").hide();
-                    // $("#month-view-container").css("display", "block");
                     break;
             }
         }
