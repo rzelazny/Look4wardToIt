@@ -20,12 +20,7 @@ nav,
 
 
 #viewBtn,
-#searchShowtimesBtn,
-#save-user-button,
-#save-theme-button,
-#save-quotes-button,
-#save-sports-button,
-#save-movies-button {
+#searchShowtimesBtn {
     background-color: #292b2c;
     color:#f7f7f7;
 }
@@ -56,10 +51,10 @@ td {
 h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 50px;
     letter-spacing: -1px; color: #444;
-    text-align: end;
+    text-align: center;
 }
 
 tr{
@@ -72,7 +67,17 @@ tr{
 #previous
 #next,
 #previousDate,
-#nextDate {
+#nextDate,
+#save-user-button,
+#nuThemeMoveOnButton,
+#nuQuoteMoveOnButton,
+#nuSportsMoveOnButton,
+#nuMovieMoveOnButton,
+#nuShowThemes,
+#nuShowQuotes,
+#newUserPickActivites,
+#yesToEmail,
+#noToEmail {
     border-color: #2196F3;
     color: dodgerblue;
     cursor: pointer;
@@ -91,7 +96,17 @@ tr{
 #previous:hover
 #next:hover,
 #previousDate:hover,
-#nextDate:hover {
+#nextDate:hover,
+#save-user-button:hover,
+#nuThemeMoveOnButton:hover,
+#nuQuoteMoveOnButton:hover,
+#nuSportsMoveOnButton:hover,
+#nuMovieMoveOnButton:hover,
+#nuShowThemes:hover,
+#nuShowQuotes:hover,
+#newUserPickActivites:hover,
+#yesToEmail:hover,
+#noToEmail:hover {
     background: #2196F3;
     color: white;
 }
@@ -199,8 +214,7 @@ tr{
     color: whitesmoke;
 }
 
-.dark-mode #userSetting,
-.dark-mode #save-user-button {
+.dark-mode #userSetting {
     background-color: #3D488A;
     color: whitesmoke;
 }
@@ -232,8 +246,8 @@ tr{
 .dark-mode h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 50px;
     letter-spacing: -1px; color: whitesmoke;
 }
 
@@ -252,7 +266,6 @@ tr{
 
 .dark-mode #viewBtn,
 .dark-mode #searchShowtimesBtn,
-.dark-mode #save-user-button,
 .dark-mode #save-theme-button,
 .dark-mode #save-quotes-button,
 .dark-mode #save-sports-button,
@@ -396,38 +409,20 @@ font-style: normal;
 
 .rm-mode,
 .rm-mode #month-view-card,
-.rm-mode #daily-view {
-    background-color:black;
-    color: white;
-}
-
+.rm-mode #daily-view,
 .rm-mode #userSetting,
-.rm-mode #save-user-button {
-    background-color: green;
-    color: white;
-}
-
 .rm-mode #themeSetting,
-.rm-mode #newUserInformation {
-    background-color: green;
-    color: white;
-}
-.rm-mode #quoteSetting {
-    background-color: green;
-    color: white;
-}
-.rm-mode #sportsSetting {
-    background-color: green;
-    color: white;
-}
+.rm-mode #newUserInformation,
+.rm-mode #quoteSetting,
+.rm-mode #sportsSetting,
 .rm-mode #moviesSetting {
-    background-color: green;
+    background-color: 	black;
     color: white;
 }
 
 .rm-mode h1{
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 50px;
     letter-spacing: -1px; color: white;
 }
 
@@ -446,7 +441,6 @@ font-style: normal;
 
 .rm-mode #viewBtn,
 .rm-mode #searchShowtimesBtn,
-.rm-mode #save-user-button,
 .rm-mode #save-theme-button,
 .rm-mode #save-quotes-button,
 .rm-mode #save-sports-button,
@@ -464,7 +458,17 @@ font-style: normal;
 .rm-mode #previous
 .rm-mode #next,
 .rm-mode #previousDate,
-.rm-mode #nextDate {
+.rm-mode #nextDate,
+.rm-mode #save-user-button,
+.rm-mode #nuThemeMoveOnButton,
+.rm-mode #nuQuoteMoveOnButton,
+.rm-mode #nuSportsMoveOnButton,
+.rm-mode #nuMovieMoveOnButton,
+.rm-mode #nuShowThemes,
+.rm-mode #nuShowQuotes,
+.rm-mode #newUserPickActivites,
+.rm-mode #yesToEmail,
+.rm-mode #noToEmail {
     border: 2px solid;
     border-color: #4CAF50;
     color: green;
@@ -472,19 +476,22 @@ font-style: normal;
     border-radius: 5px;
 }
 
-/* .rm-mode #todaysDate {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-} */
-
 .rm-mode #previousMonth:hover,
 .rm-mode #nextMonth:hover, 
 .rm-mode #previous:hover
 .rm-mode #next:hover,
 .rm-mode #previousDate:hover,
-.rm-mode #nextDate:hover {
+.rm-mode #nextDate:hover,
+.rm-mode #save-user-button:hover,
+.rm-mode #nuThemeMoveOnButton:hover,
+.rm-mode #nuQuoteMoveOnButton:hover,
+.rm-mode #nuSportsMoveOnButton:hover,
+.rm-mode #nuMovieMoveOnButton:hover,
+.rm-mode #nuShowThemes:hover,
+.rm-mode #nuShowQuotes:hover,
+.rm-mode #newUserPickActivites:hover,
+.rm-mode #yesToEmail:hover,
+.rm-mode #noToEmail:hover{
     background-color: #4CAF50;
     color: white;
 }

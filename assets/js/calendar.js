@@ -275,7 +275,7 @@
                     $("#sportsSetting").show();
                     $("#sportsYN").show();
                     break;
-                case "nuSportsMoveOn":
+                case "nuSportsMoveOnButton":
                     $("#sportsSetting").hide();
                     $("#moviesSetting").show();
                     $("#faveGenres").hide();
@@ -302,9 +302,8 @@
                     $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
-                    console.log($("#nuShowThemes"));
-                    $("#nuShowThemes").toggleClass("invisible", "visible");
-                    console.log($("#nuShowThemes").classList);
+                    $("#nuQuotesButton").hide();
+                    $("#quoteSetting").hide();
                     break;
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
