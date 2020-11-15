@@ -263,7 +263,7 @@
             $("#faveSports").hide();
             $("#faveTeam").hide();
             $("#moviesSetting").hide();
-            console.log(myObject.id)
+            //console.log(myObject.id)
             //show the next section depending on what the user clicked
             switch(myObject.id){
                 case "newUserPickActivites": //this is the first button they see
@@ -306,7 +306,7 @@
                     break;
                 case "nuMovieMoveOnButton":
                     $("#moviesSetting").hide();
-                    if(userPreferences.movies.likesMovies === "true"){
+                    if(userPreferences.movies.likesMovies){
                         $("#movieBarBlurb").show();
                         $("#movieSearchBar").show(); //make the movie search appear
                     }
