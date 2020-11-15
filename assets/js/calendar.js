@@ -8,6 +8,7 @@
     var monthContainer = document.querySelector("#month-view-container");
     var weekContainer = document.querySelector("#week-view-container");
     var dailyContainer = document.querySelector("#daily-view-container");
+    var twitter = document.querySelector("#twitter");
 
     var monthButton = document.querySelector("#month-button");
     var weekButton = document.querySelector("#week-button");
@@ -227,6 +228,7 @@
             monthContainer.style.display = "none";
             weekContainer.style.display = "none";
             dailyContainer.style.display = "block";
+
         }
         else if (monthContainer.style.display === "none" && weekContainer.style.display === "block" && dailyContainer.style.display === "none") {
             monthContainer.style.display = "none";
@@ -237,6 +239,16 @@
             dailyContainer.style.display = "block";
         }
     }
+
+    // function displayTwitter() {
+    //     if (dailyContainer.style.display === "block" && twitter.style.display === "none") {
+    //         twitter.style.display = "block";
+    //     }
+    // }
+
+    ///////////////////////////////////////////////////////////////////////
+    // New User Set Up ///////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
     //function moves the user through setting up their initial preferences
     function nuExperience(myObject, newUser){
         //only make changes for new users
@@ -275,7 +287,7 @@
                     $("#sportsSetting").show();
                     $("#sportsYN").show();
                     break;
-                case "nuSportsMoveOn":
+                case "nuSportsMoveOnButton":
                     $("#sportsSetting").hide();
                     $("#moviesSetting").show();
                     $("#faveGenres").hide();
@@ -302,7 +314,8 @@
                     $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
-                    $("#nuShowThemes").toggleClass("invisible", "visible");
+                    $("#nuQuotesButton").hide();
+                    $("#quoteSetting").hide();
                     break;
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
@@ -395,6 +408,8 @@
     monthButton.addEventListener("click", showMonthView);
     weekButton.addEventListener("click", showWeekView);
     dailyButton.addEventListener("click", showDailyView);
+
+    // displayTwitter();
 
     selectYear.addEventListener("change", jump);
     selectMonth.addEventListener("change", jump);
