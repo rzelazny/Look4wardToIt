@@ -306,7 +306,8 @@
                     break;
                 case "nuMovieMoveOnButton":
                     $("#moviesSetting").hide();
-                    if(userPreferences.movies.likesMovies){
+                    //console.log(userPreferences.movies.likesMovies)
+                    if(userPreferences.movies.likesMovies == "true"){
                         $("#movieBarBlurb").show();
                         $("#movieSearchBar").show(); //make the movie search appear
                     }
@@ -342,10 +343,11 @@
                     $("#beforeEmailBlurb").hide();
                     $("#beforeQuoteBlurb").show();
                     $("#nuThemeButton").hide();
+                    $("#nuShowQuotes").show();
                     $("#nuQuotesButton").show();
                     $("#nuEmailButtons").hide();
                     $("#nuShowThemes").toggleClass("invisible", "visible");
-                    $("#nuShowQuotes").toggleClass("invisible", "visible");
+                    //$("#nuShowQuotes").toggleClass("invisible", "visible");
                     break;
                 case "nuShowQuotes":$("#quoteSetting").hide();
                     $("#themeSetting").hide();
