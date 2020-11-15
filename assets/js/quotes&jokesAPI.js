@@ -8,7 +8,7 @@ var todaysDateBtn = document.querySelector("#todaysDate");
 var rmRadio = document.querySelector("#rmQuote");
 
 function displayRM() {
-    var rmURL = "http://loremricksum.com/api/?paragraphs=1"
+    var rmURL = "https://cors-anywhere.herokuapp.com/http://loremricksum.com/api/?paragraphs=1"
     $.ajax({
         url: rmURL,
         method: "GET",
