@@ -251,7 +251,7 @@
             $("#faveSports").hide();
             $("#faveTeam").hide();
             $("#moviesSetting").hide();
-            console.log(myObject.id)
+            //console.log(myObject.id)
             //show the next section depending on what the user clicked
             switch(myObject.id){
                 case "newUserPickActivites": //this is the first button they see
@@ -294,7 +294,7 @@
                     break;
                 case "nuMovieMoveOnButton":
                     $("#moviesSetting").hide();
-                    if(userPreferences.movies.likesMovies === "true"){
+                    if(userPreferences.movies.likesMovies){
                         $("#movieBarBlurb").show();
                         $("#movieSearchBar").show(); //make the movie search appear
                     }
@@ -302,9 +302,7 @@
                     $("#newUserInformation").show();
                     $("#beforeThemeBlurb").show();
                     $("#nuThemeButton").show();
-                    console.log($("#nuShowThemes"));
                     $("#nuShowThemes").toggleClass("invisible", "visible");
-                    console.log($("#nuShowThemes").classList);
                     break;
                 case "nuShowThemes": //Show them that they can change themes
                     $("#newUserInformation").hide(); 
